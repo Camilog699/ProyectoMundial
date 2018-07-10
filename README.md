@@ -1,3 +1,3 @@
 # ProyectoMundial
-# Buena la rata
-# Puto el que lo lea
+# Bitacora espacial
+Gomez nos retrasó el proyecto
