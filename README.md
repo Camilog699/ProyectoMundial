@@ -1,3 +1,3 @@
 # ProyectoMundial
 # Bitacora espacial
-Gomez nos retrasó el proyecto
+_**`Gomez nos retrasó el proyecto`**_
