@@ -10,5 +10,8 @@ package Clases;
  * @author amrag
  */
 public class Grupo {
-    
+    public void crearJuego(){
+
+    }
 }
+

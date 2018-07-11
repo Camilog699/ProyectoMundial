@@ -11,21 +11,16 @@ package Clases;
  */
 public class Juego {
 
-    private String equiposEncuentro;
+    private Equipo e1;
+    private Equipo e2;
     private String resultado;
     private String fecha;
     private String estadio;
 
-    private int minAnotacion;
-    private String jugDeGol;
-    private String jugAmarilla;
-    private String jugRoja;
-    private int numAmarilla;
-    private int numRoja;
-    private int minEsquina;
-    private String equipoEsquina;
-    private int minSustitucion;
-    private int numJugSale;
-    private int numJugEntra;
-
+    public Juego(Equipo e1, Equipo e2, String fecha, String estadio) {
+        this.e1 = e1;
+        this.e2 = e2;
+        this.fecha = fecha;
+        this.estadio = estadio;
+    }
 }
