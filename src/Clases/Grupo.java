@@ -10,5 +10,5 @@ package Clases;
  * @author amrag
  */
 public class Grupo {
-    
 }
+
