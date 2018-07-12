@@ -1,6 +1,7 @@
 package Vistas;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Tablero extends javax.swing.JFrame{
     
@@ -11,17 +12,17 @@ public class Tablero extends javax.swing.JFrame{
     
     public static void main(String[] args) {
         JFrame inicio = new JFrame("Mundial Rusia 2018");
-        inicio.setIconImage(new ImageIcon(Tablero.class.getResource("../Img/ico.png")));
         inicio.setContentPane(new Tablero().panel1);
         inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch(Exception ignored){}
         inicio.pack();
+        inicio.setIconImage(Toolkit.getDefaultToolkit().
+                getImage(Tablero.class.getResource("../Img/ico.png")));
         inicio.setLocationRelativeTo(null);
         inicio.setVisible(true);
     }
-    
     
     private void createUIComponents() {
         panel1 = new Inicio();
