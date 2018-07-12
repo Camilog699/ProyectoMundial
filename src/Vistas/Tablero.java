@@ -11,6 +11,7 @@ public class Tablero extends javax.swing.JFrame{
     
     public static void main(String[] args) {
         JFrame inicio = new JFrame("Mundial Rusia 2018");
+        inicio.setIconImage(new ImageIcon(Tablero.class.getResource("../Img/ico.png")));
         inicio.setContentPane(new Tablero().panel1);
         inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         try {
