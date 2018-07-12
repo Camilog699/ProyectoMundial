@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package Clases;
-
-
 import java.util.LinkedList;
 
 /**
@@ -13,7 +11,6 @@ import java.util.LinkedList;
  * @author amrag
  */
 public class Juego {
-
     private Equipo e1;
     private Equipo e2;
     private String resultado;
@@ -28,5 +25,14 @@ public class Juego {
         this.e2 = e2;
         this.fecha = fecha;
         this.estadio = estadio;
+    }
+    public  static void agregarTarjeta(Jugador j, Tarjeta t){
+        tarjetas.add(j,t);
+    }
+    public  static void golazohpta(Jugador j, Tiempo t){
+        goals.add(j,t);
+    }
+    public static void prostitucion(Jugador js, Jugador je, Tiempo t){
+        cambios.add(js,je,t,e);
     }
 }

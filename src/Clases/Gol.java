@@ -1,7 +1,12 @@
 package Clases;
 
-public class Gol extends DatoPartido{
+public class Gol {
+
     public Gol(Jugador j, String tiempo, Equipo e) {
-        super(j, tiempo, e);
+        this.jugador = j;
+        this.tiempo = tiempo;
+        this.equipo = e;
     }
+
+
 }
