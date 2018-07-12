@@ -9,12 +9,12 @@ package Modelos;
  *
  * @author amrag
  */
-public class Background extends Objeto{
+public class Fondo extends Objeto{
 
-    public Background() {
+    public Fondo() {
     }
 
-    public Background(String id, int x, int y, int alto, int ancho) {
-        super(id, x, y, ancho, alto, "../Img/Background.jpg");
+    public Fondo(String id, int x, int y, int alto, int ancho) {
+        super(id, x, y, ancho, alto, "../Img/Fondo.png");
     }
 }
