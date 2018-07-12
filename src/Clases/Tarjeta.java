@@ -1,13 +1,14 @@
 package Clases;
 
-public class Tarjeta extends DatoPartido{
+public class Tarjeta{
 
     /**
      * @amarilla Es true si es amarilla, si no, es roja
      */
     private boolean amarilla;
-    public Tarjeta(Jugador j, String tiempo, Equipo e, boolean amarilla) {
-        super(j, tiempo, e);
+
+    public Tarjeta(boolean amarilla) {
+        this.amarilla = amarilla;
     }
 
     public boolean isAmarilla() {

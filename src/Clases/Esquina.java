@@ -1,7 +1,11 @@
 package Clases;
 
-public class Esquina extends DatoPartido{
-    public Esquina(String tiempo, Equipo e) {
-        super(tiempo, e);
+public class Esquina {
+    Tiempo t;
+    Equipo e;
+
+    public Esquina(Tiempo t, Equipo e) {
+        this.t = t;
+        this.e = e;
     }
 }
