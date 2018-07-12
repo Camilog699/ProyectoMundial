@@ -26,13 +26,16 @@ public class Juego {
         this.fecha = fecha;
         this.estadio = estadio;
     }
-    public  static void agregarTarjeta(Jugador j, Tarjeta t){
-        tarjetas.add(j,t);
+    public void agregarTarjeta(Tarjeta t){
+        tarjetas.add(t);
     }
-    public  static void golazohpta(Jugador j, Tiempo t){
-        goals.add(j,t);
+    public void golazohpta(Gol g){
+        goals.add(g);
     }
-    public static void prostitucion(Jugador js, Jugador je, Tiempo t){
-        cambios.add(js,je,t,e);
+    public void prostitucion(Cambio c){
+        cambios.add(c);
+    }
+    public void corner(Esquina e){
+        esquinas.add(e);
     }
 }
