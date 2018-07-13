@@ -40,7 +40,8 @@ public class CuerpoTecnico extends Persona {
     public void setPaisNacimiento(String PaisNacimiento) {
         this.PaisNacimiento = PaisNacimiento;
     }
-    
+
+
     
 
 }

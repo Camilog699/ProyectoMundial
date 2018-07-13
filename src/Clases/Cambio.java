@@ -1,19 +1,19 @@
 package Clases;
 
-public class Cambio{
+public class Cambio extends DatoPartido{
     private Jugador entra;
     private Jugador sale;
-    private Tiempo t;
-    private Equipo e;
 
-    public Cambio(Jugador entra, Jugador sale, Tiempo tiempo, Equipo e) {
+
+    public Cambio(Jugador entra, Jugador sale) {
         this.entra = entra;
         this.sale = sale;
-        this.t = tiempo;
-        this.e = e;
     }
 
-    public Cambio() {
+    public Cambio(String tiempo, Equipo equipo, Jugador j, Jugador entra, Jugador sale) {
+        super(tiempo, equipo, j);
+        this.entra = entra;
+        this.sale = sale;
     }
 
     public Jugador getEntra() {
