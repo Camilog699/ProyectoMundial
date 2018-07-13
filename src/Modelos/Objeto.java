@@ -19,7 +19,7 @@ public class Objeto {
     private int alto;
     private ImageIcon sprite;
 
-    public Objeto() {
+    public Objeto(String bandera, int i, int i1, int i2, int i3) {
     }
 
     public Objeto(String id, int x, int y, int ancho, int alto, String ruta) {
