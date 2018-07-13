@@ -10,19 +10,31 @@ public class Tablero {
     private JPanel panel1;
     public static JFrame inicio;
     public static JFrame verJugadoresFrame;
+    public static JFrame subirDatosFrame;
+
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
     private JButton verEquiposButton;
     
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
-            verJugadoresFrame = new JFrame("Ver jugadores | Mundial Rusia 2018");
+            verJugadoresFrame = new JFrame("Ver jugadores | Mundial Russia 2018");
             verJugadoresFrame.setContentPane(new VerJugadores().panel);
             verJugadoresFrame.pack();
             verJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
                     getImage(Tablero.class.getResource("../Img/ico.png")));
             verJugadoresFrame.setLocationRelativeTo(null);
             verJugadoresFrame.setVisible(true);
+            verJugadoresFrame.setResizable(false);
+        });
+        subirDatosPartidoButton.addActionListener(l -> {
+            subirDatosFrame = new JFrame("Subir datos partido | Mundial Russia 2018");
+            subirDatosFrame.setContentPane(new SubirDatos().panel);
+            subirDatosFrame.pack();
+            subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("../Img/ico.png")));
+            subirDatosFrame.setLocationRelativeTo(null);
+            subirDatosFrame.setVisible(true);
+            subirDatosFrame.setResizable(false);
         });
     }
     
@@ -39,6 +51,7 @@ public class Tablero {
                 getImage(Tablero.class.getResource("../Img/ico.png")));
         inicio.setLocationRelativeTo(null);
         inicio.setVisible(true);
+        inicio.setResizable(false);
     }
     
     private void createUIComponents() {
