@@ -4,14 +4,10 @@ import Modelos.Fondo;
 
 import java.awt.*;
 
-public class Inicio extends javax.swing.JPanel {
-    
+public class CrearPartidoPanel extends javax.swing.JPanel {
     Fondo bg;
+    public CrearPartidoPanel() { this.bg = new Fondo("bg", 0, 0, 0 ,0); }
 
-    public Inicio() {
-        this.bg = new Fondo("bg", 0, 0, 0 ,0);
-    }
-    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
