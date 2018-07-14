@@ -19,7 +19,11 @@
     <children>
       <component id="78314" class="javax.swing.JButton" binding="subirDatosPartidoButton" default-binding="true">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="75"/>
+            <preferred-size width="200" height="75"/>
+            <maximum-size width="200" height="75"/>
+          </grid>
         </constraints>
         <properties>
           <focusPainted value="false"/>
@@ -38,7 +42,11 @@
       </hspacer>
       <component id="51f8" class="javax.swing.JButton" binding="verJugadoresButton" default-binding="true">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="75"/>
+            <preferred-size width="200" height="75"/>
+            <maximum-size width="200" height="75"/>
+          </grid>
         </constraints>
         <properties>
           <focusPainted value="false"/>
@@ -57,7 +65,11 @@
       </vspacer>
       <component id="da2ec" class="javax.swing.JButton" binding="verEquiposButton" default-binding="true">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="75"/>
+            <preferred-size width="200" height="75"/>
+            <maximum-size width="200" height="75"/>
+          </grid>
         </constraints>
         <properties>
           <focusPainted value="false"/>
