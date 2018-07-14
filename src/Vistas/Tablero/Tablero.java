@@ -1,11 +1,13 @@
-package Vistas;
+package Vistas.Tablero;
 
 import Clases.Juego;
+import Vistas.CrearPartido.CrearPartido;
+import Vistas.SubirDatos.FrameSubirDatos;
+import Vistas.SubirDatos.SubirDatos;
+import Vistas.VerJugadores.VerJugadores;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.LinkedList;
 
 public class Tablero {

@@ -1,4 +1,7 @@
-package Vistas;
+package Vistas.VerJugadores;
+
+import Vistas.ContJugadores.ContJugadores;
+import Vistas.Tablero.Tablero;
 
 import javax.swing.*;
 import java.awt.*;

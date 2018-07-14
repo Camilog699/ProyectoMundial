@@ -1,16 +1,17 @@
-package Vistas;
+package Vistas.Tablero;
 
 import Modelos.Fondo;
 
 import java.awt.*;
 
-public class TablaPosicionesPanel extends javax.swing.JPanel{
-
+public class TableroPanel extends javax.swing.JPanel {
+    
     Fondo bg;
 
-    public TablaPosicionesPanel() { this.bg = new Fondo("bg", 0, 0, 0 ,0); }
-
-
+    public TableroPanel() {
+        this.bg = new Fondo("bg", 0, 0, 0 ,0);
+    }
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -19,5 +20,4 @@ public class TablaPosicionesPanel extends javax.swing.JPanel{
         g.drawImage(this.bg.getSprite().getImage(), this.bg.getX(), this.bg.getY(), this.bg.getAncho(), this.bg.getAlto(), this);
         repaint();
     }
-
 }

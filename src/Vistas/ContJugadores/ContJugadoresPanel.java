@@ -1,4 +1,4 @@
-package Vistas;
+package Vistas.ContJugadores;
 
 import Modelos.Fondo;
 import org.json.JSONObject;
