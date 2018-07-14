@@ -4,7 +4,6 @@ import Clases.Juego;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Tablero {
@@ -56,7 +55,6 @@ public class Tablero {
         inicio.setVisible(true);
         inicio.setResizable(false);
     }
-    
     private void createUIComponents() {
         panel1 = new Inicio();
     }
