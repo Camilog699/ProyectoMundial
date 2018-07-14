@@ -30,7 +30,7 @@ public class Tablero {
             verJugadoresFrame.setResizable(false);
         });
         subirDatosPartidoButton.addActionListener(l -> {
-            subirDatosFrame = new JFrame("Subir datos partido | Mundial Russia 2018");
+            subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
             subirDatosFrame.setContentPane(new SubirDatos().panel);
             subirDatosFrame.pack();
             subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("../Img/ico.png")));
