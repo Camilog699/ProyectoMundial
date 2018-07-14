@@ -16,7 +16,7 @@ public class ContJugadoresPanel extends javax.swing.JPanel {
     public ContJugadoresPanel() {
         this.bg = new Fondo("bg", 0, 0, 0, 0);
         try {
-        FileInputStream fis = new FileInputStream(getClass().getResource("../JSON/database.json").getFile());
+        FileInputStream fis = new FileInputStream(getClass().getResource("../../JSON/database.json").getFile());
         byte[] buffer = new byte[10];
         StringBuilder sb = new StringBuilder();
         while (fis.read(buffer) != -1) {
