@@ -11,6 +11,7 @@ public class VerJugadores {
     private JButton button2;
     private JButton button3;
     private JButton button4;
+
     JFrame contJugadoresFrame;
     public VerJugadores() {
         button1.addActionListener(new ActionListener() {
@@ -27,6 +28,7 @@ public class VerJugadores {
             }
         });
     }
+
 
     private void createUIComponents() {
         this.esp = new VerJugadoresPanel();
