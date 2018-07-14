@@ -3,7 +3,7 @@ package Vistas;
 import javax.swing.*;
 
 public class ContJugadores {
-    private JPanel panel;
+    public JPanel panel;
     
     private void createUIComponents() {
         panel = new ContJugadoresPanel();

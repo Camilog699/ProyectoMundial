@@ -3,7 +3,6 @@ package Vistas;
 import Clases.Juego;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.LinkedList;
 
@@ -14,7 +13,7 @@ public class Tablero {
     public static JFrame verJugadoresFrame;
     public static JFrame subirDatosFrame;
     LinkedList<Juego> juegos = new LinkedList<>();
-
+    
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
     private JButton verEquiposButton;
@@ -29,10 +28,6 @@ public class Tablero {
             verJugadoresFrame.setLocationRelativeTo(null);
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
-            subirDatosPartidoButton.setBorder(new LineBorder(Color.RED));
-            verEquiposButton.setBorder(new LineBorder(Color.RED));
-            verEquiposButton.setBorder(new LineBorder(Color.RED));
-
         });
         subirDatosPartidoButton.addActionListener(l -> {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
@@ -50,6 +45,7 @@ public class Tablero {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception ignored) {
         }
+        setUIFont (new javax.swing.plaf.FontUIResource("Dusha", 0,12));
         inicio = new JFrame("Mundial Rusia 2018");
         inicio.setContentPane(new Tablero().panel1);
         inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,7 +56,19 @@ public class Tablero {
         inicio.setVisible(true);
         inicio.setResizable(false);
     }
+    
     private void createUIComponents() {
         panel1 = new Inicio();
+    }
+    
+    public static void setUIFont(javax.swing.plaf.FontUIResource f) {
+        java.util.Enumeration keys = UIManager.getDefaults().keys();
+        while (keys.hasMoreElements()) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get(key);
+            if (value instanceof javax.swing.plaf.FontUIResource) {
+                UIManager.put(key, f);
+            }
+        }
     }
 }

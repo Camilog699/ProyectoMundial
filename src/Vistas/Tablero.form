@@ -26,6 +26,7 @@
           </grid>
         </constraints>
         <properties>
+          <borderPainted value="true"/>
           <focusPainted value="false"/>
           <font name="Dusha V5" size="16" style="0"/>
           <text value="Subir datos partido"/>
