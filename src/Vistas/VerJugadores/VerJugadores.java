@@ -23,7 +23,7 @@ public class VerJugadores {
                 contJugadoresFrame = new JFrame("Ver jugadores | Mundial Russia 2018");
                 contJugadoresFrame.setContentPane(new ContJugadores().panel);
                 contJugadoresFrame.pack();
-                contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("../Img/ico.png")));
+                contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("../../Img/ico.png")));
                 contJugadoresFrame.setLocationRelativeTo(null);
                 contJugadoresFrame.setVisible(true);
                 contJugadoresFrame.setResizable(false);
