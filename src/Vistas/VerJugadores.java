@@ -12,6 +12,15 @@ public class VerJugadores {
     private JButton button4;
 
 
+    public VerJugadores() {
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
+
     private void createUIComponents() {
         this.esp = new verJugadoresPanel();
     }
