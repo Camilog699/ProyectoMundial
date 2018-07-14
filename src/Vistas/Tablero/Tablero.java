@@ -4,6 +4,7 @@ import Clases.Juego;
 import Vistas.CrearPartido.CrearPartido;
 import Vistas.SubirDatos.FrameSubirDatos;
 import Vistas.SubirDatos.SubirDatos;
+import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.VerJugadores;
 
 import javax.swing.*;
@@ -17,6 +18,7 @@ public class Tablero {
     public static JFrame verJugadoresFrame;
     public static JFrame subirDatosFrame;
     public static JFrame crearPartido;
+    public static JFrame TablaPosicionesFrame;
     LinkedList<Juego> juegos = new LinkedList<>();
 
     private JButton subirDatosPartidoButton;
@@ -34,6 +36,7 @@ public class Tablero {
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
         });
+
         subirDatosPartidoButton.addActionListener(l -> {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
             subirDatosFrame.setContentPane(new SubirDatos().panel);
@@ -51,19 +54,19 @@ public class Tablero {
             crearPartido.setLocationRelativeTo(null);
             crearPartido.setVisible(true);
             crearPartido.setResizable(false);
-
-
-            verJugadoresButton.addActionListener(f -> {
-                verJugadoresFrame = new JFrame("Ver Tabla de Posiciones | Mundial Russia 2018");
-                verJugadoresFrame.setContentPane(new VerJugadores().esp);
-                verJugadoresFrame.pack();
-                verJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
-                        getImage(Tablero.class.getResource("../Img/ico.png")));
-                verJugadoresFrame.setLocationRelativeTo(null);
-                verJugadoresFrame.setVisible(true);
-                verJugadoresFrame.setResizable(false);
-            });
         });
+
+            TablaPosicionesButton.addActionListener(f -> {
+                TablaPosicionesFrame = new JFrame("Ver Tabla de Posiciones | Mundial Russia 2018");
+                TablaPosicionesFrame.setContentPane(new TablaPosiciones().panel);
+                TablaPosicionesFrame.pack();
+                TablaPosicionesFrame.setIconImage(Toolkit.getDefaultToolkit().
+                        getImage(Tablero.class.getResource("../../Img/ico.png")));
+                TablaPosicionesFrame.setLocationRelativeTo(null);
+                TablaPosicionesFrame.setVisible(true);
+                TablaPosicionesFrame.setResizable(false);
+            });
+
 
     }
 
