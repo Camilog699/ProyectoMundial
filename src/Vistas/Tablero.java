@@ -12,6 +12,7 @@ public class Tablero {
     public static JFrame inicio;
     public static JFrame verJugadoresFrame;
     public static JFrame subirDatosFrame;
+    public static JFrame crearPartido;
     LinkedList<Juego> juegos = new LinkedList<>();
     
     private JButton subirDatosPartidoButton;
@@ -33,10 +34,20 @@ public class Tablero {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
             subirDatosFrame.setContentPane(new SubirDatos().panel);
             subirDatosFrame.pack();
-            subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("../Img/ico.png")));
+            subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
+                    getImage(Tablero.class.getResource("../Img/ico.png")));
             subirDatosFrame.setLocationRelativeTo(null);
             subirDatosFrame.setVisible(true);
             subirDatosFrame.setResizable(false);
+            crearPartido = new JFrame("Crear partido | Mundial Russia 2018");
+            crearPartido.setContentPane(new CrearPartido().panel);
+            crearPartido.pack();
+            crearPartido.setIconImage(Toolkit.getDefaultToolkit().
+                    getImage(Tablero.class.getResource("../Img/ico.png")));
+            crearPartido.setLocationRelativeTo(null);
+            crearPartido.setVisible(true);
+            crearPartido.setResizable(false);
+
         });
     }
     
@@ -58,7 +69,7 @@ public class Tablero {
     }
     
     private void createUIComponents() {
-        panel1 = new Inicio();
+        panel1 = new TableroPanel();
     }
     
     public static void setUIFont(javax.swing.plaf.FontUIResource f) {

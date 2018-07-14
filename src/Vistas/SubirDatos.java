@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class SubirDatos {
     public JPanel panel;
-    private JComboBox Tarjeta;
+    private JComboBox Equipo;
     private JComboBox TiroEsquina;
     private JLabel gol;
 

@@ -21,9 +21,8 @@ public class Equipo {
     public Equipo() {
     }
 
-    public Equipo(String nombre, int PosicionFifa) {
+    public Equipo(String nombre) {
         this.nombre = nombre;
-        this.PosicionFifa = PosicionFifa;
     }
 
     
@@ -36,15 +35,4 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public int getPosicionFifa() {
-        return PosicionFifa;
-    }
-
-    public void setPosicionFifa(int PosicionFifa) {
-        this.PosicionFifa = PosicionFifa;
-    }
-    
-    
-    
-    
 }
