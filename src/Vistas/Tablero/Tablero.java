@@ -1,10 +1,10 @@
 package Vistas.Tablero;
 
+import Clases.Equipo;
 import Clases.Juego;
 import Vistas.CrearPartido.CrearPartido;
 import Vistas.SubirDatos.FrameSubirDatos;
 import Vistas.SubirDatos.SubirDatos;
-import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.VerJugadores;
 
 import javax.swing.*;
@@ -18,12 +18,12 @@ public class Tablero {
     public static JFrame verJugadoresFrame;
     public static JFrame subirDatosFrame;
     public static JFrame crearPartido;
-    public static JFrame TablaPosicionesFrame;
     LinkedList<Juego> juegos = new LinkedList<>();
+    LinkedList<Equipo> equipos = new LinkedList<>();
 
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
-    private JButton TablaPosicionesButton;
+    private JButton verEquiposButton;
 
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
@@ -36,7 +36,6 @@ public class Tablero {
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
         });
-
         subirDatosPartidoButton.addActionListener(l -> {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
             subirDatosFrame.setContentPane(new SubirDatos().panel);
@@ -54,19 +53,8 @@ public class Tablero {
             crearPartido.setLocationRelativeTo(null);
             crearPartido.setVisible(true);
             crearPartido.setResizable(false);
+
         });
-
-            TablaPosicionesButton.addActionListener(f -> {
-                TablaPosicionesFrame = new JFrame("Ver Tabla de Posiciones | Mundial Russia 2018");
-                TablaPosicionesFrame.setContentPane(new TablaPosiciones().panel);
-                TablaPosicionesFrame.pack();
-                TablaPosicionesFrame.setIconImage(Toolkit.getDefaultToolkit().
-                        getImage(Tablero.class.getResource("../../Img/ico.png")));
-                TablaPosicionesFrame.setLocationRelativeTo(null);
-                TablaPosicionesFrame.setVisible(true);
-                TablaPosicionesFrame.setResizable(false);
-            });
-
 
     }
 

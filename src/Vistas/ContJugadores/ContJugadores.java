@@ -12,6 +12,6 @@ public class ContJugadores {
     
     private void createUIComponents() {
         panel = new ContJugadoresPanel();
-        scrollPane = new ContJugadoresScrollPane();
+        scrollPane = new JScrollPane(new ContJugadoresPanelScroll());
     }
 }

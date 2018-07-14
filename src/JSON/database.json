@@ -1,69 +1,69 @@
 {
-  "España" : {
+  "Espana" : {
     "Cuerpo tecnico" : {
       "0224" : {
         "Nombre" : "Antonio Guerra Collado  ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Utillero"
       },
       "0225" : {
         "Nombre" : "Antonio Limones ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Secretario Técnico"
       },
       "0226" : {
         "Nombre" : "Fernando Galán del Río",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Fisioterapeuta"
       },
       "0227" : {
         "Nombre" : "Fernando Hierro",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Entrenador"
       },
       "0228" : {
         "Nombre" : "Joaquín Retamosa Fernández ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Utillero"
       },
       "0229" : {
         "Nombre" : "José Damián García Iglesias ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Utillero"
       },
       "0230" : {
         "Nombre" : "José Francisco Molina ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Director Deportivo"
       },
       "0231" : {
         "Nombre" : "José Manuel Ochotorena ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Entrenador de Porteros"
       },
       "0232" : {
         "Nombre" : "Juan Carlos Herranz Bautista ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Fisioterapeuta"
       },
       "0233" : {
         "Nombre" : "Juan José García Cota ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Doctor"
       },
       "0234" : {
         "Nombre" : "Luis Rubiales ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Presidente"
       },
       "0235" : {
         "Nombre" : "Paloma Antoranz Espinar  ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Gerente mediático"
       },
       "0236" : {
         "Nombre" : "Raúl Martínez Rodríguez ",
-        "Pais" : "España",
+        "Pais" : "Espana",
         "Posicion" : "Fisioterapeuta"
       }
     },
@@ -207,7 +207,7 @@
         "Posicion" : "MEDIOCAMPISTA"
       }
     },
-    "Posición FIFA" : 10
+    "Posicion FIFA" : 10
   },
   "Iran" : {
     "Cuerpo tecnico" : {
@@ -292,142 +292,142 @@
         "Dorsal" : "01",
         "Nacimiento" : "21/09/1992",
         "Nombre" : "Ali BEIRANVAND",
-        "Posición" : "ARQUERO"
+        "Posicion" : "ARQUERO"
       },
       "0302" : {
         "Dorsal" : "12",
         "Nacimiento" : "18/05/1989",
         "Nombre" : "Rashid MAZAHERI",
-        "Posición" : "ARQUERO"
+        "Posicion" : "ARQUERO"
       },
       "0303" : {
         "Dorsal" : "22",
         "Nacimiento" : "26/04/1993",
         "Nombre" : "Amir ABEDZADEH",
-        "Posición" : "ARQUERO"
+        "Posicion" : "ARQUERO"
       },
       "0304" : {
         "Dorsal" : "03",
         "Nacimiento" : "25/02/1990",
         "Nombre" : "Ehsan HAJI SAFI",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0305" : {
         "Dorsal" : "04",
         "Nacimiento" : "24/07/1993",
         "Nombre" : "Roozbeh CHESHMI",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0306" : {
         "Dorsal" : "05",
         "Nacimiento" : "29/09/1993",
         "Nombre" : "Milad MOHAMMADI",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0307" : {
         "Dorsal" : "08",
         "Nacimiento" : "19/04/1992",
         "Nombre" : "Morteza POURALIGANJI",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0308" : {
         "Dorsal" : "13",
         "Nacimiento" : "11/05/1991",
         "Nombre" : "Mohammad Reza KHANZADEH",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0309" : {
         "Dorsal" : "15",
         "Nacimiento" : "06/09/1983",
         "Nombre" : "Pejman MONTAZERI",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0310" : {
         "Dorsal" : "19",
         "Nacimiento" : "20/06/1996",
         "Nombre" : "Majid HOSSEINI",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0311" : {
         "Dorsal" : "23",
         "Nacimiento" : "21/03/1990",
         "Nombre" : "Ramin REZAEIAN",
-        "Posición" : "DEFENSOR"
+        "Posicion" : "DEFENSOR"
       },
       "0312" : {
         "Dorsal" : "02",
         "Nacimiento" : "10/09/1994",
         "Nombre" : "Mahdi TORABI",
-        "Posición" : "MEDIOCAMPISTA"
+        "Posicion" : "MEDIOCAMPISTA"
       },
       "0313" : {
         "Dorsal" : "06",
         "Nacimiento" : "01/10/1996",
         "Nombre" : "Saeid EZATOLAHI",
-        "Posición" : "MEDIOCAMPISTA"
+        "Posicion" : "MEDIOCAMPISTA"
       },
       "0314" : {
         "Dorsal" : "07",
         "Nacimiento" : "09/06/1984",
         "Nombre" : "Masoud SHOJAEI",
-        "Posición" : "MEDIOCAMPISTA"
+        "Posicion" : "MEDIOCAMPISTA"
       },
       "0315" : {
         "Dorsal" : "09",
         "Nacimiento" : "16/09/1987",
         "Nombre" : "Omid EBRAHIMI",
-        "Posición" : "MEDIOCAMPISTA"
+        "Posicion" : "MEDIOCAMPISTA"
       },
       "0316" : {
         "Dorsal" : "11",
         "Nacimiento" : "02/04/1988",
         "Nombre" : "Vahid AMIRI",
-        "Posición" : "MEDIOCAMPISTA"
+        "Posicion" : "MEDIOCAMPISTA"
       },
       "0317" : {
         "Dorsal" : "10",
         "Nacimiento" : "03/04/1990",
         "Nombre" : "Karim ANSARIFARD",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       },
       "0318" : {
         "Dorsal" : "14",
         "Nacimiento" : "06/09/1993",
         "Nombre" : "Saman GHODDOS",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       },
       "0319" : {
         "Dorsal" : "16",
         "Nacimiento" : "20/09/1987",
         "Nombre" : "Reza GHOOCHANNEJHAD",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       },
       "0320" : {
         "Dorsal" : "17",
         "Nacimiento" : "18/07/1992",
         "Nombre" : "Mehdi TAREMI",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       },
       "0321" : {
         "Dorsal" : "18",
         "Nacimiento" : "11/08/1993",
         "Nombre" : "Alireza JAHANBAKHSH",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       },
       "0322" : {
         "Dorsal" : "20",
         "Nacimiento" : "01/01/1995",
         "Nombre" : "Sardar AZMOUN",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       },
       "0323" : {
         "Dorsal" : "21",
         "Nacimiento" : "05/07/1986",
         "Nombre" : "Ashkan DEJAGAH",
-        "Posición" : "DELANTERO"
+        "Posicion" : "DELANTERO"
       }
     },
-    "Posición FIFA" : 37
+    "Posicion FIFA" : 37
   },
   "Marruecos" : {
     "Cuerpo tecnico" : {
@@ -797,6 +797,6 @@
         "Posicion" : "MEDIOCAMPISTA"
       }
     },
-    "Posición FIFA" : 4
+    "Posicion FIFA" : 4
   }
 }

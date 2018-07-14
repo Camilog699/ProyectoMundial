@@ -15,19 +15,18 @@ public class Jugador extends Persona{
     private String posicion;
     private String nacimiento;
     private int dorsal;
-    private String PaisNacimiento;
-
+    
     //Costructores
     public Jugador() {
     }
-
-    public Jugador(String posicion, String nacimiento, int dorsal, String PaisNacimiento) {
+    
+    public Jugador(String nombre, String id, String posicion, String nacimiento, int dorsal) {
+        super(nombre, id);
         this.posicion = posicion;
         this.nacimiento = nacimiento;
         this.dorsal = dorsal;
-        this.PaisNacimiento = PaisNacimiento;
     }
-
+    
     //get y set
     public String getPosicion() {
         return posicion;
@@ -52,15 +51,6 @@ public class Jugador extends Persona{
     public void setDorsal(int dorsal) {
         this.dorsal = dorsal;
     }
-
-    public String getPaisNacimiento() {
-        return PaisNacimiento;
-    }
-
-    public void setPaisNacimiento(String PaisNacimiento) {
-        this.PaisNacimiento = PaisNacimiento;
-    }
-    
     
     
 }

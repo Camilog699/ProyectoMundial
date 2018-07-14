@@ -5,6 +5,8 @@
  */
 package Clases;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author amrag
@@ -15,16 +17,17 @@ public class Equipo {
     //Atributos
     private String nombre;
     private int PosicionFifa;
-
+    private LinkedList<Jugador> jugadores = new LinkedList<>();
     
     //Costructores
     public Equipo() {
     }
-
-    public Equipo(String nombre) {
+    
+    public Equipo(String nombre, int posicionFifa, LinkedList<Jugador> jugadores) {
         this.nombre = nombre;
+        PosicionFifa = posicionFifa;
+        this.jugadores = jugadores;
     }
-
     
     //get y set
     public String getNombre() {
@@ -34,5 +37,20 @@ public class Equipo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    public int getPosicionFifa() {
+        return PosicionFifa;
+    }
+    
+    public void setPosicionFifa(int posicionFifa) {
+        PosicionFifa = posicionFifa;
+    }
+    
+    public LinkedList<Jugador> getJugadores() {
+        return jugadores;
+    }
+    
+    public void setJugadores(LinkedList<Jugador> jugadores) {
+        this.jugadores = jugadores;
+    }
 }
