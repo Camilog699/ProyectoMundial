@@ -19,7 +19,7 @@ public class Tablero {
 
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
-    private JButton verEquiposButton;
+    private JButton TablaPosicionesButton;
 
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
@@ -50,6 +50,17 @@ public class Tablero {
             crearPartido.setVisible(true);
             crearPartido.setResizable(false);
 
+
+            verJugadoresButton.addActionListener(f -> {
+                verJugadoresFrame = new JFrame("Ver Tabla de Posiciones | Mundial Russia 2018");
+                verJugadoresFrame.setContentPane(new VerJugadores().esp);
+                verJugadoresFrame.pack();
+                verJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
+                        getImage(Tablero.class.getResource("../Img/ico.png")));
+                verJugadoresFrame.setLocationRelativeTo(null);
+                verJugadoresFrame.setVisible(true);
+                verJugadoresFrame.setResizable(false);
+            });
         });
 
     }
