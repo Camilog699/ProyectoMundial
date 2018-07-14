@@ -17,16 +17,16 @@ public class Equipo {
     //Atributos
     private String nombre;
     private int PosicionFifa;
-    private LinkedList<Jugador> jugadores = new LinkedList<>();
+    private LinkedList<Jugador> jugadores;
     
     //Costructores
     public Equipo() {
     }
     
-    public Equipo(String nombre, int posicionFifa, LinkedList<Jugador> jugadores) {
+    public Equipo(String nombre, int posicionFifa) {
         this.nombre = nombre;
         PosicionFifa = posicionFifa;
-        this.jugadores = jugadores;
+        jugadores = new LinkedList<>();
     }
     
     //get y set
@@ -52,5 +52,14 @@ public class Equipo {
     
     public void setJugadores(LinkedList<Jugador> jugadores) {
         this.jugadores = jugadores;
+    }
+    
+    @Override
+    public String toString() {
+        return "Equipo{" +
+                "nombre='" + nombre + '\'' +
+                ", PosicionFifa=" + PosicionFifa +
+                ", jugadores=" + jugadores +
+                '}';
     }
 }

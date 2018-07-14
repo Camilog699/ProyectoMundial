@@ -70,139 +70,139 @@
     "Jugadores" : {
       "0201" : {
         "Dorsal" : "12",
-        "Fecha de nacimiento" : "14/12/1995",
+        "Nacimiento" : "14/12/1995",
         "Nombre" : "Alvaro ODRIOZOLA",
         "Posicion" : "DEFENSOR"
       },
       "0202" : {
         "Dorsal" : "6",
-        "Fecha de nacimiento" : "11/05/984",
+        "Nacimiento" : "11/05/984",
         "Nombre" : "Andres INIESTA",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "0203" : {
         "Dorsal" : "14",
-        "Fecha de nacimiento" : "28/06/1989",
+        "Nacimiento" : "28/06/1989",
         "Nombre" : "Cesar AZPILICUETA",
         "Posicion" : "DEFENSOR"
       },
       "0204" : {
         "Dorsal" : "2",
-        "Fecha de nacimiento" : "11/01/1992",
+        "Nacimiento" : "11/01/1992",
         "Nombre" : "Dani CARVAJAL",
         "Posicion" : "DEFENSOR"
       },
       "0205" : {
         "Dorsal" : "1",
-        "Fecha de nacimiento" : "07/11/1990",
+        "Nacimiento" : "07/11/1990",
         "Nombre" : "David De Gea",
         "Posicion" : "ARQUERO"
       },
       "0206" : {
         "Dorsal" : "21",
-        "Fecha de nacimiento" : "08/01/1986",
+        "Nacimiento" : "08/01/1986",
         "Nombre" : "David SILVA",
         "Posicion" : "DELANTERO"
       },
       "0207" : {
         "Dorsal" : "19",
-        "Fecha de nacimiento" : "07/10/1988",
+        "Nacimiento" : "07/10/1988",
         "Nombre" : "Diego COSTA",
         "Posicion" : "DELANTERO"
       },
       "0208" : {
         "Dorsal" : "3",
-        "Fecha de nacimiento" : "02/02/1987",
+        "Nacimiento" : "02/02/1987",
         "Nombre" : "Gerard PIQUE",
         "Posicion" : "DEFENSOR"
       },
       "0209" : {
         "Dorsal" : "22",
-        "Fecha de nacimiento" : "21/04/1992",
+        "Nacimiento" : "21/04/1992",
         "Nombre" : "ISCO",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "0210" : {
         "Dorsal" : "17",
-        "Fecha de nacimiento" : "01/08/1987",
+        "Nacimiento" : "01/08/1987",
         "Nombre" : "Iago ASPAS",
         "Posicion" : "DELANTERO"
       },
       "0211" : {
         "Dorsal" : "18",
-        "Fecha de nacimiento" : "21/03/1989",
+        "Nacimiento" : "21/03/1989",
         "Nombre" : "Jordi ALBA",
         "Posicion" : "DEFENSOR"
       },
       "0212" : {
         "Dorsal" : "08",
-        "Fecha de nacimiento" : "08/01/1992",
+        "Nacimiento" : "08/01/1992",
         "Nombre" : "KOKE",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "0213" : {
         "Dorsal" : "13",
-        "Fecha de nacimiento" : "03/10/1994",
+        "Nacimiento" : "03/10/1994",
         "Nombre" : "Kepa ARRIZABALAGA",
         "Posicion" : "ARQUERO"
       },
       "0214" : {
         "Dorsal" : "11",
-        "Fecha de nacimiento" : "00/00/0000",
+        "Nacimiento" : "00/00/0000",
         "Nombre" : "Lucas VAZQUEZ",
         "Posicion" : "DELANTERO"
       },
       "0215" : {
         "Dorsal" : "20",
-        "Fecha de nacimiento" : "00/00/0000",
+        "Nacimiento" : "00/00/0000",
         "Nombre" : "Marco ASENSIO",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "0216" : {
         "Dorsal" : "4",
-        "Fecha de nacimiento" : "18/01/1990",
+        "Nacimiento" : "18/01/1990",
         "Nombre" : "NACHO",
         "Posicion" : "DEFENSOR"
       },
       "0217" : {
         "Dorsal" : "16",
-        "Fecha de nacimiento" : "26/02/1986",
+        "Nacimiento" : "26/02/1986",
         "Nombre" : "Nacho MONREAL",
         "Posicion" : "DEFENSOR"
       },
       "0218" : {
         "Dorsal" : "23",
-        "Fecha de nacimiento" : "31/06/1982",
+        "Nacimiento" : "31/06/1982",
         "Nombre" : "Pepe REINA",
         "Posicion" : "ARQUERO"
       },
       "0219" : {
         "Dorsal" : "09",
-        "Fecha de nacimiento" : "06/03/1991",
+        "Nacimiento" : "06/03/1991",
         "Nombre" : "RODRIGO",
         "Posicion" : "DELANTERO"
       },
       "0220" : {
         "Dorsal" : "7",
-        "Fecha de nacimiento" : "21/11/1994",
+        "Nacimiento" : "21/11/1994",
         "Nombre" : "SAUL",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "0221" : {
         "Dorsal" : "5",
-        "Fecha de nacimiento" : "16/07/1988",
+        "Nacimiento" : "16/07/1988",
         "Nombre" : "Sergio BUSQUETS",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "0222" : {
         "Dorsal" : "15",
-        "Fecha de nacimiento" : "30/03/1986",
+        "Nacimiento" : "30/03/1986",
         "Nombre" : "Sergio RAMOS",
         "Posicion" : "DEFENSOR"
       },
       "0223" : {
         "Dorsal" : "10",
-        "Fecha de nacimiento" : "11/04/1991",
+        "Nacimiento" : "11/04/1991",
         "Nombre" : "THIAGO",
         "Posicion" : "MEDIOCAMPISTA"
       }
