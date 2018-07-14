@@ -28,9 +28,9 @@ public class Tablero {
             verJugadoresFrame.setLocationRelativeTo(null);
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
-            subirDatosPartidoButton.setBorder(BorderFactory.createLineBorder(Color.RED,3));
-            verEquiposButton.setBorder(BorderFactory.createLineBorder(Color.RED,3));
-            verEquiposButton.setBorder(BorderFactory.createLineBorder(Color.RED,3));
+            subirDatosPartidoButton.setBorder(BorderFactory.createLineBorder(Color.RED,5));
+            verEquiposButton.setBorder(BorderFactory.createLineBorder(Color.RED,5));
+            verEquiposButton.setBorder(BorderFactory.createLineBorder(Color.RED,5));
         });
         subirDatosPartidoButton.addActionListener(l -> {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
