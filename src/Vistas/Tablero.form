@@ -76,7 +76,7 @@
         <properties>
           <focusPainted value="false"/>
           <font name="Dusha V5" size="16"/>
-          <text value="Ver equipos"/>
+          <text value="Tabla de posiciones"/>
         </properties>
       </component>
     </children>

@@ -5,8 +5,8 @@ public class Gol extends DatoPartido {
     public Gol() {
     }
 
-    public Gol(String tiemmpo, Equipo equipo, Jugador j) {
-        super(tiemmpo, equipo, j);
+    public Gol(String tiempo, Equipo equipo, Jugador j) {
+        super(tiempo, equipo, j);
     }
 
 
