@@ -4,6 +4,7 @@ import Clases.Juego;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Tablero {
