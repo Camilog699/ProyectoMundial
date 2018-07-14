@@ -5,10 +5,14 @@ import Clases.Juego;
 import Vistas.CrearPartido.CrearPartido;
 import Vistas.SubirDatos.FrameSubirDatos;
 import Vistas.SubirDatos.SubirDatos;
+import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.VerJugadores;
+import org.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 
 public class Tablero {
@@ -17,13 +21,16 @@ public class Tablero {
     public static JFrame inicio;
     public static JFrame verJugadoresFrame;
     public static JFrame subirDatosFrame;
+    public static JFrame tablaPosicionesFrame;
     public static JFrame crearPartido;
+    public static JSONObject obj;
+    public static String databaseStr;
     LinkedList<Juego> juegos = new LinkedList<>();
     LinkedList<Equipo> equipos = new LinkedList<>();
 
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
-    private JButton verEquiposButton;
+    private JButton TablaPosicionesButton;
 
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
@@ -53,12 +60,27 @@ public class Tablero {
             crearPartido.setLocationRelativeTo(null);
             crearPartido.setVisible(true);
             crearPartido.setResizable(false);
-
         });
-
+    
+        TablaPosicionesButton.addActionListener(e -> {
+            tablaPosicionesFrame = new JFrame("Tabla de posiciones | Mundial Russia 2018");
+            tablaPosicionesFrame.setContentPane(new TablaPosiciones().panel);
+            tablaPosicionesFrame.pack();
+            tablaPosicionesFrame.setIconImage(Toolkit.getDefaultToolkit().
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
+            tablaPosicionesFrame.setLocationRelativeTo(null);
+            tablaPosicionesFrame.setVisible(true);
+            tablaPosicionesFrame.setResizable(false);
+        });
     }
 
     public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream(Tablero.class.getResource("../../JSON/database.json").getFile());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception ignored) {
