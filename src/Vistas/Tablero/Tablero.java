@@ -29,7 +29,7 @@ public class Tablero {
             verJugadoresFrame.setContentPane(new VerJugadores().esp);
             verJugadoresFrame.pack();
             verJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
-                    getImage(Tablero.class.getResource("../Img/ico.png")));
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
             verJugadoresFrame.setLocationRelativeTo(null);
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
@@ -39,7 +39,7 @@ public class Tablero {
             subirDatosFrame.setContentPane(new SubirDatos().panel);
             subirDatosFrame.pack();
             subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
-                    getImage(Tablero.class.getResource("../Img/ico.png")));
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
             subirDatosFrame.setLocationRelativeTo(null);
             subirDatosFrame.setVisible(true);
             subirDatosFrame.setResizable(false);
@@ -47,7 +47,7 @@ public class Tablero {
             crearPartido.setContentPane(new CrearPartido().panel);
             crearPartido.pack();
             crearPartido.setIconImage(Toolkit.getDefaultToolkit().
-                    getImage(Tablero.class.getResource("../Img/ico.png")));
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
             crearPartido.setLocationRelativeTo(null);
             crearPartido.setVisible(true);
             crearPartido.setResizable(false);
@@ -67,7 +67,7 @@ public class Tablero {
         inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         inicio.pack();
         inicio.setIconImage(Toolkit.getDefaultToolkit().
-                getImage(Tablero.class.getResource("../Img/ico.png")));
+                getImage(Tablero.class.getResource("../../Img/ico.png")));
         inicio.setLocationRelativeTo(null);
         inicio.setVisible(true);
         inicio.setResizable(false);
