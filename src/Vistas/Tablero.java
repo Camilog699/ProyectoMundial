@@ -3,6 +3,7 @@ package Vistas;
 import Clases.Juego;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.LinkedList;
 
@@ -28,6 +29,9 @@ public class Tablero {
             verJugadoresFrame.setLocationRelativeTo(null);
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
+            subirDatosPartidoButton.setBorder(new LineBorder(Color.RED));
+            verEquiposButton.setBorder(new LineBorder(Color.RED));
+            verEquiposButton.setBorder(new LineBorder(Color.RED));
         });
         subirDatosPartidoButton.addActionListener(l -> {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);

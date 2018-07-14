@@ -27,6 +27,7 @@
         </constraints>
         <properties>
           <focusPainted value="false"/>
+          <font name="Dusha V5" style="0"/>
           <text value="Subir datos partido"/>
         </properties>
       </component>
@@ -50,6 +51,7 @@
         </constraints>
         <properties>
           <focusPainted value="false"/>
+          <font name="Dusha V5" style="0"/>
           <text value="Ver jugadores"/>
         </properties>
       </component>
@@ -73,6 +75,7 @@
         </constraints>
         <properties>
           <focusPainted value="false"/>
+          <font name="Dusha V5"/>
           <text value="Ver equipos"/>
         </properties>
       </component>
