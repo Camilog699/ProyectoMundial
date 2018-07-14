@@ -71,139 +71,139 @@
       "Alvaro ODRIOZOLA" : {
         "Dorsal" : "12",
         "Fecha de nacimiento" : "14/12/1995",
-        "Indetificación" : "0201",
+        "Identificacion" : "0201",
         "Posicion" : "DEFENSOR"
       },
       "Andres INIESTA" : {
         "Dorsal" : "6",
         "Fecha de nacimiento" : "11/05/984",
-        "Indetificación" : "0202",
+        "Identificacion" : "0202",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "Cesar AZPILICUETA" : {
         "Dorsal" : "14",
         "Fecha de nacimiento" : "28/06/1989",
-        "Indetificación" : "0203",
+        "Identificacion" : "0203",
         "Posicion" : "DEFENSOR"
       },
       "Dani CARVAJAL" : {
         "Dorsal" : "2",
         "Fecha de nacimiento" : "11/01/1992",
-        "Indetificación" : "0204",
+        "Identificacion" : "0204",
         "Posicion" : "DEFENSOR"
       },
       "David De Gea" : {
         "Dorsal" : "1",
         "Fecha de nacimiento" : "07/11/1990",
-        "Indetificación" : "0205",
+        "Identificacion" : "0205",
         "Posicion" : "ARQUERO"
       },
       "David SILVA" : {
         "Dorsal" : "21",
         "Fecha de nacimiento" : "08/01/1986",
-        "Indetificación" : "0206",
+        "Identificacion" : "0206",
         "Posicion" : "DELANTERO"
       },
       "Diego COSTA" : {
         "Dorsal" : "19",
         "Fecha de nacimiento" : "07/10/1988",
-        "Indetificación" : "0207",
+        "Identificacion" : "0207",
         "Posicion" : "DELANTERO"
       },
       "Gerard PIQUE" : {
         "Dorsal" : "3",
         "Fecha de nacimiento" : "02/02/1987",
-        "Indetificación" : "0208",
+        "Identificacion" : "0208",
         "Posicion" : "DEFENSOR"
       },
       "ISCO" : {
         "Dorsal" : "22",
         "Fecha de nacimiento" : "21/04/1992",
-        "Indetificación" : "0209",
+        "Identificacion" : "0209",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "Iago ASPAS" : {
         "Dorsal" : "17",
         "Fecha de nacimiento" : "01/08/1987",
-        "Indetificación" : "0210",
+        "Identificacion" : "0210",
         "Posicion" : "DELANTERO"
       },
       "Jordi ALBA" : {
         "Dorsal" : "18",
         "Fecha de nacimiento" : "21/03/1989",
-        "Indetificación" : "0211",
+        "Identificacion" : "0211",
         "Posicion" : "DEFENSOR"
       },
       "KOKE" : {
         "Dorsal" : "08",
         "Fecha de nacimiento" : "08/01/1992",
-        "Indetificación" : "0212",
+        "Identificacion" : "0212",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "Kepa ARRIZABALAGA" : {
         "Dorsal" : "13",
         "Fecha de nacimiento" : "03/10/1994",
-        "Indetificación" : "0213",
+        "Identificacion" : "0213",
         "Posicion" : "ARQUERO"
       },
       "Lucas VAZQUEZ" : {
         "Dorsal" : "11",
         "Fecha de nacimiento" : "00/00/0000",
-        "Indetificación" : "0214",
+        "Identificacion" : "0214",
         "Posicion" : "DELANTERO"
       },
       "Marco ASENSIO" : {
         "Dorsal" : "20",
         "Fecha de nacimiento" : "00/00/0000",
-        "Indetificación" : "0215",
+        "Identificacion" : "0215",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "NACHO" : {
         "Dorsal" : "4",
         "Fecha de nacimiento" : "18/01/1990",
-        "Indetificación" : "0216",
+        "Identificacion" : "0216",
         "Posicion" : "DEFENSOR"
       },
       "Nacho MONREAL" : {
         "Dorsal" : "16",
         "Fecha de nacimiento" : "26/02/1986",
-        "Indetificación" : "0217",
+        "Identificacion" : "0217",
         "Posicion" : "DEFENSOR"
       },
       "Pepe REINA" : {
         "Dorsal" : "23",
         "Fecha de nacimiento" : "31/06/1982",
-        "Indetificación" : "0218",
+        "Identificacion" : "0218",
         "Posicion" : "ARQUERO"
       },
       "RODRIGO" : {
         "Dorsal" : "09",
         "Fecha de nacimiento" : "06/03/1991",
-        "Indetificación" : "0219",
+        "Identificacion" : "0219",
         "Posicion" : "DELANTERO"
       },
       "SAUL" : {
         "Dorsal" : "7",
         "Fecha de nacimiento" : "21/11/1994",
-        "Indetificación" : "0220",
+        "Identificacion" : "0220",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "Sergio BUSQUETS" : {
         "Dorsal" : "5",
         "Fecha de nacimiento" : "16/07/1988",
-        "Indetificación" : "0221",
+        "Identificacion" : "0221",
         "Posicion" : "MEDIOCAMPISTA"
       },
       "Sergio RAMOS" : {
         "Dorsal" : "15",
         "Fecha de nacimiento" : "30/03/1986",
-        "Indetificación" : "0222",
+        "Identificacion" : "0222",
         "Posicion" : "DEFENSOR"
       },
       "THIAGO" : {
         "Dorsal" : "10",
         "Fecha de nacimiento" : "11/04/1991",
-        "Indetificación" : "0223",
+        "Identificacion" : "0223",
         "Posicion" : "MEDIOCAMPISTA"
       }
     },
