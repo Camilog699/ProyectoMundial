@@ -1,4 +1,4 @@
-package Vistas;
+package Vistas.VerJugadores;
 
 import Modelos.Fondo;
 import Modelos.Objeto;
