@@ -1,7 +1,10 @@
 package Vistas;
 
+import Clases.Juego;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.LinkedList;
 
 public class Tablero {
     
@@ -9,6 +12,7 @@ public class Tablero {
     public static JFrame inicio;
     public static JFrame verJugadoresFrame;
     public static JFrame subirDatosFrame;
+    LinkedList<Juego> juegos = new LinkedList<>();
 
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;

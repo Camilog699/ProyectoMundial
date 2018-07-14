@@ -29,7 +29,7 @@ public class ContJugadoresPanel extends javax.swing.JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
+        obj.names().forEach(System.out::println);
     }
     
     @Override
