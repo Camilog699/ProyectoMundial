@@ -1,4 +1,4 @@
-package Vistas;
+package Vistas.CrearPartido;
 
 import javax.swing.*;
 

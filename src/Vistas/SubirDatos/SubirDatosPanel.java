@@ -1,17 +1,14 @@
-package Vistas;
+package Vistas.SubirDatos;
 
 import Modelos.Fondo;
 
 import java.awt.*;
 
-public class TableroPanel extends javax.swing.JPanel {
-    
-    Fondo bg;
+public class SubirDatosPanel extends javax.swing.JPanel {
 
-    public TableroPanel() {
-        this.bg = new Fondo("bg", 0, 0, 0 ,0);
-    }
-    
+    Fondo bg;
+    public SubirDatosPanel() { this.bg = new Fondo("bg", 0, 0, 0 ,0); }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

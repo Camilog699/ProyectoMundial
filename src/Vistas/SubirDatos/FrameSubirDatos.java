@@ -1,4 +1,4 @@
-package Vistas;
+package Vistas.SubirDatos;
 
 import Clases.Juego;
 
