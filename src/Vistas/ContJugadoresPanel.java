@@ -29,9 +29,7 @@ public class ContJugadoresPanel extends javax.swing.JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = obj.names().length() - 1; i >= 0; i--) {
-        
-        }
+        System.out.println(obj.names().get(0));
     }
     
     @Override
@@ -39,5 +37,7 @@ public class ContJugadoresPanel extends javax.swing.JPanel {
         super.paintComponent(g);
         this.bg.setAncho(this.getWidth());
         this.bg.setAlto(this.getHeight());
+        g.drawImage(this.bg.getSprite().getImage(), this.bg.getX(), this.bg.getY(), this.bg.getAncho(), this.bg.getAlto(), this);
+        repaint();
     }
 }
