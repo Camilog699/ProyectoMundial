@@ -2,8 +2,6 @@ package Vistas;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Tablero {
     
@@ -19,7 +17,7 @@ public class Tablero {
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
             verJugadoresFrame = new JFrame("Ver jugadores | Mundial Russia 2018");
-            verJugadoresFrame.setContentPane(new VerJugadores().panel);
+            verJugadoresFrame.setContentPane(new VerJugadores().esp);
             verJugadoresFrame.pack();
             verJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
                     getImage(Tablero.class.getResource("../Img/ico.png")));
