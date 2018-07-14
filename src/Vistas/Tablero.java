@@ -31,7 +31,11 @@ public class Tablero {
             verJugadoresFrame.setResizable(false);
             subirDatosPartidoButton.setBorder(new LineBorder(Color.RED));
             verEquiposButton.setBorder(new LineBorder(Color.RED));
-            verEquiposButton.setBorder(new LineBorder(Color.RED));
+            verJugadoresButton.setBorder(new LineBorder(Color.RED));
+            verEquiposButton.setBorderPainted(true);
+            verJugadoresButton.setBorderPainted(true);
+            subirDatosPartidoButton.setBorderPainted(true);
+
         });
         subirDatosPartidoButton.addActionListener(l -> {
             subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
