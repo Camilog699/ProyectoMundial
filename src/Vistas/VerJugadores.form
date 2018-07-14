@@ -13,7 +13,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="acda5" class="javax.swing.JButton" binding="button1" default-binding="true">
+      <component id="d4824" class="javax.swing.JButton" binding="button1" default-binding="true">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="300" height="180"/>
@@ -22,20 +22,64 @@
           </grid>
         </constraints>
         <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <focusPainted value="false"/>
           <icon value="Img/esp.png"/>
+          <opaque value="false"/>
           <text value=""/>
         </properties>
       </component>
-      <hspacer id="cc1be">
+      <component id="a61f8" class="javax.swing.JButton" binding="button2" default-binding="true">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="300" height="180"/>
+            <preferred-size width="300" height="180"/>
+            <maximum-size width="300" height="180"/>
+          </grid>
         </constraints>
-      </hspacer>
-      <vspacer id="41a1c">
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <focusPainted value="false"/>
+          <icon value="Img/mar.png"/>
+          <opaque value="false"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7fd28" class="javax.swing.JButton" binding="button4" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="300" height="180"/>
+            <preferred-size width="300" height="180"/>
+            <maximum-size width="300" height="180"/>
+          </grid>
         </constraints>
-      </vspacer>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <focusPainted value="false"/>
+          <icon value="Img/por.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="96205" class="javax.swing.JButton" binding="button3" default-binding="true">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="300" height="180"/>
+            <preferred-size width="300" height="180"/>
+            <maximum-size width="300" height="180"/>
+          </grid>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <focusPainted value="false"/>
+          <icon value="Img/irn.png"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
