@@ -31,8 +31,7 @@ public class Tablero {
             verJugadoresFrame.setResizable(false);
             subirDatosPartidoButton.setBorder(new LineBorder(Color.RED));
             verEquiposButton.setBorder(new LineBorder(Color.RED));
-            verJugadoresButton.setBorder(new LineBorder(Color.RED));
-
+            verEquiposButton.setBorder(new LineBorder(Color.RED));
 
         });
         subirDatosPartidoButton.addActionListener(l -> {
