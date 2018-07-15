@@ -13,7 +13,7 @@ public class SubirDatos {
     private JComboBox Equipo;
     private JComboBox TiroEsquina;
     private JLabel gol;
-    private JButton back;
+    private JButton backSD;
     Equipo e1;
     Equipo e2;
     FrameSubirDatos frame;
@@ -30,7 +30,7 @@ public class SubirDatos {
                 e2 = frame.e2;
             }
         });
-        back.addActionListener(new ActionListener() {
+        backSD.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);

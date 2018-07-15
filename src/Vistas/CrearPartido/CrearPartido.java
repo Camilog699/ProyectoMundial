@@ -27,6 +27,8 @@ public class CrearPartido{
     LinkedList<Equipo> equipos;
     Equipo e1;
     Equipo e2;
+    FrameCrearPartido frame;
+    private JButton backCP;
 
     public CrearPartido() {
         panel.setFocusable(true);
@@ -100,6 +102,15 @@ public class CrearPartido{
                         subirDatosFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     }
                 }
+            }
+        });
+
+        backCP.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame = (FrameCrearPartido) SwingUtilities.getWindowAncestor(panel);
+                frame.setVisible(false);
+                frame.dispose();
             }
         });
 

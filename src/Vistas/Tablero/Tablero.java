@@ -10,6 +10,7 @@ import Vistas.VerJugadores.VerJugadores;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class Tablero {
     
     public JPanel panel;
@@ -33,6 +34,7 @@ public class Tablero {
             verJugadoresFrame.setLocationRelativeTo(null);
             verJugadoresFrame.setVisible(true);
             verJugadoresFrame.setResizable(false);
+            verJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
         subirDatosPartidoButton.addActionListener(l -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(subirDatosPartidoButton);
@@ -44,6 +46,7 @@ public class Tablero {
             crearPartido.setLocationRelativeTo(null);
             crearPartido.setVisible(true);
             crearPartido.setResizable(false);
+            crearPartido.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
         
         TablaPosicionesButton.addActionListener(e -> {
@@ -56,6 +59,7 @@ public class Tablero {
             tablaPosicionesFrame.setVisible(true);
             tablaPosicionesFrame.setResizable(false);
         });
+
     }
     
     private void createUIComponents() {

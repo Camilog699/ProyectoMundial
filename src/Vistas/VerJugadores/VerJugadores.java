@@ -5,6 +5,9 @@ import Vistas.Tablero.Tablero;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class VerJugadores {
     public JPanel esp;
@@ -12,7 +15,8 @@ public class VerJugadores {
     private JButton iran;
     private JButton marruecos;
     private JButton portugal;
-    private JButton back;
+    private JButton backVJ;
+    FrameVerJugadores frame;
 
     FrameVerJugadores contJugadoresFrame;
     public VerJugadores() {
@@ -26,6 +30,17 @@ public class VerJugadores {
             contJugadoresFrame.setLocationRelativeTo(null);
             contJugadoresFrame.setVisible(true);
             contJugadoresFrame.setResizable(false);
+            contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        });
+
+
+        backVJ.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(esp);
+                frame.setVisible(false);
+                frame.dispose();
+            }
         });
     }
 

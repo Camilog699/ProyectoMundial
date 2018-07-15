@@ -17,6 +17,8 @@ public class TablaPosicionesPanel extends javax.swing.JPanel{
         this.bg.setAlto(this.getHeight());
         g.drawImage(this.bg.getSprite().getImage(), this.bg.getX(), this.bg.getY(), this.bg.getAncho(), this.bg.getAlto(), this);
         repaint();
+
+
     }
 
 }
