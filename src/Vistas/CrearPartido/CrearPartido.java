@@ -68,18 +68,22 @@ public class CrearPartido{
         iniciarPartido.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(equipo1.getSelectedItem().equals(equipo2.getSelectedItem())){
-                    JOptionPane.showMessageDialog(null, "Un equipo no puede jugar contra él mismo");
+                if((equipo1.getSelectedItem().equals("Seleccione equipo") || (equipo2.getSelectedItem().equals("Seleccione equipo")))){
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar los equipos");
                 }
-                else {
-                    subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
-                    subirDatosFrame.setContentPane(new SubirDatos().panel);
-                    subirDatosFrame.pack();
-                    subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
-                            getImage(Tablero.class.getResource("../../Img/ico.png")));
-                    subirDatosFrame.setLocationRelativeTo(null);
-                    subirDatosFrame.setVisible(true);
-                    subirDatosFrame.setResizable(false);
+                else{
+                    if (equipo1.getSelectedItem().equals(equipo2.getSelectedItem())) {
+                        JOptionPane.showMessageDialog(null, "Un equipo no puede jugar contra él mismo");
+                    } else {
+                        subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
+                        subirDatosFrame.setContentPane(new SubirDatos().panel);
+                        subirDatosFrame.pack();
+                        subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
+                                getImage(Tablero.class.getResource("../../Img/ico.png")));
+                        subirDatosFrame.setLocationRelativeTo(null);
+                        subirDatosFrame.setVisible(true);
+                        subirDatosFrame.setResizable(false);
+                    }
                 }
             }
         });
