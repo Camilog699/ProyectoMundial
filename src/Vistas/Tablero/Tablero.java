@@ -58,6 +58,7 @@ public class Tablero {
             tablaPosicionesFrame.setLocationRelativeTo(null);
             tablaPosicionesFrame.setVisible(true);
             tablaPosicionesFrame.setResizable(false);
+            tablaPosicionesFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
 
     }

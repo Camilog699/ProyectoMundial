@@ -1,6 +1,11 @@
 package Vistas.TablaPosiciones;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 public class TablaPosiciones {
     public JPanel panel;
@@ -36,6 +41,8 @@ public class TablaPosiciones {
     private JLabel label6666;
     private JLabel label7777;
     private JLabel label8888;
+    private JButton backTP;
+    JFrame frame;
 
     private void createUIComponents() {
         panel = new TablaPosicionesPanel();
@@ -43,6 +50,14 @@ public class TablaPosiciones {
 
     public TablaPosiciones() {
         PanelInterno.setOpaque(false);
-        
+
+        backTP.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame = (JFrame) SwingUtilities.getWindowAncestor(panel);
+                frame.setVisible(false);
+                frame.dispose();
+            }
+        });
     }
 }
