@@ -43,7 +43,7 @@ public class ContJugadores {
                     JPanel imgPanel = new JPanel(new GridLayout(1, 0));
                     JPanel dataPanel = new JPanel(new GridLayout(2, 3));
                     dataPanel.setFont(new Font("Dusha", Font.PLAIN, 12));
-                    jugPanel.setBorder(BorderFactory.createDashedBorder(Color.red));
+                    jugPanel.setBorder(BorderFactory.createLineBorder(Color.red));
                     jugPanel.setOpaque(false);
                     imgPanel.setOpaque(false);
                     dataPanel.setOpaque(false);
