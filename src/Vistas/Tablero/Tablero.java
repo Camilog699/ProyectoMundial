@@ -9,6 +9,8 @@ import Vistas.VerJugadores.VerJugadores;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class Tablero {
@@ -22,7 +24,9 @@ public class Tablero {
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
     private JButton TablaPosicionesButton;
-    
+    private JButton off;
+    JFrame frame;
+
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(verJugadoresButton);
@@ -61,6 +65,15 @@ public class Tablero {
             tablaPosicionesFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
 
+
+                off.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        frame = (JFrame) SwingUtilities.getWindowAncestor(panel);
+                        frame.setVisible(false);
+                        frame.dispose();
+                    }
+                });
     }
     
     private void createUIComponents() {

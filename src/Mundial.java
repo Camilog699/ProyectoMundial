@@ -29,6 +29,7 @@ public class Mundial {
         inicio.setLocationRelativeTo(null);
         inicio.setVisible(true);
         inicio.setResizable(false);
+        inicio.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
     
     public static void setUIFont(javax.swing.plaf.FontUIResource f) {
