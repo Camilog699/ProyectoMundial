@@ -95,7 +95,6 @@ public class SubirDatos {
                         }
                     }
                 }
-                System.out.println(golesE1.getFirst().getJ().getNombre());
             }
         });
     }
