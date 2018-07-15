@@ -2,12 +2,12 @@
   "Espana" : {
     "Cuerpo tecnico" : {
       "0224" : {
-        "Nombre" : "Antonio Guerra Collado  ",
+        "Nombre" : "Antonio Guerra Collado",
         "Pais" : "Espana",
         "Posicion" : "Utillero"
       },
       "0225" : {
-        "Nombre" : "Antonio Limones ",
+        "Nombre" : "Antonio Limones",
         "Pais" : "Espana",
         "Posicion" : "Secretario Técnico"
       },
@@ -22,12 +22,12 @@
         "Posicion" : "Entrenador"
       },
       "0228" : {
-        "Nombre" : "Joaquín Retamosa Fernández ",
+        "Nombre" : "Joaquín Retamosa Fernández",
         "Pais" : "Espana",
         "Posicion" : "Utillero"
       },
       "0229" : {
-        "Nombre" : "José Damián García Iglesias ",
+        "Nombre" : "José Damián García Iglesias",
         "Pais" : "Espana",
         "Posicion" : "Utillero"
       },
@@ -42,7 +42,7 @@
         "Posicion" : "Entrenador de Porteros"
       },
       "0232" : {
-        "Nombre" : "Juan Carlos Herranz Bautista ",
+        "Nombre" : "Juan Carlos Herranz Bautista",
         "Pais" : "Espana",
         "Posicion" : "Fisioterapeuta"
       },
