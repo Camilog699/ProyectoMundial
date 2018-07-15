@@ -79,6 +79,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="Hora del partido"/>
         </properties>
       </component>
