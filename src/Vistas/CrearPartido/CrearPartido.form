@@ -79,7 +79,7 @@
           </grid>
         </constraints>
         <properties>
-          <focusable value="false"/>
+          <focusable value="true"/>
           <text value="Hora del partido"/>
         </properties>
       </component>
@@ -98,6 +98,7 @@
           <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <editable value="false"/>
           <model>
             <item value="Seleccione equipo"/>
           </model>
