@@ -2,8 +2,6 @@ package Vistas.Tablero;
 
 import Vistas.CrearPartido.CrearPartido;
 import Vistas.CrearPartido.FrameCrearPartido;
-import Vistas.SubirDatos.FrameSubirDatos;
-import Vistas.SubirDatos.SubirDatos;
 import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.VerJugadores;
 
@@ -14,7 +12,6 @@ public class Tablero {
     
     public JPanel panel;
     public JFrame verJugadoresFrame;
-    public JFrame subirDatosFrame;
     public JFrame tablaPosicionesFrame;
     public JFrame crearPartido;
     
@@ -35,14 +32,6 @@ public class Tablero {
         });
         subirDatosPartidoButton.addActionListener(l -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(subirDatosPartidoButton);
-            subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
-            subirDatosFrame.setContentPane(new SubirDatos().panel);
-            subirDatosFrame.pack();
-            subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
-                    getImage(Tablero.class.getResource("../../Img/ico.png")));
-            subirDatosFrame.setLocationRelativeTo(null);
-            subirDatosFrame.setVisible(true);
-            subirDatosFrame.setResizable(false);
             crearPartido = new FrameCrearPartido("Crear partido | Mundial Russia 2018", frame.getEquipos());
             crearPartido.setContentPane(new CrearPartido().panel);
             crearPartido.pack();

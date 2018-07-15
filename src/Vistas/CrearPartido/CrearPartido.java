@@ -1,5 +1,12 @@
 package Vistas.CrearPartido;
+import Vistas.SubirDatos.FrameSubirDatos;
+import Vistas.SubirDatos.SubirDatos;
+import Vistas.Tablero.Tablero;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
@@ -11,6 +18,7 @@ public class CrearPartido{
     private JTextField estadio;
     private JTextField horaPartido;
     private JButton iniciarPartido;
+    public JFrame subirDatosFrame;
 
     public CrearPartido() {
         panel.setFocusable(true);
@@ -50,6 +58,19 @@ public class CrearPartido{
                 if (horaPartido.getText().equals("")){
                     horaPartido.setText("Hora del partido");
                 }
+            }
+        });
+        iniciarPartido.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
+                subirDatosFrame.setContentPane(new SubirDatos().panel);
+                subirDatosFrame.pack();
+                subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
+                        getImage(Tablero.class.getResource("../../Img/ico.png")));
+                subirDatosFrame.setLocationRelativeTo(null);
+                subirDatosFrame.setVisible(true);
+                subirDatosFrame.setResizable(false);
             }
         });
     }
