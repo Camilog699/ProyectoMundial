@@ -1,32 +1,22 @@
 package Vistas.Tablero;
 
-import Clases.Equipo;
-import Clases.Juego;
-import Clases.Jugador;
 import Vistas.CrearPartido.CrearPartido;
+import Vistas.CrearPartido.FrameCrearPartido;
 import Vistas.SubirDatos.FrameSubirDatos;
 import Vistas.SubirDatos.SubirDatos;
 import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.VerJugadores;
-import org.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.FileInputStream;
-import java.util.LinkedList;
 
 public class Tablero {
     
-    private JPanel panel1;
-    public static JFrame inicio;
-    public static JFrame verJugadoresFrame;
-    public static JFrame subirDatosFrame;
-    public static JFrame tablaPosicionesFrame;
-    public static JFrame crearPartido;
-    public static JSONObject obj;
-    public static String databaseStr;
-    LinkedList<Juego> juegos = new LinkedList<>();
-    LinkedList<Equipo> equipos = new LinkedList<>();
+    public JPanel panel;
+    public JFrame verJugadoresFrame;
+    public JFrame subirDatosFrame;
+    public JFrame tablaPosicionesFrame;
+    public JFrame crearPartido;
     
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
@@ -44,7 +34,8 @@ public class Tablero {
             verJugadoresFrame.setResizable(false);
         });
         subirDatosPartidoButton.addActionListener(l -> {
-            subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", juegos);
+            FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(subirDatosPartidoButton);
+            subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
             subirDatosFrame.setContentPane(new SubirDatos().panel);
             subirDatosFrame.pack();
             subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -52,7 +43,7 @@ public class Tablero {
             subirDatosFrame.setLocationRelativeTo(null);
             subirDatosFrame.setVisible(true);
             subirDatosFrame.setResizable(false);
-            crearPartido = new JFrame("Crear partido | Mundial Russia 2018");
+            crearPartido = new FrameCrearPartido("Crear partido | Mundial Russia 2018", frame.getEquipos());
             crearPartido.setContentPane(new CrearPartido().panel);
             crearPartido.pack();
             crearPartido.setIconImage(Toolkit.getDefaultToolkit().
@@ -74,68 +65,8 @@ public class Tablero {
         });
     }
     
-    public static void cargarDatos() {
-        try {
-            FileInputStream fis = new FileInputStream(Tablero.class.getResource("../../JSON/database.json").getFile());
-            byte[] buffer = new byte[10];
-            StringBuilder sb = new StringBuilder();
-            while (fis.read(buffer) != -1) {
-                sb.append(new String(buffer));
-                buffer = new byte[10];
-            }
-            fis.close();
-            String content = sb.toString();
-            obj = new JSONObject(content);
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
-        
-        for (int i = 0; i < obj.names().length(); i++) {
-            String key = (String) obj.names().get(i);
-            JSONObject jugs = obj.getJSONObject(key).getJSONObject("Jugadores");
-            Equipo equipo = new Equipo(key, obj.getJSONObject(key).getInt("Posicion FIFA"));
-            for (int j = 0; j < jugs.names().length(); j++) {
-                String jugKey = (String) jugs.names().get(i);
-                equipo.getJugadores().add(
-                        new Jugador(jugs.getJSONObject(jugKey).getString("Nombre"), jugKey,
-                                jugs.getJSONObject(jugKey).getString("Posicion"),
-                                jugs.getJSONObject(jugKey).getString("Nacimiento"),
-                                jugs.getJSONObject(jugKey).getInt("Dorsal")
-                        ));
-            }
-        }
-    }
-    
-    public static void main(String[] args) {
-        cargarDatos();
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception ignored) {
-        }
-        setUIFont(new javax.swing.plaf.FontUIResource("Dusha", 0, 12));
-        inicio = new JFrame("Mundial Rusia 2018");
-        inicio.setContentPane(new Tablero().panel1);
-        inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        inicio.pack();
-        inicio.setIconImage(Toolkit.getDefaultToolkit().
-                getImage(Tablero.class.getResource("../../Img/ico.png")));
-        inicio.setLocationRelativeTo(null);
-        inicio.setVisible(true);
-        inicio.setResizable(false);
-    }
-    
     private void createUIComponents() {
-        panel1 = new TableroPanel();
+        panel = new TableroPanel();
     }
     
-    public static void setUIFont(javax.swing.plaf.FontUIResource f) {
-        java.util.Enumeration keys = UIManager.getDefaults().keys();
-        while (keys.hasMoreElements()) {
-            Object key = keys.nextElement();
-            Object value = UIManager.get(key);
-            if (value instanceof javax.swing.plaf.FontUIResource) {
-                UIManager.put(key, f);
-            }
-        }
-    }
 }

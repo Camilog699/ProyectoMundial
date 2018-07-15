@@ -5,7 +5,7 @@
  */
 package Modelos;
 
-import javax.swing.ImageIcon;
+import javax.swing.*;
 
 /**
  *
