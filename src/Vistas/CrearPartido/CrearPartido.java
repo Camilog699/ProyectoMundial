@@ -90,8 +90,6 @@ public class CrearPartido{
                             }
                         }
                         subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", e1, e2);
-                        System.out.println(subirDatosFrame);
-                        System.out.println(new SubirDatos().panel);
                         subirDatosFrame.setContentPane(new SubirDatos().panel);
                         subirDatosFrame.pack();
                         subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
