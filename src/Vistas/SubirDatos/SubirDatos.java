@@ -5,7 +5,6 @@ import Clases.Gol;
 import Clases.Jugador;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
@@ -22,15 +21,14 @@ public class SubirDatos {
     private JTextField minutoGol;
     private JButton guardarGol;
     private JComboBox JugadorTarjeta;
-    private JButton GUARDARTARJETAButton;
     private JComboBox comboBox3;
     private JTextField minutoEnElQueTextField;
-    private JButton GUARDARESQUINASButton;
+    private JButton GUARDARESQUINAButton;
     private JComboBox comboBox4;
     private JComboBox comboBox5;
-    private JButton AMARILLAButton;
-    private JButton ROJAButton;
-    private JComboBox comboBox1;
+    private JButton amarilla;
+    private JButton roja;
+    private JComboBox equipoTarjeta;
     Equipo e1;
     Equipo e2;
     FrameSubirDatos frame;
@@ -38,8 +36,8 @@ public class SubirDatos {
     LinkedList<Gol> golesE2 = new LinkedList<>();
 
     public SubirDatos() {
-        guardarGol.setBackground(new Color(59, 139, 84));
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
+        JugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
             @Override
@@ -99,7 +97,7 @@ public class SubirDatos {
                 }
             }
         });
-        //Añadir equipos dinamicamente en gol
+        //Añadir equipos dinamicamente
         panel.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -107,6 +105,8 @@ public class SubirDatos {
                 frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);
                 EquipoGol.addItem(e1.getNombre());
                 EquipoGol.addItem(e2.getNombre());
+                equipoTarjeta.addItem(e1.getNombre());
+                equipoTarjeta.addItem(e2.getNombre());
             }
         });
         //agregar jugadores dinamicamente en gol
@@ -131,6 +131,29 @@ public class SubirDatos {
                     }
                 }
                 else JugadorGol.setEnabled(false);
+            }
+        });
+        equipoTarjeta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!(equipoTarjeta.getSelectedItem().equals("Seleccione equipo"))) {
+                    if (Objects.equals(equipoTarjeta.getSelectedItem(), e1.getNombre())) {
+                        JugadorTarjeta.removeAllItems();
+                        JugadorTarjeta.addItem("Seleccione jugador");
+                        for (Jugador jugador : e1.getJugadores()) {
+                            JugadorTarjeta.addItem(jugador.getNombre());
+                        }
+                        JugadorTarjeta.setEnabled(true);
+                    } else {
+                        JugadorTarjeta.removeAllItems();
+                        JugadorTarjeta.addItem("Seleccione jugador");
+                        for (Jugador jugador : e2.getJugadores()) {
+                            JugadorTarjeta.addItem(jugador.getNombre());
+                        }
+                        JugadorTarjeta.setEnabled(true);
+                    }
+                }
+                else JugadorTarjeta.setEnabled(false);
             }
         });
     }
