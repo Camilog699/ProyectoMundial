@@ -23,7 +23,7 @@
         </constraints>
         <properties>
           <font name="Dusha V5" size="20"/>
-          <foreground color="-1"/>
+          <foreground color="-16777216"/>
         </properties>
         <border type="none"/>
         <children>
@@ -32,6 +32,7 @@
               <tabbedpane title="Jugadores"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <opaque value="false"/>
             </properties>
             <border type="none"/>
@@ -42,6 +43,7 @@
               <tabbedpane title="Cuerpo técnico"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <opaque value="false"/>
               <visible value="true"/>
             </properties>

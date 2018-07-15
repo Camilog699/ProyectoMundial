@@ -1,6 +1,8 @@
 package Vistas.VerJugadores;
 
+import Clases.Equipo;
 import Vistas.ContJugadores.ContJugadores;
+import Vistas.ContJugadores.FrameContJugadores;
 import Vistas.Tablero.Tablero;
 
 import javax.swing.*;
@@ -18,19 +20,24 @@ public class VerJugadores {
     private JButton backVJ;
     FrameVerJugadores frame;
 
-    FrameVerJugadores contJugadoresFrame;
+    FrameContJugadores contJugadoresFrame;
     public VerJugadores() {
         españa.addActionListener(e -> {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(españa);
-            contJugadoresFrame = new FrameVerJugadores("Ver jugadores | Mundial Russia 2018", frame.getEquipos());
-            contJugadoresFrame.setContentPane(new ContJugadores().panel);
-            contJugadoresFrame.pack();
-            contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
-                    getImage(Tablero.class.getResource("../../Img/ico.png")));
-            contJugadoresFrame.setLocationRelativeTo(null);
-            contJugadoresFrame.setVisible(true);
-            contJugadoresFrame.setResizable(false);
-            contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            for (Equipo equipo : frame.getEquipos()) {
+                if (equipo.getNombre().equals("Espana")) {
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame.setContentPane(new ContJugadores().panel);
+                    contJugadoresFrame.pack();
+                    contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
+                            getImage(Tablero.class.getResource("../../Img/ico.png")));
+                    contJugadoresFrame.setLocationRelativeTo(null);
+                    contJugadoresFrame.setVisible(true);
+                    contJugadoresFrame.setResizable(false);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    break;
+                }
+            }
         });
 
 

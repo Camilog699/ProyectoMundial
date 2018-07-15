@@ -51,6 +51,7 @@ public class ContJugadores {
                         imgPanel.add(new JLabel("", new ImageIcon(getClass().getResource("../../Img/" +
                                 jugador.getId() + ".png")), SwingConstants.CENTER));
                     }
+                    dataPanel.setForeground(Color.WHITE);
                     dataPanel.add(new JLabel(jugador.getId(), SwingConstants.CENTER));
                     dataPanel.add(new JLabel(jugador.getNombre(), SwingConstants.CENTER));
                     dataPanel.add(new JLabel(jugador.getPosicion(), SwingConstants.CENTER));
