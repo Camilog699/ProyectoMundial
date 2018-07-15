@@ -24,6 +24,9 @@ public class CrearPartido{
     private JButton button1;
     public JFrame subirDatosFrame;
     private String[] nombreEquipos = {};
+    LinkedList<Equipo> equipos;
+    Equipo e1;
+    Equipo e2;
 
     public CrearPartido() {
         panel.setFocusable(true);
@@ -70,12 +73,23 @@ public class CrearPartido{
             public void actionPerformed(ActionEvent e) {
                 if((equipo1.getSelectedItem().equals("Seleccione equipo") || (equipo2.getSelectedItem().equals("Seleccione equipo")))){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar los equipos");
+
                 }
                 else{
                     if (equipo1.getSelectedItem().equals(equipo2.getSelectedItem())) {
                         JOptionPane.showMessageDialog(null, "Un equipo no puede jugar contra él mismo");
                     } else {
-                        subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
+                        for (Equipo equipo : equipos) {
+                            if (equipo.getNombre().equals(equipo1.getSelectedItem())){
+                                e1 = equipo;
+                            }
+                            if (equipo.getNombre().equals(equipo2.getSelectedItem())){
+                                e2 = equipo;
+                            }
+                        }
+                        subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018", e1, e2);
+                        System.out.println(subirDatosFrame);
+                        System.out.println(new SubirDatos().panel);
                         subirDatosFrame.setContentPane(new SubirDatos().panel);
                         subirDatosFrame.pack();
                         subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -83,6 +97,7 @@ public class CrearPartido{
                         subirDatosFrame.setLocationRelativeTo(null);
                         subirDatosFrame.setVisible(true);
                         subirDatosFrame.setResizable(false);
+                        subirDatosFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     }
                 }
             }
@@ -93,8 +108,7 @@ public class CrearPartido{
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
                 FrameCrearPartido frame = (FrameCrearPartido) SwingUtilities.getWindowAncestor(panel);
-                LinkedList<Equipo> equipos = frame.getEquipos();
-
+                equipos = frame.getEquipos();
                 for (Equipo equipo : equipos) {
                     equipo1.addItem(equipo.getNombre());
                     equipo2.addItem(equipo.getNombre());
