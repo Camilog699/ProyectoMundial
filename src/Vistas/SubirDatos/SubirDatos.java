@@ -20,6 +20,14 @@ public class SubirDatos {
     private JButton backSD;
     private JTextField minuto;
     private JButton guardarGol;
+    private JComboBox comboBox1;
+    private JComboBox comboBox2;
+    private JButton guardarTarjetasButton;
+    private JComboBox comboBox3;
+    private JTextField minutoEnElQueTextField;
+    private JButton GUARDARESQUINASButton;
+    private JComboBox comboBox4;
+    private JComboBox comboBox5;
     Equipo e1;
     Equipo e2;
     FrameSubirDatos frame;
@@ -65,10 +73,10 @@ public class SubirDatos {
                 }
             }
         });
-        guardarGol.addActionListener(new ActionListener() {
+       /*   guardarGol.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (Objects.equals(Equipo.getSelectedItem(), "Seleccione equipo")){
+              if (Objects.equals(Equipo.getSelectedItem(), "Seleccione equipo")){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar el quipo al que pertenece el gol");
                 }
                 else if (Objects.equals(Jugador.getSelectedItem(), "Seleccione jugador")){
@@ -85,7 +93,7 @@ public class SubirDatos {
                     }
                 }
             }
-        });
+        });*/
     }
 
     private void createUIComponents() {
