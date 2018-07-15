@@ -35,8 +35,8 @@ public class SubirDatos {
     LinkedList<Gol> golesE2 = new LinkedList<>();
 
     public SubirDatos() {
+        Jugador.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
-
         panel.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -59,7 +59,7 @@ public class SubirDatos {
             @Override
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
-                if (minuto.getText().equals("Minuto en el que marcó")){
+                if (minuto.getText().equals("Minuto en el que marcó")) {
                     minuto.setText("");
                 }
             }
@@ -68,27 +68,24 @@ public class SubirDatos {
             @Override
             public void focusLost(FocusEvent e) {
                 super.focusLost(e);
-                if (minuto.getText().equals("")){
+                if (minuto.getText().equals("")) {
                     minuto.setText("Minuto en el que marcó");
                 }
             }
         });
-          guardarGol.addActionListener(new ActionListener() {
+        guardarGol.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              if (Objects.equals(Equipo.getSelectedItem(), "Seleccione equipo")){
-                    JOptionPane.showMessageDialog(null,"Debe seleccionar el quipo al que pertenece el gol");
-                }
-                else if (Objects.equals(Jugador.getSelectedItem(), "Seleccione jugador")){
-                    JOptionPane.showMessageDialog(null,"Debe seleccionar el jugador que hizo el gol");
-                }
-                else if(minuto.getText().equals("Minuto en el que marcó")){
-                    JOptionPane.showMessageDialog(null,"Digite el minuto en el que se marco el gol");
-                }
-                else{
-                    if(Objects.equals(Equipo.getSelectedItem(), e1.getNombre())){
-                        for (Jugador jugador:e1.getJugadores()) {
-                            if (Objects.equals(jugador.getNombre(), Jugador.getSelectedItem())){
+                if (Objects.equals(Equipo.getSelectedItem(), "Seleccione equipo")) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar el quipo al que pertenece el gol");
+                } else if (Objects.equals(Jugador.getSelectedItem(), "Seleccione jugador")) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar el jugador que hizo el gol");
+                } else if (minuto.getText().equals("Minuto en el que marcó")) {
+                    JOptionPane.showMessageDialog(null, "Digite el minuto en el que se marco el gol");
+                } else {
+                    if (Objects.equals(Equipo.getSelectedItem(), e1.getNombre())) {
+                        for (Jugador jugador : e1.getJugadores()) {
+                            if (Objects.equals(jugador.getNombre(), Jugador.getSelectedItem())) {
                                 golesE1.add(new Gol(minuto.getText(), e1, jugador));
                                 break;
                             }
@@ -97,10 +94,41 @@ public class SubirDatos {
                 }
             }
         });
+        panel.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                super.focusGained(e);
+                frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);
+                Equipo.addItem(e1.getNombre());
+                Equipo.addItem(e2.getNombre());
+            }
+        });
+
+        Equipo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!(Equipo.getSelectedItem().equals("Seleccione equipo"))) {
+                    if (Objects.equals(Equipo.getSelectedItem(), e1.getNombre())) {
+                        Jugador.removeAllItems();
+                        Jugador.addItem("Seleccione jugador");
+                        for (Jugador jugador : e1.getJugadores()) {
+                            Jugador.addItem(jugador.getNombre());
+                        }
+                        Jugador.setEnabled(true);
+                    } else {
+                        Jugador.removeAllItems();
+                        Jugador.addItem("Seleccione jugador");
+                        for (Jugador jugador : e2.getJugadores()) {
+                            Jugador.addItem(jugador.getNombre());
+                        }
+                        Jugador.setEnabled(true);
+                    }
+                }
+                else Jugador.setEnabled(false);
+            }
+        });
     }
-
-    private void createUIComponents() {
+    private void createUIComponents(){
         panel = new SubirDatosPanel();
-
     }
 }

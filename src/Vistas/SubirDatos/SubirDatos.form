@@ -16,13 +16,13 @@
     <children>
       <component id="bed5a" class="javax.swing.JComboBox" binding="Equipo">
         <constraints>
-          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="Dusha V5" size="16" style="0"/>
+          <lightWeightPopupEnabled value="true"/>
           <model>
             <item value="Seleccione equipo"/>
-            <item value="Espana"/>
           </model>
         </properties>
       </component>
@@ -38,13 +38,14 @@
       </hspacer>
       <component id="4f076" class="javax.swing.JComboBox" binding="Jugador">
         <constraints>
-          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <enabled value="false"/>
+          <focusable value="true"/>
           <font name="Dusha V5" size="16" style="0"/>
           <model>
             <item value="Seleccione jugador"/>
-            <item value="KOKE"/>
           </model>
         </properties>
       </component>
@@ -147,11 +148,12 @@
       </vspacer>
       <component id="69eac" class="javax.swing.JTextField" binding="minuto">
         <constraints>
-          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
+          <editable value="true"/>
           <text value="Minuto en el que marcó"/>
         </properties>
       </component>
