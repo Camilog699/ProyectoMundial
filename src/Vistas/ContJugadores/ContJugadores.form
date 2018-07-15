@@ -6,42 +6,68 @@
       <xy x="20" y="20" width="1000" height="603"/>
     </constraints>
     <properties>
+      <font name="Dusha V5" size="20"/>
+      <foreground color="-1"/>
       <maximumSize width="1000" height="603"/>
       <minimumSize width="1000" height="603"/>
+      <opaque value="false"/>
       <preferredSize width="1000" height="603"/>
     </properties>
     <border type="none"/>
     <children>
-      <scrollpane id="fecd8" binding="scrollPane" custom-create="true">
+      <tabbedpane id="fe54d" binding="tabs">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <minimum-size width="650" height="350"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="650" height="350"/>
-            <maximum-size width="650" height="350"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="Dusha V5" size="20"/>
+          <foreground color="-1"/>
+        </properties>
         <border type="none"/>
-        <children/>
-      </scrollpane>
-      <hspacer id="2c4ff">
+        <children>
+          <scrollpane id="e4615" binding="jugsScroll">
+            <constraints>
+              <tabbedpane title="Jugadores"/>
+            </constraints>
+            <properties>
+              <opaque value="false"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </scrollpane>
+          <scrollpane id="fecd8" binding="tecsScroll">
+            <constraints>
+              <tabbedpane title="Cuerpo técnico"/>
+            </constraints>
+            <properties>
+              <opaque value="false"/>
+              <visible value="true"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </scrollpane>
+        </children>
+      </tabbedpane>
+      <hspacer id="61138">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <hspacer id="2c31c">
+      <vspacer id="e4d19">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
-      <vspacer id="3b51f">
-        <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <vspacer id="1e848">
+      <hspacer id="f8581">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="8df39">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
     </children>

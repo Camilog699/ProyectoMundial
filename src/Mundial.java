@@ -19,7 +19,9 @@ public class Mundial {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception ignored) {
         }
-        setUIFont(new javax.swing.plaf.FontUIResource("Dusha", 0, 12));
+        UIManager.put("Label.font", new javax.swing.plaf.FontUIResource("Dusha V5", Font.PLAIN, 12));
+        setUIFont(new javax.swing.plaf.FontUIResource("Dusha V5", Font.PLAIN, 12));
+        UIManager.put("TabbedPane.contentOpaque", false);
         JFrame inicio = new FrameTablero("Mundial Rusia 2018", equipos, juegos);
         inicio.setContentPane(new Tablero().panel);
         inicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
