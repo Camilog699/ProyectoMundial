@@ -18,6 +18,8 @@ public class Equipo {
     private String nombre;
     private int PosicionFifa;
     private LinkedList<Jugador> jugadores;
+    private LinkedList<CuerpoTecnico> tecnicos;
+    
     private int perdidos;
     private int ganados;
     private int empatados;
@@ -31,6 +33,7 @@ public class Equipo {
         this.nombre = nombre;
         PosicionFifa = posicionFifa;
         jugadores = new LinkedList<>();
+        tecnicos = new LinkedList<>();
     }
     
     //get y set
@@ -89,5 +92,13 @@ public class Equipo {
 
     public void setEmpatados(int empatados) {
         this.empatados = empatados;
+    }
+    
+    public LinkedList<CuerpoTecnico> getTecnicos() {
+        return tecnicos;
+    }
+    
+    public void setTecnicos(LinkedList<CuerpoTecnico> tecnicos) {
+        this.tecnicos = tecnicos;
     }
 }

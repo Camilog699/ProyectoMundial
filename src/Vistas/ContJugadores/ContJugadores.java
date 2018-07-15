@@ -1,5 +1,6 @@
 package Vistas.ContJugadores;
 
+import Clases.CuerpoTecnico;
 import Clases.Jugador;
 
 import javax.swing.*;
@@ -26,7 +27,7 @@ public class ContJugadores {
         jugsScroll.setFont(new javax.swing.plaf.FontUIResource("Dusha V5", Font.PLAIN, 20));
         jugsPanelScroll.setOpaque(false);
         tecsPanelScroll.setLayout(new GridLayout(12, 3));
-        tecsPanelScroll.setPreferredSize(new Dimension(600, 3000));
+        tecsPanelScroll.setPreferredSize(new Dimension(600, 1000));
         tecsScroll.setViewportView(tecsPanelScroll);
         tecsScroll.setOpaque(false);
         tecsScroll.getViewport().setOpaque(false);
@@ -39,6 +40,7 @@ public class ContJugadores {
                 super.focusGained(e);
                 FrameContJugadores frame = (FrameContJugadores) SwingUtilities.getWindowAncestor(panel);
                 LinkedList<Jugador> jugadores = frame.getJugadores();
+                LinkedList<CuerpoTecnico> tecnicos = frame.getTecnicos();
                 for (Jugador jugador : jugadores) {
                     JPanel jugPanel;
                     JPanel dataPanel = new JPanel(new GridLayout(3, 3));
@@ -80,6 +82,29 @@ public class ContJugadores {
                     jugsPanelScroll.add(jugPanel);
                 }
                 tecsScroll.updateUI();
+                for (CuerpoTecnico tecnico : tecnicos) {
+                    JPanel tecPanel;
+                    JPanel dataPanel = new JPanel(new GridLayout(2, 2));
+                    dataPanel.setFont(new Font("Dusha", Font.PLAIN, 12));
+                    dataPanel.setOpaque(false);
+                    tecPanel = new JPanel(new GridLayout(1, 0));
+                    tecPanel.setBorder(BorderFactory.createLineBorder(Color.white));
+                    tecPanel.setOpaque(false);
+                    JLabel nombreLabel = new JLabel(tecnico.getNombre(), SwingConstants.CENTER);
+                    JLabel funcionLabel = new JLabel(tecnico.getFuncion(), SwingConstants.CENTER);
+                    JLabel paisLabel = new JLabel(tecnico.getPaisNacimiento(), SwingConstants.CENTER);
+                    nombreLabel.setForeground(Color.WHITE);
+                    funcionLabel.setForeground(Color.WHITE);
+                    paisLabel.setForeground(Color.WHITE);
+                    nombreLabel.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 15));
+                    funcionLabel.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 15));
+                    paisLabel.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 15));
+                    dataPanel.add(nombreLabel);
+                    dataPanel.add(funcionLabel);
+                    dataPanel.add(paisLabel);
+                    tecPanel.add(dataPanel);
+                    tecsPanelScroll.add(tecPanel);
+                }
                 panel.setFocusable(false);
             }
         });

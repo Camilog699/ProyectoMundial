@@ -14,16 +14,13 @@ public class CuerpoTecnico extends Persona {
     //Atributos
     private String funcion;
     private String PaisNacimiento;
-
-    //Constructores
-    public CuerpoTecnico() {
-    }
-
-    public CuerpoTecnico(String funcion, String PaisNacimiento) {
+    
+    public CuerpoTecnico(String nombre, String id, String funcion, String paisNacimiento) {
+        super(nombre, id);
         this.funcion = funcion;
-        this.PaisNacimiento = PaisNacimiento;
+        PaisNacimiento = paisNacimiento;
     }
-
+    
     //get y set
     public String getFuncion() {
         return funcion;
@@ -40,8 +37,4 @@ public class CuerpoTecnico extends Persona {
     public void setPaisNacimiento(String PaisNacimiento) {
         this.PaisNacimiento = PaisNacimiento;
     }
-
-
-    
-
 }

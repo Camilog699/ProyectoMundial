@@ -1,3 +1,4 @@
+import Clases.CuerpoTecnico;
 import Clases.Equipo;
 import Clases.Juego;
 import Clases.Jugador;
@@ -13,6 +14,7 @@ import java.util.LinkedList;
 public class Mundial {
     public static void main(String[] args) {
         LinkedList<Equipo> equipos = new LinkedList<>();
+        LinkedList<CuerpoTecnico> tecnicos = new LinkedList<>();
         LinkedList<Juego> juegos = new LinkedList<>();
         cargarDatos(equipos);
         try {
@@ -60,8 +62,9 @@ public class Mundial {
         
         for (int i = 0; i < obj.names().length(); i++) {
             String key = (String) obj.names().get(i);
-            JSONObject jugs = obj.getJSONObject(key).getJSONObject("Jugadores");
             Equipo equipo = new Equipo(key, obj.getJSONObject(key).getInt("Posicion FIFA"));
+            JSONObject jugs = obj.getJSONObject(key).getJSONObject("Jugadores");
+            JSONObject tecs = obj.getJSONObject(key).getJSONObject("Cuerpo tecnico");
             for (int j = 0; j < jugs.names().length(); j++) {
                 String jugKey = (String) jugs.names().get(j);
                 equipo.getJugadores().add(
@@ -69,6 +72,13 @@ public class Mundial {
                                 jugs.getJSONObject(jugKey).getString("Posicion"),
                                 jugs.getJSONObject(jugKey).getString("Nacimiento"),
                                 jugs.getJSONObject(jugKey).getInt("Dorsal")
+                        ));
+            }
+            for (int k = 0; k < tecs.names().length(); k++) {
+                String tecKey = (String) tecs.names().get(k);
+                equipo.getTecnicos().add(
+                        new CuerpoTecnico(tecs.getJSONObject(tecKey).getString("Nombre"), tecKey, tecs.getJSONObject(tecKey).getString("Posicion"),
+                                tecs.getJSONObject(tecKey).getString("Pais")
                         ));
             }
             equipos.add(equipo);

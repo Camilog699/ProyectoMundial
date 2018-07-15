@@ -212,79 +212,79 @@
   "Iran" : {
     "Cuerpo tecnico" : {
       "0324" : {
-        "Cargo" : "Entrenador",
+        "Posicion" : "Entrenador",
         "Nombre" : "Carlos Queiroz",
-        "Pais nacimiento" : "Mozambique"
+        "Pais" : "Mozambique"
       },
       "0325" : {
-        "Cargo" : "Segundo entrenador",
+        "Posicion" : "Segundo entrenador",
         "Nombre" : "Markar Aghajanian",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0326" : {
-        "Cargo" : "Segundo entrenador",
+        "Posicion" : "Segundo entrenador",
         "Nombre" : "Oceano Cruz",
-        "Pais nacimiento" : "Portugal"
+        "Pais" : "Portugal"
       },
       "0327" : {
-        "Cargo" : "Segundo entrenador",
+        "Posicion" : "Segundo entrenador",
         "Nombre" : "Rodolfo Correia",
-        "Pais nacimiento" : "Portugal"
+        "Pais" : "Portugal"
       },
       "0328" : {
-        "Cargo" : "Entrenador de acondicionamiento",
+        "Posicion" : "Entrenador de acondicionamiento",
         "Nombre" : "Mick McDermott",
-        "Pais nacimiento" : "Irlanda del norte"
+        "Pais" : "Irlanda del norte"
       },
       "0329" : {
-        "Cargo" : "Preparador fisico",
+        "Posicion" : "Preparador fisico",
         "Nombre" : "Mikko Kujala",
-        "Pais nacimiento" : "Finlandia"
+        "Pais" : "Finlandia"
       },
       "0330" : {
-        "Cargo" : "Jefe de analisis",
+        "Posicion" : "Jefe de analisis",
         "Nombre" : "Mohammad Ebrahim Khanban",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0331" : {
-        "Cargo" : "Asistente tecnico",
+        "Posicion" : "Asistente tecnico",
         "Nombre" : "Afshin Peyrovani",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0332" : {
-        "Cargo" : "Director deportivo",
+        "Posicion" : "Director deportivo",
         "Nombre" : "Mehdi Nabi",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0333" : {
-        "Cargo" : "Doctor",
+        "Posicion" : "Doctor",
         "Nombre" : "Parhan Khanlari",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0334" : {
-        "Cargo" : "Fisioterapeuta",
+        "Posicion" : "Fisioterapeuta",
         "Nombre" : "Diego Giacchino",
-        "Pais nacimiento" : "Argentina"
+        "Pais" : "Argentina"
       },
       "0335" : {
-        "Cargo" : "Fisioterapeuta",
+        "Posicion" : "Fisioterapeuta",
         "Nombre" : "Alireza Shahab",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0336" : {
-        "Cargo" : "Masajista",
+        "Posicion" : "Masajista",
         "Nombre" : "Mohammad Saber",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0337" : {
-        "Cargo" : "Masajista",
+        "Posicion" : "Masajista",
         "Nombre" : "Ehsan Sadathosseini",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       },
       "0338" : {
-        "Cargo" : "Traductor",
+        "Posicion" : "Traductor",
         "Nombre" : "Aryan Ghasemi",
-        "Pais nacimiento" : "Iran"
+        "Pais" : "Iran"
       }
     },
     "Jugadores" : {

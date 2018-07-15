@@ -26,7 +26,7 @@ public class VerJugadores {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(españa);
             for (Equipo equipo : frame.getEquipos()) {
                 if (equipo.getNombre().equals("Espana")) {
-                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores(), equipo.getTecnicos());
                     contJugadoresFrame.setContentPane(new ContJugadores().panel);
                     contJugadoresFrame.pack();
                     contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -44,7 +44,7 @@ public class VerJugadores {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(iran);
             for (Equipo equipo : frame.getEquipos()) {
                 if (equipo.getNombre().equals("Iran")) {
-                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores(), equipo.getTecnicos());
                     contJugadoresFrame.setContentPane(new ContJugadores().panel);
                     contJugadoresFrame.pack();
                     contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -62,7 +62,7 @@ public class VerJugadores {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(portugal);
             for (Equipo equipo : frame.getEquipos()) {
                 if (equipo.getNombre().equals("Portugal")) {
-                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores(), equipo.getTecnicos());
                     contJugadoresFrame.setContentPane(new ContJugadores().panel);
                     contJugadoresFrame.pack();
                     contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -80,7 +80,7 @@ public class VerJugadores {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(marruecos);
             for (Equipo equipo : frame.getEquipos()) {
                 if (equipo.getNombre().equals("Marruecos")) {
-                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores(), equipo.getTecnicos());
                     contJugadoresFrame.setContentPane(new ContJugadores().panel);
                     contJugadoresFrame.pack();
                     contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
