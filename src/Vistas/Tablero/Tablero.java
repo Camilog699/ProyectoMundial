@@ -2,7 +2,10 @@ package Vistas.Tablero;
 
 import Vistas.CrearPartido.CrearPartido;
 import Vistas.CrearPartido.FrameCrearPartido;
+import Vistas.SubirDatos.FrameSubirDatos;
+import Vistas.SubirDatos.SubirDatos;
 import Vistas.TablaPosiciones.TablaPosiciones;
+import Vistas.VerJugadores.FrameVerJugadores;
 import Vistas.VerJugadores.VerJugadores;
 
 import javax.swing.*;
@@ -11,9 +14,10 @@ import java.awt.*;
 public class Tablero {
     
     public JPanel panel;
-    public JFrame verJugadoresFrame;
+    public FrameVerJugadores verJugadoresFrame;
+    public FrameSubirDatos subirDatosFrame;
     public JFrame tablaPosicionesFrame;
-    public JFrame crearPartido;
+    public FrameCrearPartido crearPartido;
     
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
@@ -21,7 +25,8 @@ public class Tablero {
     
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
-            verJugadoresFrame = new JFrame("Ver jugadores | Mundial Russia 2018");
+            FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(verJugadoresButton);
+            verJugadoresFrame = new FrameVerJugadores("Ver jugadores | Mundial Russia 2018", frame.getEquipos());
             verJugadoresFrame.setContentPane(new VerJugadores().esp);
             verJugadoresFrame.pack();
             verJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -32,6 +37,14 @@ public class Tablero {
         });
         subirDatosPartidoButton.addActionListener(l -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(subirDatosPartidoButton);
+            subirDatosFrame = new FrameSubirDatos("Subir datos partido | Mundial Russia 2018");
+            subirDatosFrame.setContentPane(new SubirDatos().panel);
+            subirDatosFrame.pack();
+            subirDatosFrame.setIconImage(Toolkit.getDefaultToolkit().
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
+            subirDatosFrame.setLocationRelativeTo(null);
+            subirDatosFrame.setVisible(true);
+            subirDatosFrame.setResizable(false);
             crearPartido = new FrameCrearPartido("Crear partido | Mundial Russia 2018", frame.getEquipos());
             crearPartido.setContentPane(new CrearPartido().panel);
             crearPartido.pack();

@@ -5,8 +5,6 @@ import Vistas.Tablero.Tablero;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class VerJugadores {
     public JPanel esp;
@@ -15,20 +13,18 @@ public class VerJugadores {
     private JButton button3;
     private JButton button4;
 
-    JFrame contJugadoresFrame;
+    FrameVerJugadores contJugadoresFrame;
     public VerJugadores() {
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                contJugadoresFrame = new JFrame("Ver jugadores | Mundial Russia 2018");
-                contJugadoresFrame.setContentPane(new ContJugadores().panel);
-                contJugadoresFrame.pack();
-                contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
-                        getImage(Tablero.class.getResource("../../Img/ico.png")));
-                contJugadoresFrame.setLocationRelativeTo(null);
-                contJugadoresFrame.setVisible(true);
-                contJugadoresFrame.setResizable(false);
-            }
+        button1.addActionListener(e -> {
+            FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(button1);
+            contJugadoresFrame = new FrameVerJugadores("Ver jugadores | Mundial Russia 2018", frame.getEquipos());
+            contJugadoresFrame.setContentPane(new ContJugadores().panel);
+            contJugadoresFrame.pack();
+            contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
+            contJugadoresFrame.setLocationRelativeTo(null);
+            contJugadoresFrame.setVisible(true);
+            contJugadoresFrame.setResizable(false);
         });
     }
 

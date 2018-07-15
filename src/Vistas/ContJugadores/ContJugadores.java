@@ -7,6 +7,7 @@ public class ContJugadores {
     private JScrollPane scrollPane;
     
     public ContJugadores() {
+        panel.setFocusable(true);
         scrollPane.getViewport().setOpaque(false);
     }
     
