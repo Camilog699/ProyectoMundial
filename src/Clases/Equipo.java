@@ -18,6 +18,10 @@ public class Equipo {
     private String nombre;
     private int PosicionFifa;
     private LinkedList<Jugador> jugadores;
+    private int perdidos;
+    private int ganados;
+    private int empatados;
+
     
     //Costructores
     public Equipo() {
@@ -61,5 +65,29 @@ public class Equipo {
                 ", PosicionFifa=" + PosicionFifa +
                 ", jugadores=" + jugadores +
                 '}';
+    }
+
+    public int getPerdidos() {
+        return perdidos;
+    }
+
+    public void setPerdidos(int perdidos) {
+        this.perdidos = perdidos;
+    }
+
+    public int getGanados() {
+        return ganados;
+    }
+
+    public void setGanados(int ganados) {
+        this.ganados = ganados;
+    }
+
+    public int getEmpatados() {
+        return empatados;
+    }
+
+    public void setEmpatados(int empatados) {
+        this.empatados = empatados;
     }
 }

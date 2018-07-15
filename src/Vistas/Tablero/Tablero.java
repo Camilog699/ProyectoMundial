@@ -3,6 +3,7 @@ package Vistas.Tablero;
 import Vistas.CrearPartido.CrearPartido;
 import Vistas.CrearPartido.FrameCrearPartido;
 import Vistas.SubirDatos.FrameSubirDatos;
+import Vistas.TablaPosiciones.FrameTablaPosiciones;
 import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.FrameVerJugadores;
 import Vistas.VerJugadores.VerJugadores;
@@ -14,18 +15,18 @@ import java.awt.event.ActionListener;
 
 
 public class Tablero {
-    
+
     public JPanel panel;
     public FrameVerJugadores verJugadoresFrame;
     public FrameSubirDatos subirDatosFrame;
     public JFrame tablaPosicionesFrame;
     public FrameCrearPartido crearPartido;
-    
+
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
     private JButton TablaPosicionesButton;
     private JButton off;
-    JFrame frame;
+    FrameTablero frame;
 
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
@@ -52,9 +53,10 @@ public class Tablero {
             crearPartido.setResizable(false);
             crearPartido.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
-        
+
         TablaPosicionesButton.addActionListener(e -> {
-            tablaPosicionesFrame = new JFrame("Tabla de posiciones | Mundial Russia 2018");
+            frame=(FrameTablero) SwingUtilities.getWindowAncestor(TablaPosicionesButton);
+            tablaPosicionesFrame = new FrameTablaPosiciones("Tabla de posiciones | Mundial Russia 2018", frame.getJuegos(), frame.getEquipos());
             tablaPosicionesFrame.setContentPane(new TablaPosiciones().panel);
             tablaPosicionesFrame.pack();
             tablaPosicionesFrame.setIconImage(Toolkit.getDefaultToolkit().
@@ -66,18 +68,18 @@ public class Tablero {
         });
 
 
-                off.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        frame = (JFrame) SwingUtilities.getWindowAncestor(panel);
-                        frame.setVisible(false);
-                        frame.dispose();
-                    }
-                });
+        off.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame = (FrameTablero) SwingUtilities.getWindowAncestor(panel);
+                frame.setVisible(false);
+                frame.dispose();
+            }
+        });
     }
-    
+
     private void createUIComponents() {
         panel = new TableroPanel();
     }
-    
+
 }

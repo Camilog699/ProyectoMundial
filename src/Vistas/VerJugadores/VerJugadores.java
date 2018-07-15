@@ -40,6 +40,60 @@ public class VerJugadores {
             }
         });
 
+        iran.addActionListener(e -> {
+            FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(iran);
+            for (Equipo equipo : frame.getEquipos()) {
+                if (equipo.getNombre().equals("Iran")) {
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame.setContentPane(new ContJugadores().panel);
+                    contJugadoresFrame.pack();
+                    contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
+                            getImage(Tablero.class.getResource("../../Img/ico.png")));
+                    contJugadoresFrame.setLocationRelativeTo(null);
+                    contJugadoresFrame.setVisible(true);
+                    contJugadoresFrame.setResizable(false);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    break;
+                }
+            }
+        });
+
+        portugal.addActionListener(e -> {
+            FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(portugal);
+            for (Equipo equipo : frame.getEquipos()) {
+                if (equipo.getNombre().equals("Portugal")) {
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame.setContentPane(new ContJugadores().panel);
+                    contJugadoresFrame.pack();
+                    contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
+                            getImage(Tablero.class.getResource("../../Img/ico.png")));
+                    contJugadoresFrame.setLocationRelativeTo(null);
+                    contJugadoresFrame.setVisible(true);
+                    contJugadoresFrame.setResizable(false);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    break;
+                }
+            }
+        });
+
+        marruecos.addActionListener(e -> {
+            FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(marruecos);
+            for (Equipo equipo : frame.getEquipos()) {
+                if (equipo.getNombre().equals("Marruecos")) {
+                    contJugadoresFrame = new FrameContJugadores("Ver jugadores | Mundial Russia 2018", equipo.getJugadores());
+                    contJugadoresFrame.setContentPane(new ContJugadores().panel);
+                    contJugadoresFrame.pack();
+                    contJugadoresFrame.setIconImage(Toolkit.getDefaultToolkit().
+                            getImage(Tablero.class.getResource("../../Img/ico.png")));
+                    contJugadoresFrame.setLocationRelativeTo(null);
+                    contJugadoresFrame.setVisible(true);
+                    contJugadoresFrame.setResizable(false);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    break;
+                }
+            }
+        });
+
 
         backVJ.addActionListener(new ActionListener() {
             @Override
