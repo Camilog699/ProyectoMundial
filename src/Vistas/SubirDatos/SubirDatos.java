@@ -5,6 +5,7 @@ import Clases.Gol;
 import Clases.Jugador;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
@@ -37,6 +38,7 @@ public class SubirDatos {
     LinkedList<Gol> golesE2 = new LinkedList<>();
 
     public SubirDatos() {
+        guardarGol.setBackground(new Color(59, 139, 84));
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
