@@ -7,6 +7,7 @@ public class SubirDatos {
     private JComboBox Equipo;
     private JComboBox TiroEsquina;
     private JLabel gol;
+    private JButton button1;
 
     private void createUIComponents() {
         panel = new SubirDatosPanel();

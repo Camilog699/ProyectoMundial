@@ -18,6 +18,7 @@ public class CrearPartido{
     private JTextField estadio;
     private JTextField horaPartido;
     private JButton iniciarPartido;
+    private JButton button1;
     public JFrame subirDatosFrame;
 
     public CrearPartido() {
