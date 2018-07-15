@@ -10,7 +10,7 @@ public class VerJugadores {
     public JPanel esp;
     private JButton españa;
     private JButton iran;
-    private JButton marrucecos;
+    private JButton marruecos;
     private JButton portugal;
     private JButton back;
 
