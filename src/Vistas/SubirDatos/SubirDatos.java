@@ -73,7 +73,7 @@ public class SubirDatos {
                 }
             }
         });
-       /*   guardarGol.addActionListener(new ActionListener() {
+          guardarGol.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
               if (Objects.equals(Equipo.getSelectedItem(), "Seleccione equipo")){
@@ -88,12 +88,16 @@ public class SubirDatos {
                 else{
                     if(Objects.equals(Equipo.getSelectedItem(), e1.getNombre())){
                         for (Jugador jugador:e1.getJugadores()) {
-                            if (jugador.getNombre().equals())
+                            if (Objects.equals(jugador.getNombre(), Jugador.getSelectedItem())){
+                                golesE1.add(new Gol(minuto.getText(), e1, jugador));
+                                break;
+                            }
                         }
                     }
                 }
+                System.out.println(golesE1.getFirst().getJ().getNombre());
             }
-        });*/
+        });
     }
 
     private void createUIComponents() {

@@ -22,6 +22,7 @@
           <font name="Dusha V5" size="16" style="0"/>
           <model>
             <item value="Seleccione equipo"/>
+            <item value="Espana"/>
           </model>
         </properties>
       </component>
@@ -43,6 +44,7 @@
           <font name="Dusha V5" size="16" style="0"/>
           <model>
             <item value="Seleccione jugador"/>
+            <item value="KOKE"/>
           </model>
         </properties>
       </component>

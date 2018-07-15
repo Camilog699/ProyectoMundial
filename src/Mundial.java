@@ -61,7 +61,7 @@ public class Mundial {
             JSONObject jugs = obj.getJSONObject(key).getJSONObject("Jugadores");
             Equipo equipo = new Equipo(key, obj.getJSONObject(key).getInt("Posicion FIFA"));
             for (int j = 0; j < jugs.names().length(); j++) {
-                String jugKey = (String) jugs.names().get(i);
+                String jugKey = (String) jugs.names().get(j);
                 equipo.getJugadores().add(
                         new Jugador(jugs.getJSONObject(jugKey).getString("Nombre"), jugKey,
                                 jugs.getJSONObject(jugKey).getString("Posicion"),
