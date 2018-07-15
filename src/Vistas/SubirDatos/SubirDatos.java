@@ -14,20 +14,22 @@ import java.util.Objects;
 
 public class SubirDatos {
     public JPanel panel;
-    private JComboBox Equipo;
-    private JComboBox Jugador;
+    private JComboBox EquipoGol;
+    private JComboBox JugadorGol;
     private JLabel gol;
     private JButton backSD;
-    private JTextField minuto;
+    private JTextField minutoGol;
     private JButton guardarGol;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JButton guardarTarjetasButton;
+    private JComboBox JugadorTarjeta;
+    private JButton GUARDARTARJETAButton;
     private JComboBox comboBox3;
     private JTextField minutoEnElQueTextField;
     private JButton GUARDARESQUINASButton;
     private JComboBox comboBox4;
     private JComboBox comboBox5;
+    private JButton AMARILLAButton;
+    private JButton ROJAButton;
+    private JComboBox comboBox1;
     Equipo e1;
     Equipo e2;
     FrameSubirDatos frame;
@@ -35,7 +37,7 @@ public class SubirDatos {
     LinkedList<Gol> golesE2 = new LinkedList<>();
 
     public SubirDatos() {
-        Jugador.setPrototypeDisplayValue("Juan Carlos Herranz");
+        JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
             @Override
@@ -54,39 +56,40 @@ public class SubirDatos {
                 frame.dispose();
             }
         });
-        minuto.setHorizontalAlignment(JTextField.CENTER);
-        minuto.addFocusListener(new FocusAdapter() {
+        minutoGol.setHorizontalAlignment(JTextField.CENTER);
+        minutoGol.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
-                if (minuto.getText().equals("Minuto en el que marcó")) {
-                    minuto.setText("");
+                if (minutoGol.getText().equals("Minuto en el que marcó")) {
+                    minutoGol.setText("");
                 }
             }
         });
-        minuto.addFocusListener(new FocusAdapter() {
+        minutoGol.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
                 super.focusLost(e);
-                if (minuto.getText().equals("")) {
-                    minuto.setText("Minuto en el que marcó");
+                if (minutoGol.getText().equals("")) {
+                    minutoGol.setText("Minuto en el que marcó");
                 }
             }
         });
+        //Ifs para guardar gol
         guardarGol.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (Objects.equals(Equipo.getSelectedItem(), "Seleccione equipo")) {
+                if (Objects.equals(EquipoGol.getSelectedItem(), "Seleccione equipo")) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar el quipo al que pertenece el gol");
-                } else if (Objects.equals(Jugador.getSelectedItem(), "Seleccione jugador")) {
+                } else if (Objects.equals(JugadorGol.getSelectedItem(), "Seleccione jugador")) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar el jugador que hizo el gol");
-                } else if (minuto.getText().equals("Minuto en el que marcó")) {
-                    JOptionPane.showMessageDialog(null, "Digite el minuto en el que se marco el gol");
+                } else if (minutoGol.getText().equals("Minuto en el que marcó")) {
+                    JOptionPane.showMessageDialog(null, "Digite el minutoGol en el que se marco el gol");
                 } else {
-                    if (Objects.equals(Equipo.getSelectedItem(), e1.getNombre())) {
+                    if (Objects.equals(EquipoGol.getSelectedItem(), e1.getNombre())) {
                         for (Jugador jugador : e1.getJugadores()) {
-                            if (Objects.equals(jugador.getNombre(), Jugador.getSelectedItem())) {
-                                golesE1.add(new Gol(minuto.getText(), e1, jugador));
+                            if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
+                                golesE1.add(new Gol(minutoGol.getText(), e1, jugador));
                                 break;
                             }
                         }
@@ -94,37 +97,38 @@ public class SubirDatos {
                 }
             }
         });
+        //Añadir equipos dinamicamente en gol
         panel.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
                 frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);
-                Equipo.addItem(e1.getNombre());
-                Equipo.addItem(e2.getNombre());
+                EquipoGol.addItem(e1.getNombre());
+                EquipoGol.addItem(e2.getNombre());
             }
         });
-
-        Equipo.addActionListener(new ActionListener() {
+        //agregar jugadores dinamicamente en gol
+        EquipoGol.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!(Equipo.getSelectedItem().equals("Seleccione equipo"))) {
-                    if (Objects.equals(Equipo.getSelectedItem(), e1.getNombre())) {
-                        Jugador.removeAllItems();
-                        Jugador.addItem("Seleccione jugador");
+                if (!(EquipoGol.getSelectedItem().equals("Seleccione equipo"))) {
+                    if (Objects.equals(EquipoGol.getSelectedItem(), e1.getNombre())) {
+                        JugadorGol.removeAllItems();
+                        JugadorGol.addItem("Seleccione jugador");
                         for (Jugador jugador : e1.getJugadores()) {
-                            Jugador.addItem(jugador.getNombre());
+                            JugadorGol.addItem(jugador.getNombre());
                         }
-                        Jugador.setEnabled(true);
+                        JugadorGol.setEnabled(true);
                     } else {
-                        Jugador.removeAllItems();
-                        Jugador.addItem("Seleccione jugador");
+                        JugadorGol.removeAllItems();
+                        JugadorGol.addItem("Seleccione jugador");
                         for (Jugador jugador : e2.getJugadores()) {
-                            Jugador.addItem(jugador.getNombre());
+                            JugadorGol.addItem(jugador.getNombre());
                         }
-                        Jugador.setEnabled(true);
+                        JugadorGol.setEnabled(true);
                     }
                 }
-                else Jugador.setEnabled(false);
+                else JugadorGol.setEnabled(false);
             }
         });
     }
