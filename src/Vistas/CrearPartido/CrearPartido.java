@@ -56,7 +56,7 @@ public class CrearPartido{
             @Override
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
-                if (fechaPartido.getText().equals("Hora del partido")){
+                if (fechaPartido.getText().equals("DD/MM")){
                     fechaPartido.setText("");
                 }
             }
@@ -66,7 +66,7 @@ public class CrearPartido{
             public void focusLost(FocusEvent e) {
                 super.focusLost(e);
                 if (fechaPartido.getText().equals("")){
-                    fechaPartido.setText("Hora del partido");
+                    fechaPartido.setText("DD/MM");
                 }
             }
         });
