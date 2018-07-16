@@ -13,8 +13,14 @@ import java.awt.event.FocusEvent;
 import java.util.LinkedList;
 import java.util.Objects;
 
-public class CrearPartido{
+public class CrearPartido {
     public JPanel panel;
+    public JFrame subirDatosFrame;
+    LinkedList<Equipo> equipos;
+    Equipo e1;
+    Equipo e2;
+    FrameCrearPartido frame;
+    Juego partido;
     private JComboBox equipo1;
     private JComboBox equipo2;
     private JLabel vs;
@@ -22,14 +28,8 @@ public class CrearPartido{
     private JTextField fechaPartido;
     private JButton iniciarPartido;
     private JButton button1;
-    public JFrame subirDatosFrame;
-    LinkedList<Equipo> equipos;
-    Equipo e1;
-    Equipo e2;
-    FrameCrearPartido frame;
-    Juego partido;
     private JButton backCP;
-
+    
     public CrearPartido() {
         panel.setFocusable(true);
         estadio.setHorizontalAlignment(JTextField.CENTER);
@@ -37,7 +37,7 @@ public class CrearPartido{
             @Override
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
-                if (estadio.getText().equals("Estadio")){
+                if (estadio.getText().equals("Estadio")) {
                     estadio.setText("");
                 }
             }
@@ -46,7 +46,7 @@ public class CrearPartido{
             @Override
             public void focusLost(FocusEvent e) {
                 super.focusLost(e);
-                if (estadio.getText().equals("")){
+                if (estadio.getText().equals("")) {
                     estadio.setText("Estadio");
                 }
             }
@@ -56,7 +56,7 @@ public class CrearPartido{
             @Override
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
-                if (fechaPartido.getText().equals("DD/MM")){
+                if (fechaPartido.getText().equals("DD/MM")) {
                     fechaPartido.setText("");
                 }
             }
@@ -65,28 +65,27 @@ public class CrearPartido{
             @Override
             public void focusLost(FocusEvent e) {
                 super.focusLost(e);
-                if (fechaPartido.getText().equals("")){
+                if (fechaPartido.getText().equals("")) {
                     fechaPartido.setText("DD/MM");
                 }
             }
         });
         iniciarPartido.addActionListener(e -> {
-            if((Objects.equals(equipo1.getSelectedItem(), "Seleccione equipo") ||
+            if ((Objects.equals(equipo1.getSelectedItem(), "Seleccione equipo") ||
                     (Objects.equals(equipo2.getSelectedItem(), "Seleccione equipo"))) ||
                     (Objects.equals(estadio.getText(), "Estadio")) ||
-                    (Objects.equals(fechaPartido.getText(), "DD/MM"))){
-                JOptionPane.showMessageDialog(null,"Por favor complete todos los campos");
-
-            }
-            else{
+                    (Objects.equals(fechaPartido.getText(), "DD/MM"))) {
+                JOptionPane.showMessageDialog(null, "Por favor complete todos los campos");
+                
+            } else {
                 if (equipo1.getSelectedItem().equals(equipo2.getSelectedItem())) {
                     JOptionPane.showMessageDialog(null, "Un equipo no puede jugar contra él mismo");
                 } else {
                     for (Equipo equipo : equipos) {
-                        if (equipo.getNombre().equals(equipo1.getSelectedItem())){
+                        if (equipo.getNombre().equals(equipo1.getSelectedItem())) {
                             e1 = equipo;
                         }
-                        if (equipo.getNombre().equals(equipo2.getSelectedItem())){
+                        if (equipo.getNombre().equals(equipo2.getSelectedItem())) {
                             e2 = equipo;
                         }
                     }
@@ -103,13 +102,13 @@ public class CrearPartido{
                 }
             }
         });
-
+        
         backCP.addActionListener(e -> {
             frame = (FrameCrearPartido) SwingUtilities.getWindowAncestor(panel);
             frame.setVisible(false);
             frame.dispose();
         });
-
+        
         panel.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -123,9 +122,9 @@ public class CrearPartido{
             }
         });
     }
-
+    
     private void createUIComponents() {
         panel = new CrearPartidoPanel();
-
+        
     }
 }
