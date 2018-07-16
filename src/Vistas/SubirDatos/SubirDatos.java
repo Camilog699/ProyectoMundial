@@ -11,13 +11,13 @@ import java.util.Objects;
 
 public class SubirDatos {
     public JPanel panel;
-    private JComboBox EquipoGol;
-    private JComboBox JugadorGol;
+    private JComboBox<String> EquipoGol;
+    private JComboBox<String> JugadorGol;
     private JLabel gol;
     private JButton backSD;
     private JTextField minutoGol;
     private JButton guardarGol;
-    private JComboBox JugadorTarjeta;
+    private JComboBox<String> JugadorTarjeta;
     private JComboBox comboBox3;
     private JTextField minutoEnElQueTextField;
     private JButton GUARDARESQUINAButton;
@@ -25,7 +25,7 @@ public class SubirDatos {
     private JComboBox comboBox5;
     private JButton amarilla;
     private JButton roja;
-    private JComboBox equipoTarjeta;
+    private JComboBox<String> equipoTarjeta;
     private Juego juego;
     private FrameSubirDatos frame;
 
@@ -114,7 +114,7 @@ public class SubirDatos {
         });
         //agregar jugadores dinamicamente en gol
         EquipoGol.addActionListener(e -> {
-            if (!(EquipoGol.getSelectedItem().equals("Seleccione equipo"))) {
+            if (!(Objects.equals(EquipoGol.getSelectedItem(), "Seleccione equipo"))) {
                 if (Objects.equals(EquipoGol.getSelectedItem(), juego.getE1().getNombre())) {
                     JugadorGol.removeAllItems();
                     JugadorGol.addItem("Seleccione jugador");

@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class CrearPartido{
     public JPanel panel;
@@ -70,8 +71,11 @@ public class CrearPartido{
             }
         });
         iniciarPartido.addActionListener(e -> {
-            if((equipo1.getSelectedItem().equals("Seleccione equipo") || (equipo2.getSelectedItem().equals("Seleccione equipo")))){
-                JOptionPane.showMessageDialog(null,"Debe seleccionar los equipos");
+            if((Objects.equals(equipo1.getSelectedItem(), "Seleccione equipo") ||
+                    (Objects.equals(equipo2.getSelectedItem(), "Seleccione equipo"))) ||
+                    (Objects.equals(estadio.getText(), "Estadio")) ||
+                    (Objects.equals(fechaPartido.getText(), "DD/MM"))){
+                JOptionPane.showMessageDialog(null,"Por favor complete todos los campos");
 
             }
             else{
