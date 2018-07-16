@@ -91,7 +91,5 @@ public class TablaPosiciones {
         label11.setText(equipos.get(1).getNombre());
         label111.setText(equipos.get(2).getNombre());
         label1111.setText(equipos.get(3).getNombre());
-        
-        System.out.println("hola");
     }
 }
