@@ -6,11 +6,10 @@
 package Clases;
 
 /**
- *
  * @author amrag
  */
 public class CuerpoTecnico extends Persona {
-
+    
     //Atributos
     private String funcion;
     private String PaisNacimiento;
@@ -25,15 +24,15 @@ public class CuerpoTecnico extends Persona {
     public String getFuncion() {
         return funcion;
     }
-
+    
     public void setFuncion(String funcion) {
         this.funcion = funcion;
     }
-
+    
     public String getPaisNacimiento() {
         return PaisNacimiento;
     }
-
+    
     public void setPaisNacimiento(String PaisNacimiento) {
         this.PaisNacimiento = PaisNacimiento;
     }

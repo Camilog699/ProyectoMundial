@@ -59,30 +59,30 @@ public class Mundial {
             fis.close();
             String content = sb.toString();
             JSONObject obj = new JSONObject(content);
-        
-        for (int i = 0; i < obj.names().length(); i++) {
-            String key = (String) obj.names().get(i);
-            Equipo equipo = new Equipo(key, obj.getJSONObject(key).getInt("Posicion FIFA"));
-            JSONObject jugs = obj.getJSONObject(key).getJSONObject("Jugadores");
-            JSONObject tecs = obj.getJSONObject(key).getJSONObject("Cuerpo tecnico");
-            for (int j = 0; j < jugs.names().length(); j++) {
-                String jugKey = (String) jugs.names().get(j);
-                equipo.getJugadores().add(
-                        new Jugador(jugs.getJSONObject(jugKey).getString("Nombre"), jugKey,
-                                jugs.getJSONObject(jugKey).getString("Posicion"),
-                                jugs.getJSONObject(jugKey).getString("Nacimiento"),
-                                jugs.getJSONObject(jugKey).getInt("Dorsal")
-                        ));
+            
+            for (int i = 0; i < obj.names().length(); i++) {
+                String key = (String) obj.names().get(i);
+                Equipo equipo = new Equipo(key, obj.getJSONObject(key).getInt("Posicion FIFA"));
+                JSONObject jugs = obj.getJSONObject(key).getJSONObject("Jugadores");
+                JSONObject tecs = obj.getJSONObject(key).getJSONObject("Cuerpo tecnico");
+                for (int j = 0; j < jugs.names().length(); j++) {
+                    String jugKey = (String) jugs.names().get(j);
+                    equipo.getJugadores().add(
+                            new Jugador(jugs.getJSONObject(jugKey).getString("Nombre"), jugKey,
+                                    jugs.getJSONObject(jugKey).getString("Posicion"),
+                                    jugs.getJSONObject(jugKey).getString("Nacimiento"),
+                                    jugs.getJSONObject(jugKey).getInt("Dorsal")
+                            ));
+                }
+                for (int k = 0; k < tecs.names().length(); k++) {
+                    String tecKey = (String) tecs.names().get(k);
+                    equipo.getTecnicos().add(
+                            new CuerpoTecnico(tecs.getJSONObject(tecKey).getString("Nombre"), tecKey, tecs.getJSONObject(tecKey).getString("Posicion"),
+                                    tecs.getJSONObject(tecKey).getString("Pais")
+                            ));
+                }
+                equipos.add(equipo);
             }
-            for (int k = 0; k < tecs.names().length(); k++) {
-                String tecKey = (String) tecs.names().get(k);
-                equipo.getTecnicos().add(
-                        new CuerpoTecnico(tecs.getJSONObject(tecKey).getString("Nombre"), tecKey, tecs.getJSONObject(tecKey).getString("Posicion"),
-                                tecs.getJSONObject(tecKey).getString("Pais")
-                        ));
-            }
-            equipos.add(equipo);
-        }
         } catch (java.io.IOException e) {
             e.printStackTrace();
         }

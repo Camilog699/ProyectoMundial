@@ -8,7 +8,6 @@ package Clases;
 import java.util.LinkedList;
 
 /**
- *
  * @author amrag
  */
 public class Equipo {
@@ -31,7 +30,7 @@ public class Equipo {
     private int perdidos;
     private int ganados;
     private int empatados;
-
+    
     
     //Costructores
     public Equipo() {
@@ -44,11 +43,15 @@ public class Equipo {
         tecnicos = new LinkedList<>();
     }
     
+    public int diferenciaGoles() {
+        return golesFavor - golesContra;
+    }
+    
     //get y set
     public String getNombre() {
         return nombre;
     }
-
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -77,27 +80,27 @@ public class Equipo {
                 ", jugadores=" + jugadores +
                 '}';
     }
-
+    
     public int getPerdidos() {
         return perdidos;
     }
-
+    
     public void setPerdidos(int perdidos) {
         this.perdidos = perdidos;
     }
-
+    
     public int getGanados() {
         return ganados;
     }
-
+    
     public void setGanados(int ganados) {
         this.ganados = ganados;
     }
-
+    
     public int getEmpatados() {
         return empatados;
     }
-
+    
     public void setEmpatados(int empatados) {
         this.empatados = empatados;
     }

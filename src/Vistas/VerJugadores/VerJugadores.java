@@ -13,14 +13,14 @@ import java.awt.event.ActionListener;
 
 public class VerJugadores {
     public JPanel esp;
+    FrameVerJugadores frame;
+    FrameContJugadores contJugadoresFrame;
     private JButton españa;
     private JButton iran;
     private JButton marruecos;
     private JButton portugal;
     private JButton backVJ;
-    FrameVerJugadores frame;
-
-    FrameContJugadores contJugadoresFrame;
+    
     public VerJugadores() {
         españa.addActionListener(e -> {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(españa);
@@ -39,7 +39,7 @@ public class VerJugadores {
                 }
             }
         });
-
+        
         iran.addActionListener(e -> {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(iran);
             for (Equipo equipo : frame.getEquipos()) {
@@ -57,7 +57,7 @@ public class VerJugadores {
                 }
             }
         });
-
+        
         portugal.addActionListener(e -> {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(portugal);
             for (Equipo equipo : frame.getEquipos()) {
@@ -75,7 +75,7 @@ public class VerJugadores {
                 }
             }
         });
-
+        
         marruecos.addActionListener(e -> {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(marruecos);
             for (Equipo equipo : frame.getEquipos()) {
@@ -93,8 +93,8 @@ public class VerJugadores {
                 }
             }
         });
-
-
+        
+        
         backVJ.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -104,8 +104,8 @@ public class VerJugadores {
             }
         });
     }
-
-
+    
+    
     private void createUIComponents() {
         this.esp = new VerJugadoresPanel();
     }

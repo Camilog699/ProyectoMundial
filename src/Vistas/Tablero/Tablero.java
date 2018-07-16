@@ -15,19 +15,18 @@ import java.awt.event.ActionListener;
 
 
 public class Tablero {
-
+    
     public JPanel panel;
     public FrameVerJugadores verJugadoresFrame;
     public FrameSubirDatos subirDatosFrame;
     public JFrame tablaPosicionesFrame;
     public FrameCrearPartido crearPartido;
-
+    FrameTablero frame;
     private JButton subirDatosPartidoButton;
     private JButton verJugadoresButton;
     private JButton TablaPosicionesButton;
     private JButton off;
-    FrameTablero frame;
-
+    
     public Tablero() {
         verJugadoresButton.addActionListener(e -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(verJugadoresButton);
@@ -53,9 +52,9 @@ public class Tablero {
             crearPartido.setResizable(false);
             crearPartido.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
-
+        
         TablaPosicionesButton.addActionListener(e -> {
-            frame=(FrameTablero) SwingUtilities.getWindowAncestor(TablaPosicionesButton);
+            frame = (FrameTablero) SwingUtilities.getWindowAncestor(TablaPosicionesButton);
             tablaPosicionesFrame = new FrameTablaPosiciones("Tabla de posiciones | Mundial Russia 2018", frame.getJuegos(), frame.getEquipos());
             tablaPosicionesFrame.setContentPane(new TablaPosiciones().panel);
             tablaPosicionesFrame.pack();
@@ -66,8 +65,8 @@ public class Tablero {
             tablaPosicionesFrame.setResizable(false);
             tablaPosicionesFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
-
-
+        
+        
         off.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -77,9 +76,9 @@ public class Tablero {
             }
         });
     }
-
+    
     private void createUIComponents() {
         panel = new TableroPanel();
     }
-
+    
 }

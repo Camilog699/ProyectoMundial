@@ -14,12 +14,12 @@ import java.util.LinkedList;
 
 public class ContJugadores {
     public JPanel panel;
+    FrameContJugadores frame;
     private JScrollPane tecsScroll;
     private JTabbedPane tabs;
     private JScrollPane jugsScroll;
     private JButton button1;
-    FrameContJugadores frame;
-
+    
     public ContJugadores() {
         JPanel jugsPanelScroll = new JPanel();
         JPanel tecsPanelScroll = new JPanel();
@@ -121,7 +121,7 @@ public class ContJugadores {
             }
         });
     }
-
+    
     private void createUIComponents() {
         panel = new ContJugadoresPanel();
     }

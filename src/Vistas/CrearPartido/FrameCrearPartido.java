@@ -13,11 +13,11 @@ public class FrameCrearPartido extends javax.swing.JFrame {
         super(titulo);
         this.setEquipos(equipos);
     }
-
+    
     public LinkedList<Equipo> getEquipos() {
         return equipos;
     }
-
+    
     public void setEquipos(LinkedList<Equipo> equipos) {
         this.equipos = equipos;
     }

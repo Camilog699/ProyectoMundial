@@ -28,7 +28,7 @@ public class SubirDatos {
     private JComboBox<String> equipoTarjeta;
     private Juego juego;
     private FrameSubirDatos frame;
-
+    
     public SubirDatos() {
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         JugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
@@ -73,8 +73,7 @@ public class SubirDatos {
                 JOptionPane.showMessageDialog(null, "Debe seleccionar el jugador que hizo el gol");
             } else if (minutoGol.getText().equals("Minuto en el que marcó")) {
                 JOptionPane.showMessageDialog(null, "Digite el minuto en el que se marcó el gol");
-            }
-            else {
+            } else {
                 if (Objects.equals(EquipoGol.getSelectedItem(), juego.getE1().getNombre())) {
                     for (Jugador jugador : juego.getE1().getJugadores()) {
                         if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
@@ -84,8 +83,7 @@ public class SubirDatos {
                             break;
                         }
                     }
-                }
-                else if(Objects.equals(EquipoGol.getSelectedItem(), juego.getE2().getNombre())){
+                } else if (Objects.equals(EquipoGol.getSelectedItem(), juego.getE2().getNombre())) {
                     for (Jugador jugador : juego.getE2().getJugadores()) {
                         if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
                             juego.getGolesE2().add(new Gol(minutoGol.getText(), jugador));
@@ -95,10 +93,10 @@ public class SubirDatos {
                         }
                     }
                 }
-                JOptionPane.showMessageDialog(null,"Se ha guardado el gol de "
+                JOptionPane.showMessageDialog(null, "Se ha guardado el gol de "
                         + JugadorGol.getSelectedItem());
             }
-
+            
         });
         //Añadir equipos dinamicamente
         panel.addFocusListener(new FocusAdapter() {
@@ -130,8 +128,9 @@ public class SubirDatos {
                     }
                     JugadorGol.setEnabled(true);
                 }
+            } else {
+                JugadorGol.setEnabled(false);
             }
-            else JugadorGol.setEnabled(false);
         });
         equipoTarjeta.addActionListener(e -> {
             if (!(Objects.equals(equipoTarjeta.getSelectedItem(), "Seleccione equipo"))) {
@@ -150,14 +149,16 @@ public class SubirDatos {
                     }
                     JugadorTarjeta.setEnabled(true);
                 }
+            } else {
+                JugadorTarjeta.setEnabled(false);
             }
-            else JugadorTarjeta.setEnabled(false);
         });
         amarilla.addActionListener(e -> {
-
+        
         });
     }
-    private void createUIComponents(){
+    
+    private void createUIComponents() {
         panel = new SubirDatosPanel();
     }
     

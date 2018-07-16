@@ -7,9 +7,9 @@ import java.awt.*;
 public class TableroPanel extends javax.swing.JPanel {
     
     Fondo bg;
-
+    
     public TableroPanel() {
-        this.bg = new Fondo("bg", 0, 0, 0 ,0);
+        this.bg = new Fondo("bg", 0, 0, 0, 0);
     }
     
     @Override

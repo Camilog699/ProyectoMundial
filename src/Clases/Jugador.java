@@ -6,10 +6,9 @@
 package Clases;
 
 /**
- *
  * @author amrag
  */
-public class Jugador extends Persona{
+public class Jugador extends Persona {
     
     //Atributos
     private String posicion;
@@ -31,23 +30,23 @@ public class Jugador extends Persona{
     public String getPosicion() {
         return posicion;
     }
-
+    
     public void setPosicion(String posicion) {
         this.posicion = posicion;
     }
-
+    
     public String getNacimiento() {
         return nacimiento;
     }
-
+    
     public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
     }
-
+    
     public int getDorsal() {
         return dorsal;
     }
-
+    
     public void setDorsal(int dorsal) {
         this.dorsal = dorsal;
     }
