@@ -11,12 +11,12 @@ import java.util.LinkedList;
  * @author amrag
  */
 public class Juego {
+    private LinkedList<Gol> golesE1;
+    private LinkedList<Gol> golesE2;
     private Equipo e1;
     private Equipo e2;
-    private String resultado;
     private String fecha;
     private String estadio;
-    private LinkedList<Gol> goals = new LinkedList<>();
     private LinkedList<Tarjeta> tarjetas = new LinkedList<>();
     private LinkedList<Cambio> cambios = new LinkedList<>();
     private LinkedList<Esquina> esquinas = new LinkedList<>();
@@ -25,18 +25,6 @@ public class Juego {
         this.setE2(e2);
         this.setFecha(fecha);
         this.setEstadio(estadio);
-    }
-    public void agregarTarjeta(Tarjeta t){
-        getTarjetas().add(t);
-    }
-    public void golazohpta(Gol g){
-        getGoals().add(g);
-    }
-    public void prostitucion(Cambio c){
-        getCambios().add(c);
-    }
-    public void corner(Esquina e){
-        getEsquinas().add(e);
     }
 
     public Equipo getE1() {
@@ -54,15 +42,7 @@ public class Juego {
     public void setE2(Equipo e2) {
         this.e2 = e2;
     }
-
-    public String getResultado() {
-        return resultado;
-    }
-
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
-    }
-
+    
     public String getFecha() {
         return fecha;
     }
@@ -78,16 +58,8 @@ public class Juego {
     public void setEstadio(String estadio) {
         this.estadio = estadio;
     }
-
-
-    public LinkedList<Gol> getGoals() {
-        return goals;
-    }
-
-    public void setGoals(LinkedList<Gol> goals) {
-        this.goals = goals;
-    }
-
+    
+    
     public LinkedList<Tarjeta> getTarjetas() {
         return tarjetas;
     }
@@ -111,6 +83,21 @@ public class Juego {
     public void setEsquinas(LinkedList<Esquina> esquinas) {
         this.esquinas = esquinas;
     }
-
-
+    
+    
+    public LinkedList<Gol> getGolesE1() {
+        return golesE1;
+    }
+    
+    public void setGolesE1(LinkedList<Gol> golesE1) {
+        this.golesE1 = golesE1;
+    }
+    
+    public LinkedList<Gol> getGolesE2() {
+        return golesE2;
+    }
+    
+    public void setGolesE2(LinkedList<Gol> golesE2) {
+        this.golesE2 = golesE2;
+    }
 }

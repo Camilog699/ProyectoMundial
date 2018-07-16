@@ -1,16 +1,22 @@
 package Vistas.SubirDatos;
 
-import Clases.Equipo;
+import Clases.Juego;
 
 import java.awt.*;
 
 public class FrameSubirDatos extends javax.swing.JFrame {
-    Equipo e1;
-    Equipo e2;
-
-    public FrameSubirDatos(String title, Equipo e1, Equipo e2) throws HeadlessException {
-        super(title);
-        this.e1 = e1;
-        this.e2 = e2;
+    private Juego juego;
+    
+    public FrameSubirDatos(String titulo, Juego juego) throws HeadlessException {
+        super(titulo);
+        this.juego = juego;
+    }
+    
+    public Juego getJuego() {
+        return juego;
+    }
+    
+    public void setJuego(Juego juego) {
+        this.juego = juego;
     }
 }

@@ -16,7 +16,15 @@ public class Equipo {
     
     //Atributos
     private String nombre;
-    private int PosicionFifa;
+    private int posicionFifa;
+    private int cantAmarillas;
+    private int cantRojas;
+    private int partJugados;
+    private int partGanados;
+    private int partEmpatados;
+    private int puntos;
+    private int golesFavor;
+    private int golesContra;
     private LinkedList<Jugador> jugadores;
     private LinkedList<CuerpoTecnico> tecnicos;
     
@@ -31,7 +39,7 @@ public class Equipo {
     
     public Equipo(String nombre, int posicionFifa) {
         this.nombre = nombre;
-        PosicionFifa = posicionFifa;
+        this.posicionFifa = posicionFifa;
         jugadores = new LinkedList<>();
         tecnicos = new LinkedList<>();
     }
@@ -46,11 +54,11 @@ public class Equipo {
     }
     
     public int getPosicionFifa() {
-        return PosicionFifa;
+        return posicionFifa;
     }
     
     public void setPosicionFifa(int posicionFifa) {
-        PosicionFifa = posicionFifa;
+        this.posicionFifa = posicionFifa;
     }
     
     public LinkedList<Jugador> getJugadores() {
@@ -65,7 +73,7 @@ public class Equipo {
     public String toString() {
         return "Equipo{" +
                 "nombre='" + nombre + '\'' +
-                ", PosicionFifa=" + PosicionFifa +
+                ", posicionFifa=" + posicionFifa +
                 ", jugadores=" + jugadores +
                 '}';
     }
@@ -100,5 +108,69 @@ public class Equipo {
     
     public void setTecnicos(LinkedList<CuerpoTecnico> tecnicos) {
         this.tecnicos = tecnicos;
+    }
+    
+    public int getCantAmarillas() {
+        return cantAmarillas;
+    }
+    
+    public void setCantAmarillas(int cantAmarillas) {
+        this.cantAmarillas = cantAmarillas;
+    }
+    
+    public int getCantRojas() {
+        return cantRojas;
+    }
+    
+    public void setCantRojas(int cantRojas) {
+        this.cantRojas = cantRojas;
+    }
+    
+    public int getPartJugados() {
+        return partJugados;
+    }
+    
+    public void setPartJugados(int partJugados) {
+        this.partJugados = partJugados;
+    }
+    
+    public int getPartGanados() {
+        return partGanados;
+    }
+    
+    public void setPartGanados(int partGanados) {
+        this.partGanados = partGanados;
+    }
+    
+    public int getPartEmpatados() {
+        return partEmpatados;
+    }
+    
+    public void setPartEmpatados(int partEmpatados) {
+        this.partEmpatados = partEmpatados;
+    }
+    
+    public int getGolesFavor() {
+        return golesFavor;
+    }
+    
+    public void setGolesFavor(int golesFavor) {
+        this.golesFavor = golesFavor;
+    }
+    
+    public int getGolesContra() {
+        return golesContra;
+    }
+    
+    public void setGolesContra(int golesContra) {
+        this.golesContra = golesContra;
+    }
+    
+    public int getPuntos() {
+        return puntos;
+    }
+    
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
     }
 }
