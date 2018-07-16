@@ -34,7 +34,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
@@ -52,7 +52,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
@@ -70,7 +70,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
@@ -88,7 +88,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }

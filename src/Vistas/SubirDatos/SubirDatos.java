@@ -85,7 +85,8 @@ public class SubirDatos {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar el jugador que hizo el gol");
                 } else if (minutoGol.getText().equals("Minuto en el que marcó")) {
                     JOptionPane.showMessageDialog(null, "Digite el minutoGol en el que se marco el gol");
-                } else {
+                }
+                else {
                     if (Objects.equals(EquipoGol.getSelectedItem(), e1.getNombre())) {
                         for (Jugador jugador : e1.getJugadores()) {
                             if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
@@ -94,7 +95,18 @@ public class SubirDatos {
                             }
                         }
                     }
+                    else if(Objects.equals(EquipoGol.getSelectedItem(), e2.getNombre())){
+                        for (Jugador jugador : e2.getJugadores()) {
+                            if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
+                                golesE2.add(new Gol(minutoGol.getText(), e2, jugador));
+                                break;
+                            }
+                        }
+                    }
+                    JOptionPane.showMessageDialog(null,"Se ha guardado el gol de "
+                            + JugadorGol.getSelectedItem());
                 }
+
             }
         });
         //Añadir equipos dinamicamente
@@ -136,7 +148,7 @@ public class SubirDatos {
         equipoTarjeta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!(equipoTarjeta.getSelectedItem().equals("Seleccione equipo"))) {
+                if (!(Objects.equals(equipoTarjeta.getSelectedItem(), "Seleccione equipo"))) {
                     if (Objects.equals(equipoTarjeta.getSelectedItem(), e1.getNombre())) {
                         JugadorTarjeta.removeAllItems();
                         JugadorTarjeta.addItem("Seleccione jugador");
@@ -154,6 +166,12 @@ public class SubirDatos {
                     }
                 }
                 else JugadorTarjeta.setEnabled(false);
+            }
+        });
+        amarilla.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
