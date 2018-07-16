@@ -17,7 +17,7 @@ public class SubirDatos {
     private JButton backSD;
     private JTextField minutoGol;
     private JButton guardarGol;
-    private JComboBox<String> JugadorTarjeta;
+    private JComboBox<String> jugadorTarjeta;
     private JComboBox comboBox3;
     private JTextField minutoEnElQueTextField;
     private JButton GUARDARESQUINAButton;
@@ -31,7 +31,7 @@ public class SubirDatos {
     
     public SubirDatos() {
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
-        JugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
+        jugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
             @Override
@@ -135,26 +135,31 @@ public class SubirDatos {
         equipoTarjeta.addActionListener(e -> {
             if (!(Objects.equals(equipoTarjeta.getSelectedItem(), "Seleccione equipo"))) {
                 if (Objects.equals(equipoTarjeta.getSelectedItem(), juego.getE1().getNombre())) {
-                    JugadorTarjeta.removeAllItems();
-                    JugadorTarjeta.addItem("Seleccione jugador");
+                    jugadorTarjeta.removeAllItems();
+                    jugadorTarjeta.addItem("Seleccione jugador");
                     for (Jugador jugador : juego.getE1().getJugadores()) {
-                        JugadorTarjeta.addItem(jugador.getNombre());
+                        jugadorTarjeta.addItem(jugador.getNombre());
                     }
-                    JugadorTarjeta.setEnabled(true);
                 } else {
-                    JugadorTarjeta.removeAllItems();
-                    JugadorTarjeta.addItem("Seleccione jugador");
+                    jugadorTarjeta.removeAllItems();
+                    jugadorTarjeta.addItem("Seleccione jugador");
                     for (Jugador jugador : juego.getE2().getJugadores()) {
-                        JugadorTarjeta.addItem(jugador.getNombre());
+                        jugadorTarjeta.addItem(jugador.getNombre());
                     }
-                    JugadorTarjeta.setEnabled(true);
                 }
+                jugadorTarjeta.setEnabled(true);
             } else {
-                JugadorTarjeta.setEnabled(false);
+                jugadorTarjeta.setEnabled(false);
             }
         });
-        amarilla.addActionListener(e -> {
-        
+        jugadorTarjeta.addActionListener(e -> {
+            if (!(Objects.equals(jugadorTarjeta.getSelectedItem(), "Seleccione jugador"))) {
+                amarilla.setEnabled(true);
+                roja.setEnabled(true);
+            }else {
+                amarilla.setEnabled(false);
+                roja.setEnabled(false);
+            }
         });
     }
     
