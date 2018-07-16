@@ -6,6 +6,8 @@ import Clases.Jugador;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.LinkedList;
@@ -15,7 +17,9 @@ public class ContJugadores {
     private JScrollPane tecsScroll;
     private JTabbedPane tabs;
     private JScrollPane jugsScroll;
-    
+    private JButton button1;
+    FrameContJugadores frame;
+
     public ContJugadores() {
         JPanel jugsPanelScroll = new JPanel();
         JPanel tecsPanelScroll = new JPanel();
@@ -108,8 +112,16 @@ public class ContJugadores {
                 panel.setFocusable(false);
             }
         });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame = (FrameContJugadores) SwingUtilities.getWindowAncestor(panel);
+                frame.setVisible(false);
+                frame.dispose();
+            }
+        });
     }
-    
+
     private void createUIComponents() {
         panel = new ContJugadoresPanel();
     }
