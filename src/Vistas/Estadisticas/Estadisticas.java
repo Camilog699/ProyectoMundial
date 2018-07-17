@@ -14,7 +14,7 @@ import java.awt.event.FocusEvent;
 public class Estadisticas {
     JPanel golesPanel;
     JPanel tarjetasPanel;
-    private JTabbedPane tabbedPane1;
+    private JTabbedPane tabs;
     Juego juego;
     public JPanel panel;
     private JScrollPane golesScrollPanel;
