@@ -5,10 +5,10 @@ import Vistas.ContJugadores.ContJugadores;
 import Vistas.ContJugadores.FrameContJugadores;
 import Vistas.Tablero.Tablero;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.io.IOException;
 
 
 public class VerJugadores {
@@ -22,6 +22,17 @@ public class VerJugadores {
     private JButton backVJ;
     
     public VerJugadores() {
+        try {
+            esp.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(esp.getX(),
+                    esp.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        españa.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        marruecos.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        iran.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        portugal.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        backVJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         españa.addActionListener(e -> {
             FrameVerJugadores frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(españa);
             for (Equipo equipo : frame.getEquipos()) {
@@ -34,7 +45,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
@@ -52,7 +63,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
@@ -70,7 +81,7 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
@@ -88,20 +99,17 @@ public class VerJugadores {
                     contJugadoresFrame.setLocationRelativeTo(null);
                     contJugadoresFrame.setVisible(true);
                     contJugadoresFrame.setResizable(false);
-                    //contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    contJugadoresFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     break;
                 }
             }
         });
         
         
-        backVJ.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(esp);
-                frame.setVisible(false);
-                frame.dispose();
-            }
+        backVJ.addActionListener(e -> {
+            frame = (FrameVerJugadores) SwingUtilities.getWindowAncestor(esp);
+            frame.setVisible(false);
+            frame.dispose();
         });
     }
     

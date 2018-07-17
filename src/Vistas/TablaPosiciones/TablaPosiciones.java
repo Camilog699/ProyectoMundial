@@ -4,6 +4,7 @@ import Clases.Equipo;
 import Clases.Juego;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
@@ -50,12 +51,13 @@ public class TablaPosiciones {
     private JLabel label7777;
     private JLabel label8888;
     private JButton backTP;
-
+    
     public TablaPosiciones() {
+        backTP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         PanelInterno.setOpaque(false);
-
+        
         panel.setFocusable(true);
-
+        
         backTP.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,38 +76,38 @@ public class TablaPosiciones {
                 setPosiciones();
             }
         });
-
+        
     }
-
+    
     private void createUIComponents() {
         panel = new TablaPosicionesPanel();
     }
-
+    
     public void setPosiciones() {
         equipos.sort(new Comparator<Equipo>() {
             @Override
             public int compare(Equipo o1, Equipo o2) {
                 int puntosO1 = 0;
                 int puntosO2 = 0;
-
+                
                 if (o1.getPuntos() < o2.getPuntos()) {
                     puntosO2 -= 4;
                 } else if (o1.getPuntos() > o2.getPuntos()) {
                     puntosO1 -= 4;
                 }
-
+                
                 if (o1.diferenciaGoles() < o2.diferenciaGoles()) {
                     puntosO2 -= 3;
                 } else if (o1.diferenciaGoles() > o2.diferenciaGoles()) {
                     puntosO1 -= 3;
                 }
-
+                
                 if (o1.getCantAmarillas() > o2.getCantAmarillas()) {
                     puntosO2 -= 2;
                 } else if (o1.getCantAmarillas() < o2.getCantAmarillas()) {
                     puntosO1 -= 2;
                 }
-
+                
                 if (o1.getCantRojas() > o2.getCantRojas()) {
                     puntosO2 -= 1;
                 } else if (o1.getCantRojas() < o2.getCantRojas()) {
@@ -114,49 +116,47 @@ public class TablaPosiciones {
                 return puntosO1 - puntosO2;
             }
         });
-
+        
         label1.setText(equipos.get(0).getNombre());
         label11.setText(equipos.get(1).getNombre());
         label111.setText(equipos.get(2).getNombre());
         label1111.setText(equipos.get(3).getNombre());
-
+        
         label2.setText(String.valueOf(equipos.get(0).getPartJugados()));
         label22.setText(String.valueOf(equipos.get(1).getPartJugados()));
         label222.setText(String.valueOf(equipos.get(2).getPartJugados()));
         label2222.setText(String.valueOf(equipos.get(3).getPartJugados()));
-
+        
         label3.setText(String.valueOf(equipos.get(0).getPartGanados()));
         label33.setText(String.valueOf(equipos.get(1).getPartGanados()));
         label333.setText(String.valueOf(equipos.get(2).getPartGanados()));
         label3333.setText(String.valueOf(equipos.get(3).getPartGanados()));
-
+        
         label4.setText(String.valueOf(equipos.get(0).getPartPerdidos()));
         label44.setText(String.valueOf(equipos.get(1).getPartPerdidos()));
         label444.setText(String.valueOf(equipos.get(2).getPartPerdidos()));
         label4444.setText(String.valueOf(equipos.get(3).getPartPerdidos()));
-
+        
         label5.setText(String.valueOf(equipos.get(0).getPuntos()));
         label55.setText(String.valueOf(equipos.get(1).getPuntos()));
         label555.setText(String.valueOf(equipos.get(2).getPuntos()));
         label5555.setText(String.valueOf(equipos.get(3).getPuntos()));
-
+        
         label6.setText(String.valueOf(equipos.get(0).getGolesFavor()));
         label66.setText(String.valueOf(equipos.get(1).getGolesFavor()));
         label666.setText(String.valueOf(equipos.get(2).getGolesFavor()));
         label6666.setText(String.valueOf(equipos.get(3).getGolesFavor()));
-
+        
         label7.setText(String.valueOf(equipos.get(0).getGolesContra()));
         label77.setText(String.valueOf(equipos.get(1).getGolesContra()));
         label777.setText(String.valueOf(equipos.get(2).getGolesContra()));
         label7777.setText(String.valueOf(equipos.get(3).getGolesContra()));
-
+        
         label8.setText(String.valueOf(equipos.get(0).diferenciaGoles()));
         label88.setText(String.valueOf(equipos.get(1).diferenciaGoles()));
         label888.setText(String.valueOf(equipos.get(2).diferenciaGoles()));
         label8888.setText(String.valueOf(equipos.get(3).diferenciaGoles()));
-
-
-
-
+        
+        
     }
 }

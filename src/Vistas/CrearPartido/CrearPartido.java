@@ -31,6 +31,7 @@ public class CrearPartido {
     private JButton backCP;
     
     public CrearPartido() {
+        backCP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         panel.setFocusable(true);
         estadio.setHorizontalAlignment(JTextField.CENTER);
         estadio.addFocusListener(new FocusAdapter() {

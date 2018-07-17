@@ -5,6 +5,7 @@ import Clases.Juego;
 import Clases.Jugador;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.Objects;
@@ -30,6 +31,7 @@ public class SubirDatos {
     private FrameSubirDatos frame;
     
     public SubirDatos() {
+        backSD.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         jugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
@@ -156,7 +158,7 @@ public class SubirDatos {
             if (!(Objects.equals(jugadorTarjeta.getSelectedItem(), "Seleccione jugador"))) {
                 amarilla.setEnabled(true);
                 roja.setEnabled(true);
-            }else {
+            } else {
                 amarilla.setEnabled(false);
                 roja.setEnabled(false);
             }

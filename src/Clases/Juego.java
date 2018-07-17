@@ -70,68 +70,68 @@ public class Juego {
     public void setEstadio(String estadio) {
         this.estadio = estadio;
     }
-
-
+    
+    
     public LinkedList<Esquina> getEsquinasE2() {
         return esquinasE2;
     }
-
+    
     public void setEsquinasE2(LinkedList<Esquina> esquinasE2) {
         this.esquinasE2 = esquinasE2;
     }
-
+    
     public LinkedList<Gol> getGolesE1() {
         return golesE1;
     }
-
+    
     public void setGolesE1(LinkedList<Gol> golesE1) {
         this.golesE1 = golesE1;
     }
-
+    
     public LinkedList<Gol> getGolesE2() {
         return golesE2;
     }
-
+    
     public void setGolesE2(LinkedList<Gol> golesE2) {
         this.golesE2 = golesE2;
     }
-
+    
     public LinkedList<Tarjeta> getTarjetasE1() {
         return tarjetasE1;
     }
-
+    
     public void setTarjetasE1(LinkedList<Tarjeta> tarjetasE1) {
         this.tarjetasE1 = tarjetasE1;
     }
-
+    
     public LinkedList<Tarjeta> getTarjetasE2() {
         return tarjetasE2;
     }
-
+    
     public void setTarjetasE2(LinkedList<Tarjeta> tarjetasE2) {
         this.tarjetasE2 = tarjetasE2;
     }
-
+    
     public LinkedList<Cambio> getCambiosE1() {
         return cambiosE1;
     }
-
+    
     public void setCambiosE1(LinkedList<Cambio> cambiosE1) {
         this.cambiosE1 = cambiosE1;
     }
-
+    
     public LinkedList<Cambio> getCambiosE2() {
         return cambiosE2;
     }
-
+    
     public void setCambiosE2(LinkedList<Cambio> cambiosE2) {
         this.cambiosE2 = cambiosE2;
     }
-
+    
     public LinkedList<Esquina> getEsquinasE1() {
         return esquinasE1;
     }
-
+    
     public void setEsquinasE1(LinkedList<Esquina> esquinasE1) {
         this.esquinasE1 = esquinasE1;
     }

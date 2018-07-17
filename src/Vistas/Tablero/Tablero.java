@@ -28,6 +28,7 @@ public class Tablero {
     private JButton off;
     
     public Tablero() {
+        off.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         verJugadoresButton.addActionListener(e -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(verJugadoresButton);
             verJugadoresFrame = new FrameVerJugadores("Ver jugadores | Mundial Russia 2018", frame.getEquipos());

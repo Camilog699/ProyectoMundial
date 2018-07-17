@@ -4,10 +4,9 @@ import Clases.CuerpoTecnico;
 import Clases.Jugador;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.LinkedList;
@@ -18,13 +17,14 @@ public class ContJugadores {
     private JScrollPane tecsScroll;
     private JTabbedPane tabs;
     private JScrollPane jugsScroll;
-    private JButton button1;
+    private JButton backCJ;
     
     public ContJugadores() {
         JPanel jugsPanelScroll = new JPanel();
         JPanel tecsPanelScroll = new JPanel();
+        backCJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        tabs.setBorder(new EmptyBorder(0, 0, 0, 0));
         jugsPanelScroll.setLayout(new GridLayout(12, 3));
-        jugsPanelScroll.setPreferredSize(new Dimension(600, 3000));
         jugsScroll.setViewportView(jugsPanelScroll);
         jugsScroll.setOpaque(false);
         jugsScroll.getViewport().setOpaque(false);
@@ -51,6 +51,7 @@ public class ContJugadores {
                     dataPanel.setFont(new Font("Dusha", Font.PLAIN, 12));
                     dataPanel.setOpaque(false);
                     if (jugador.getId().startsWith("02")) {
+                        jugsPanelScroll.setPreferredSize(new Dimension(600, 3000));
                         JPanel imgPanel = new JPanel(new GridLayout(1, 0));
                         imgPanel.setOpaque(false);
                         imgPanel.add(new JLabel("", new ImageIcon(getClass().getResource("../../Img/" +
@@ -59,6 +60,7 @@ public class ContJugadores {
                         jugPanel.add(imgPanel);
                     } else {
                         jugPanel = new JPanel(new GridLayout(1, 0));
+                        jugsPanelScroll.setPreferredSize(new Dimension(600, 1500));
                     }
                     jugPanel.setBorder(BorderFactory.createLineBorder(Color.white));
                     jugPanel.setOpaque(false);
@@ -112,13 +114,10 @@ public class ContJugadores {
                 panel.setFocusable(false);
             }
         });
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame = (FrameContJugadores) SwingUtilities.getWindowAncestor(panel);
-                frame.setVisible(false);
-                frame.dispose();
-            }
+        backCJ.addActionListener(e -> {
+            frame = (FrameContJugadores) SwingUtilities.getWindowAncestor(panel);
+            frame.setVisible(false);
+            frame.dispose();
         });
     }
     
