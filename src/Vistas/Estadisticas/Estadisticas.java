@@ -93,6 +93,7 @@ public class Estadisticas {
             frame = (FrameEstadisticas) SwingUtilities.getWindowAncestor(panel);
             frame.setVisible(false);
             frame.dispose();
+            
         });
     }
     

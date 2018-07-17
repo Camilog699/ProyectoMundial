@@ -323,6 +323,11 @@ public class SubirDatos {
                             Integer.parseInt(Objects.requireNonNull(dorsalSale.getSelectedItem()).toString()), minutoSus.getText()));
                     JOptionPane.showMessageDialog(null, "El cambio se ha agragado correctamente");
                 }
+                else {
+                    juego.getCambiosE2().add(new Cambio(Integer.parseInt(Objects.requireNonNull(dorsalEntra.getSelectedItem()).toString()),
+                            Integer.parseInt(Objects.requireNonNull(dorsalSale.getSelectedItem()).toString()), minutoSus.getText()));
+                    JOptionPane.showMessageDialog(null, "El cambio se ha agragado correctamente");
+                }
             }
         });
 
