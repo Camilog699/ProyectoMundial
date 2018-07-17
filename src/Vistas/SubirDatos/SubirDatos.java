@@ -211,7 +211,7 @@ public class SubirDatos {
             } else {
                 for (Jugador jugador : juego.getE2().getJugadores()) {
                     if (Objects.equals(jugador.getNombre(), jugadorTarjeta.getSelectedItem())) {
-                        juego.getTarjetasE2().add(new Tarjeta(true, jugador));
+                        juego.getTarjetasE2().add(new Tarjeta(false, jugador));
                         juego.getE2().setCantRojas(juego.getE2().getCantRojas() + 1);
                         break;
                     }
