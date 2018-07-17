@@ -40,7 +40,7 @@ public class Estadisticas {
                 super.focusGained(e);
                 FrameEstadisticas frame = (FrameEstadisticas) SwingUtilities.getWindowAncestor(panel);
                 juego = frame.getJuego();
-                golesPanel = new JPanel(new GridLayout(juego.getGolesE1().size() + juego.getGolesE2().size(), 2));
+                golesPanel = new JPanel(new GridLayout(juego.getGolesE1().size() + juego.getGolesE2().size() + 1, 2));
                 golesPanel.setPreferredSize(new Dimension(600, (juego.getGolesE1().size() + juego.getGolesE2().size()) * 70));
                 golesPanel.setOpaque(false);
                 golesScrollPanel.setViewportView(golesPanel);
@@ -49,7 +49,7 @@ public class Estadisticas {
                 golesScrollPanel.setFont(new javax.swing.plaf.FontUIResource("Dusha V5", Font.PLAIN, 20));
                 juego.getGolesE1().forEach(gol -> actualizarGolesPanel(gol));
                 juego.getGolesE2().forEach(gol -> actualizarGolesPanel(gol));
-                tarjetasPanel = new JPanel(new GridLayout(juego.getTarjetasE1().size() + juego.getTarjetasE2().size(), 2));
+                tarjetasPanel = new JPanel(new GridLayout(juego.getTarjetasE1().size() + juego.getTarjetasE2().size() + 1, 2));
                 tarjetasPanel.setPreferredSize(new Dimension(600, (juego.getTarjetasE1().size() + juego.getTarjetasE2().size()) * 70));
                 tarjetasPanel.setOpaque(false);
                 tarjetasScrollPanel.setViewportView(tarjetasPanel);
@@ -58,7 +58,7 @@ public class Estadisticas {
                 tarjetasScrollPanel.setFont(new javax.swing.plaf.FontUIResource("Dusha V5", Font.PLAIN, 20));
                 juego.getTarjetasE1().forEach(tarjeta -> actualizarTarjetasPanel(tarjeta));
                 juego.getTarjetasE2().forEach(tarjeta -> actualizarTarjetasPanel(tarjeta));
-                sustitucionesPanel = new JPanel(new GridLayout(juego.getCambiosE1().size() + juego.getCambiosE2().size(), 4));
+                sustitucionesPanel = new JPanel(new GridLayout(juego.getCambiosE1().size() + juego.getCambiosE2().size() + 1, 4));
                 sustitucionesPanel.setPreferredSize(new Dimension(600, (juego.getCambiosE1().size() + juego.getCambiosE2().size()) * 70));
                 sustitucionesPanel.setOpaque(false);
                 sustitucionesScrollPanel.setViewportView(sustitucionesPanel);
@@ -87,7 +87,7 @@ public class Estadisticas {
                 sustitucionesPanel.add(titTiempo);
                 juego.getCambiosE1().forEach(cambio -> actualizarSustitucionesPanel(cambio, juego.getE1()));
                 juego.getCambiosE2().forEach(cambio -> actualizarSustitucionesPanel(cambio, juego.getE2()));
-                esquinasPanel = new JPanel(new GridLayout(juego.getEsquinasE1().size() + juego.getEsquinasE2().size(), 2));
+                esquinasPanel = new JPanel(new GridLayout(juego.getEsquinasE1().size() + juego.getEsquinasE2().size() + 1, 2));
                 esquinasPanel.setPreferredSize(new Dimension(600, (juego.getEsquinasE1().size() + juego.getEsquinasE2().size()) * 70));
                 esquinasPanel.setOpaque(false);
                 esquinasScrollPanel.setViewportView(esquinasPanel);
