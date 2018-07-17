@@ -2,11 +2,13 @@ package Vistas.Estadisticas;
 
 import Clases.*;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
 
 public class Estadisticas {
     JPanel golesPanel;
@@ -24,6 +26,13 @@ public class Estadisticas {
     private FrameEstadisticas frame;
 
     public Estadisticas() {
+        try {
+            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
+                    panel.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        backE.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
             @Override
@@ -32,7 +41,7 @@ public class Estadisticas {
                 FrameEstadisticas frame = (FrameEstadisticas) SwingUtilities.getWindowAncestor(panel);
                 juego = frame.getJuego();
                 golesPanel = new JPanel(new GridLayout(juego.getGolesE1().size() + juego.getGolesE2().size(), 2));
-                golesPanel.setPreferredSize(new Dimension(600, juego.getGolesE1().size() + juego.getGolesE2().size() * 70));
+                golesPanel.setPreferredSize(new Dimension(600, (juego.getGolesE1().size() + juego.getGolesE2().size()) * 70));
                 golesPanel.setOpaque(false);
                 golesScrollPanel.setViewportView(golesPanel);
                 golesScrollPanel.setOpaque(false);
@@ -41,7 +50,7 @@ public class Estadisticas {
                 juego.getGolesE1().forEach(gol -> actualizarGolesPanel(gol));
                 juego.getGolesE2().forEach(gol -> actualizarGolesPanel(gol));
                 tarjetasPanel = new JPanel(new GridLayout(juego.getGolesE1().size() + juego.getGolesE2().size(), 2));
-                tarjetasPanel.setPreferredSize(new Dimension(600, juego.getGolesE1().size() + juego.getGolesE2().size() * 70));
+                tarjetasPanel.setPreferredSize(new Dimension(600, (juego.getGolesE1().size() + juego.getGolesE2().size()) * 70));
                 tarjetasPanel.setOpaque(false);
                 tarjetasScrollPanel.setViewportView(tarjetasPanel);
                 tarjetasScrollPanel.setOpaque(false);
@@ -50,7 +59,7 @@ public class Estadisticas {
                 juego.getTarjetasE1().forEach(tarjeta -> actualizarTarjetasPanel(tarjeta));
                 juego.getTarjetasE2().forEach(tarjeta -> actualizarTarjetasPanel(tarjeta));
                 sustitucionesPanel = new JPanel(new GridLayout(juego.getGolesE1().size() + juego.getGolesE2().size(), 4));
-                sustitucionesPanel.setPreferredSize(new Dimension(600, juego.getGolesE1().size() + juego.getGolesE2().size() * 70));
+                sustitucionesPanel.setPreferredSize(new Dimension(600, (juego.getGolesE1().size() + juego.getGolesE2().size()) * 70));
                 sustitucionesPanel.setOpaque(false);
                 sustitucionesScrollPanel.setViewportView(sustitucionesPanel);
                 sustitucionesScrollPanel.setOpaque(false);
@@ -79,7 +88,7 @@ public class Estadisticas {
                 juego.getCambiosE1().forEach(cambio -> actualizarSustitucionesPanel(cambio, juego.getE1()));
                 juego.getCambiosE2().forEach(cambio -> actualizarSustitucionesPanel(cambio, juego.getE2()));
                 esquinasPanel = new JPanel(new GridLayout(juego.getGolesE1().size() + juego.getGolesE2().size(), 2));
-                esquinasPanel.setPreferredSize(new Dimension(600, juego.getGolesE1().size() + juego.getGolesE2().size() * 70));
+                esquinasPanel.setPreferredSize(new Dimension(600, (juego.getGolesE1().size() + juego.getGolesE2().size()) * 70));
                 esquinasPanel.setOpaque(false);
                 esquinasScrollPanel.setViewportView(esquinasPanel);
                 esquinasScrollPanel.setOpaque(false);
