@@ -5,13 +5,8 @@ public class Cambio extends DatoPartido {
     private Jugador sale;
     
     
-    public Cambio(Jugador entra, Jugador sale) {
-        this.entra = entra;
-        this.sale = sale;
-    }
-    
-    public Cambio(String tiempo, Equipo equipo, Jugador j, Jugador entra, Jugador sale) {
-        super(tiempo, equipo, j);
+    public Cambio(String tiempo, Equipo equipo, Jugador entra, Jugador sale) {
+        super(tiempo, equipo);
         this.entra = entra;
         this.sale = sale;
     }
