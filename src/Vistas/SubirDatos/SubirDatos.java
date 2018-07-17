@@ -27,6 +27,7 @@ public class SubirDatos {
     private JButton amarilla;
     private JButton roja;
     private JComboBox<String> equipoTarjeta;
+    private JButton button1;
     private Juego juego;
     private FrameSubirDatos frame;
 
