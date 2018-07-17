@@ -8,30 +8,24 @@
     <properties>
       <maximumSize width="1000" height="603"/>
       <minimumSize width="1000" height="603"/>
-      <opaque value="true"/>
       <preferredSize width="1000" height="603"/>
     </properties>
     <border type="none"/>
     <children>
       <tabbedpane id="e3db" binding="tabbedPane1" default-binding="true">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="2" use-parent-layout="false">
             <preferred-size width="650" height="350"/>
           </grid>
         </constraints>
-        <properties>
-          <font name="Dusha V5" size="20"/>
-          <tabPlacement value="1"/>
-        </properties>
+        <properties/>
         <border type="none"/>
         <children>
           <scrollpane id="9df85" binding="golesScrollPanel">
             <constraints>
               <tabbedpane title="Goles"/>
             </constraints>
-            <properties>
-              <font name="Dusha V5" size="20"/>
-            </properties>
+            <properties/>
             <border type="none"/>
             <children/>
           </scrollpane>
@@ -81,6 +75,28 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
+      <component id="b79ed" class="javax.swing.JButton" binding="backE">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <focusable value="false"/>
+          <icon value="Img/back.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <hspacer id="140e5">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="3ef64">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
 </form>

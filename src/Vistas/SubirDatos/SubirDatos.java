@@ -243,7 +243,7 @@ public class SubirDatos {
                 juego.getE2().setPuntos(juego.getE2().getPuntos() + 1);
             }
 
-            FrameEstadisticas frameEstadisticas = new FrameEstadisticas("Subir datos partido | Mundial Russia 2018", juego);
+            FrameEstadisticas frameEstadisticas = new FrameEstadisticas("Estadisticas de partido | Mundial Russia 2018", juego);
             frameEstadisticas.setContentPane(new Estadisticas().panel);
             frameEstadisticas.pack();
             frameEstadisticas.setIconImage(Toolkit.getDefaultToolkit().

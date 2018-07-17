@@ -6,6 +6,8 @@ import Clases.Tarjeta;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
@@ -19,7 +21,9 @@ public class Estadisticas {
     private JScrollPane tarjetasScrollPanel;
     private JScrollPane sustitucionesScrollPanel;
     private JScrollPane esquinasScrollPanel;
-    
+    private JButton backE;
+    private FrameEstadisticas frame;
+
     public Estadisticas() {
         panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
@@ -47,6 +51,11 @@ public class Estadisticas {
                 juego.getTarjetasE1().forEach(tarjeta -> actualizarTarjetasPanel(tarjeta));
                 juego.getTarjetasE2().forEach(tarjeta -> actualizarTarjetasPanel(tarjeta));
             }
+        });
+        backE.addActionListener(e -> {
+            frame = (FrameEstadisticas) SwingUtilities.getWindowAncestor(panel);
+            frame.setVisible(false);
+            frame.dispose();
         });
     }
     
