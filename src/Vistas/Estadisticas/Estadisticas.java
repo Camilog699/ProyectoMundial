@@ -111,8 +111,8 @@ public class Estadisticas {
     
     public void actualizarSustitucionesPanel(Cambio cambio, Equipo equi) {
         JLabel equiLabel = new JLabel(String.valueOf(equi.getNombre()));
-        JLabel jugadorIn = new JLabel(String.valueOf(cambio.getEntra().getDorsal()));
-        JLabel jugadorOut = new JLabel(String.valueOf(cambio.getSale().getDorsal()));
+        JLabel jugadorIn = new JLabel(String.valueOf(cambio.getEntra()));
+        JLabel jugadorOut = new JLabel(String.valueOf(cambio.getSale()));
         JLabel tiempo = new JLabel(String.valueOf(cambio.getTiempo()));
         equiLabel.setHorizontalAlignment(SwingConstants.CENTER);
         jugadorIn.setHorizontalAlignment(SwingConstants.CENTER);
