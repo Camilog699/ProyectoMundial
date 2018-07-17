@@ -5,7 +5,6 @@ import Clases.Jugador;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.FocusAdapter;
@@ -31,7 +30,6 @@ public class ContJugadores {
         JPanel jugsPanelScroll = new JPanel();
         JPanel tecsPanelScroll = new JPanel();
         backCJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        tabs.setBorder(new EmptyBorder(0, 0, 0, 0));
         jugsPanelScroll.setLayout(new GridLayout(12, 3));
         jugsScroll.setViewportView(jugsPanelScroll);
         jugsScroll.setOpaque(false);
