@@ -61,7 +61,11 @@ public class TablaPosiciones {
     private JLabel label9999;
     private JLabel label10101010;
     private JButton backTP;
-    
+    private JLabel label0;
+    private JLabel label00;
+    private JLabel label000;
+    private JLabel label0000;
+
     public TablaPosiciones() {
         try {
             panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
@@ -138,15 +142,20 @@ public class TablaPosiciones {
         label111.setText(equipos.get(2).getNombre());
         label1111.setText(equipos.get(3).getNombre());
         
-        label2.setText(String.valueOf(equipos.get(0).getPartJugados()));
-        label22.setText(String.valueOf(equipos.get(1).getPartJugados()));
-        label222.setText(String.valueOf(equipos.get(2).getPartJugados()));
-        label2222.setText(String.valueOf(equipos.get(3).getPartJugados()));
+        label0.setText(String.valueOf(equipos.get(0).getPartJugados()));
+        label00.setText(String.valueOf(equipos.get(1).getPartJugados()));
+        label000.setText(String.valueOf(equipos.get(2).getPartJugados()));
+        label0000.setText(String.valueOf(equipos.get(3).getPartJugados()));
         
-        label3.setText(String.valueOf(equipos.get(0).getPartGanados()));
-        label33.setText(String.valueOf(equipos.get(1).getPartGanados()));
-        label333.setText(String.valueOf(equipos.get(2).getPartGanados()));
-        label3333.setText(String.valueOf(equipos.get(3).getPartGanados()));
+        label2.setText(String.valueOf(equipos.get(0).getPartGanados()));
+        label22.setText(String.valueOf(equipos.get(1).getPartGanados()));
+        label222.setText(String.valueOf(equipos.get(2).getPartGanados()));
+        label2222.setText(String.valueOf(equipos.get(3).getPartGanados()));
+
+        label3.setText(String.valueOf(equipos.get(0).getPartEmpatados()));
+        label33.setText(String.valueOf(equipos.get(1).getPartEmpatados()));
+        label333.setText(String.valueOf(equipos.get(2).getPartEmpatados()));
+        label3333.setText(String.valueOf(equipos.get(3).getPartEmpatados()));
         
         label4.setText(String.valueOf(equipos.get(0).getPartPerdidos()));
         label44.setText(String.valueOf(equipos.get(1).getPartPerdidos()));

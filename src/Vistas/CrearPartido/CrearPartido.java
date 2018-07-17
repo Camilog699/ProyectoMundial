@@ -108,6 +108,7 @@ public class CrearPartido {
                     subirDatosFrame.setVisible(true);
                     subirDatosFrame.setResizable(false);
                     subirDatosFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
                 }
             }
         });

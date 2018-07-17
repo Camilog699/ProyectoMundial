@@ -349,8 +349,8 @@ public class SubirDatos {
                 juego.getE1().setPartJugados(juego.getE1().getPartJugados() + 1);
                 juego.getE1().setPartEmpatados(juego.getE1().getPartEmpatados() + 1);
                 juego.getE1().setPuntos(juego.getE1().getPuntos() + 1);
-                juego.getE2().setPartJugados(juego.getE1().getPartJugados() + 1);
-                juego.getE2().setPartEmpatados(juego.getE1().getPartEmpatados() + 1);
+                juego.getE2().setPartJugados(juego.getE2().getPartJugados() + 1);
+                juego.getE2().setPartEmpatados(juego.getE2().getPartEmpatados() + 1);
                 juego.getE2().setPuntos(juego.getE2().getPuntos() + 1);
             }
 
@@ -363,6 +363,7 @@ public class SubirDatos {
             frameEstadisticas.setVisible(true);
             frameEstadisticas.setResizable(false);
             frameEstadisticas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            frame.dispose();
         });
 
     }
