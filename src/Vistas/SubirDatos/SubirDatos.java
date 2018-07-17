@@ -79,7 +79,7 @@ public class SubirDatos {
                     for (Jugador jugador : juego.getE1().getJugadores()) {
                         if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
                             juego.getGolesE1().add(new Gol(minutoGol.getText(), jugador));
-                            juego.getE1().setGolesFavor(juego.getE2().getGolesFavor() + 1);
+                            juego.getE1().setGolesFavor(juego.getE1().getGolesFavor() + 1);
                             juego.getE2().setGolesContra(juego.getE2().getGolesContra() + 1);
                             break;
                         }
@@ -114,6 +114,7 @@ public class SubirDatos {
                 equipoEsquina.addItem(juego.getE2().getNombre());
                 equipoSus.addItem(juego.getE1().getNombre());
                 equipoSus.addItem(juego.getE2().getNombre());
+
             }
         });
         //agregar jugadores dinamicamente en gol
@@ -249,15 +250,13 @@ public class SubirDatos {
         guardarEsquina.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(Objects.equals(minutoEsquina.getText(), "Minuto en el que ocurrió")) {
+                if (Objects.equals(minutoEsquina.getText(), "Minuto en el que ocurrió")) {
                     JOptionPane.showMessageDialog(null, "Indica el minuto en que se realizo el tiro de esquina");
-                }
-                else if(Objects.equals(equipoEsquina.getSelectedItem(), juego.getE1().getNombre())) {
+                } else if (Objects.equals(equipoEsquina.getSelectedItem(), juego.getE1().getNombre())) {
                     juego.getEsquinasE1().add(new Esquina(minutoEsquina.getText(), juego.getE1()));
                     JOptionPane.showMessageDialog(null, "Se ha agregado el tiro de esquina a "
                             + juego.getEsquinasE1().getLast().getEquipo().getNombre());
-                }
-                else {
+                } else {
                     juego.getEsquinasE2().add(new Esquina(minutoEsquina.getText(), juego.getE2()));
                     JOptionPane.showMessageDialog(null, "Se ha agregado el tiro de esquina a "
                             + juego.getEsquinasE1().getLast().getEquipo().getNombre());
@@ -265,6 +264,66 @@ public class SubirDatos {
                 }
             }
         });
+
+        minutoSus.setHorizontalAlignment(JTextField.CENTER);
+        minutoSus.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                super.focusGained(e);
+                if (minutoSus.getText().equals("Minuto en el que ocurrió")) {
+                    minutoSus.setText("");
+                }
+            }
+        });
+        minutoSus.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                super.focusLost(e);
+                if (minutoSus.getText().equals("")) {
+                    minutoSus.setText("Minuto en el que ocurrió");
+                }
+            }
+        });
+        dorsalEntra.addActionListener(e -> {
+            if (!(Objects.equals(dorsalEntra.getSelectedItem(), "Dorsal Jugador Entra"))) {
+                dorsalSale.setEnabled(true);
+            } else dorsalSale.setEnabled(false);
+        });
+        equipoSus.addActionListener(e -> {
+            if (!(Objects.equals(equipoSus.getSelectedItem(), "Seleccione equipo"))) {
+                if (Objects.equals(equipoSus.getSelectedItem(), juego.getE1().getNombre())) {
+                    dorsalEntra.removeAllItems();
+                    dorsalEntra.addItem("Dorsal Jugador Entra");
+                    for (Jugador jugador : juego.getE1().getJugadores()) {
+                        dorsalEntra.addItem(jugador.getDorsal());
+                        dorsalSale.addItem(jugador.getDorsal());
+                    }
+                    dorsalEntra.setEnabled(true);
+                } else {
+                    dorsalEntra.removeAllItems();
+                    dorsalEntra.addItem("Dorsal Jugador Entra");
+                    for (Jugador jugador : juego.getE2().getJugadores()) {
+                        dorsalEntra.addItem(jugador.getDorsal());
+                        dorsalSale.addItem(jugador.getDorsal());
+                    }
+                    dorsalEntra.setEnabled(true);
+                }
+            } else {
+                dorsalSale.setEnabled(false);
+            }
+        });
+        //Guardar cambios
+        guardarSus.addActionListener(e -> {
+            if (Objects.equals(dorsalEntra.getSelectedItem(), dorsalSale.getSelectedItem())) {
+                JOptionPane.showMessageDialog(null, "Los dorsales no pueden ser iguales");
+            } else {
+                if (Objects.equals(equipoSus.getSelectedItem(), juego.getE1().getNombre())) {
+                    juego.getCambiosE1().add(new Cambio(Integer.parseInt(Objects.requireNonNull(dorsalEntra.getSelectedItem()).toString()),
+                            Integer.parseInt(Objects.requireNonNull(dorsalSale.getSelectedItem()).toString()), minutoSus.getText()));
+                }
+            }
+        });
+
         //Lanzando frame de estadisticas
         finPartido.addActionListener(e -> {
             if (juego.getE1().getGolesFavor() > juego.getE2().getGolesFavor()) {
@@ -298,27 +357,7 @@ public class SubirDatos {
             frameEstadisticas.setResizable(false);
             frameEstadisticas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
-        equipoSus.addActionListener(e -> {
-            if (!(Objects.equals(equipoSus.getSelectedItem(), "Seleccione equipo"))) {
-                if (Objects.equals(equipoSus.getSelectedItem(), juego.getE1().getNombre())) {
-                    dorsalEntra.removeAllItems();
-                    dorsalEntra.addItem("Dorsal Jugador Entra");
-                    for (Jugador jugador : juego.getE1().getJugadores()) {
-                        dorsalEntra.addItem(jugador.getDorsal());
-                    }
-                    dorsalEntra.setEnabled(true);
-                } else {
-                    dorsalEntra.removeAllItems();
-                    dorsalEntra.addItem("Dorsal Jugador Entra");
-                    for (Jugador jugador : juego.getE2().getJugadores()) {
-                        dorsalEntra.addItem(jugador.getDorsal());
-                    }
-                    dorsalEntra.setEnabled(true);
-                }
-            } else {
-                dorsalSale.setEnabled(false);
-            }
-        });
+
     }
 
     private void createUIComponents() {
