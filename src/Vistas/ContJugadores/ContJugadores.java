@@ -3,12 +3,14 @@ package Vistas.ContJugadores;
 import Clases.CuerpoTecnico;
 import Clases.Jugador;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
 import java.util.LinkedList;
 
 public class ContJugadores {
@@ -20,6 +22,12 @@ public class ContJugadores {
     private JButton backCJ;
     
     public ContJugadores() {
+        try {
+            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
+                    panel.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         JPanel jugsPanelScroll = new JPanel();
         JPanel tecsPanelScroll = new JPanel();
         backCJ.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

@@ -6,10 +6,12 @@ import Vistas.SubirDatos.FrameSubirDatos;
 import Vistas.SubirDatos.SubirDatos;
 import Vistas.Tablero.Tablero;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Objects;
 
@@ -31,6 +33,12 @@ public class CrearPartido {
     private JButton backCP;
     
     public CrearPartido() {
+        try {
+            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
+                    panel.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         backCP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         panel.setFocusable(true);
         estadio.setHorizontalAlignment(JTextField.CENTER);

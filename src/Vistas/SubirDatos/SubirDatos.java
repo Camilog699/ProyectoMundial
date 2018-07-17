@@ -4,10 +4,12 @@ import Clases.Gol;
 import Clases.Juego;
 import Clases.Jugador;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
 import java.util.Objects;
 
 public class SubirDatos {
@@ -31,6 +33,12 @@ public class SubirDatos {
     private FrameSubirDatos frame;
     
     public SubirDatos() {
+        try {
+            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
+                    panel.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         backSD.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         jugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");

@@ -8,10 +8,12 @@ import Vistas.TablaPosiciones.TablaPosiciones;
 import Vistas.VerJugadores.FrameVerJugadores;
 import Vistas.VerJugadores.VerJugadores;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 
 public class Tablero {
@@ -28,6 +30,13 @@ public class Tablero {
     private JButton off;
     
     public Tablero() {
+        try {
+            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass()
+                    .getResource("../../Img/cursor.png")), new Point(panel.getX(),
+                    panel.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         off.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         verJugadoresButton.addActionListener(e -> {
             FrameTablero frame = (FrameTablero) SwingUtilities.getWindowAncestor(verJugadoresButton);

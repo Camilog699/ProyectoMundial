@@ -3,12 +3,14 @@ package Vistas.TablaPosiciones;
 import Clases.Equipo;
 import Clases.Juego;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
 import java.util.Comparator;
 import java.util.LinkedList;
 
@@ -53,6 +55,12 @@ public class TablaPosiciones {
     private JButton backTP;
     
     public TablaPosiciones() {
+        try {
+            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
+                    panel.getY()), "img"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         backTP.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         PanelInterno.setOpaque(false);
         
