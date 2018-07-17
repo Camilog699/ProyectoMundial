@@ -28,6 +28,8 @@ public class TablaPosiciones {
     private JLabel label6;
     private JLabel label7;
     private JLabel label8;
+    private JLabel label9;
+    private JLabel label10;
     private JLabel label11;
     private JLabel label22;
     private JLabel label33;
@@ -36,6 +38,8 @@ public class TablaPosiciones {
     private JLabel label66;
     private JLabel label77;
     private JLabel label88;
+    private JLabel label99;
+    private JLabel label1010;
     private JLabel label111;
     private JLabel label222;
     private JLabel label333;
@@ -44,6 +48,8 @@ public class TablaPosiciones {
     private JLabel label666;
     private JLabel label777;
     private JLabel label888;
+    private JLabel label999;
+    private JLabel label101010;
     private JLabel label1111;
     private JLabel label2222;
     private JLabel label3333;
@@ -52,6 +58,8 @@ public class TablaPosiciones {
     private JLabel label6666;
     private JLabel label7777;
     private JLabel label8888;
+    private JLabel label9999;
+    private JLabel label10101010;
     private JButton backTP;
     
     public TablaPosiciones() {
@@ -164,7 +172,17 @@ public class TablaPosiciones {
         label88.setText(String.valueOf(equipos.get(1).diferenciaGoles()));
         label888.setText(String.valueOf(equipos.get(2).diferenciaGoles()));
         label8888.setText(String.valueOf(equipos.get(3).diferenciaGoles()));
-        
-        
+
+        label9.setText(String.valueOf(equipos.get(0).getCantAmarillas()));
+        label99.setText(String.valueOf(equipos.get(1).getCantAmarillas()));
+        label999.setText(String.valueOf(equipos.get(2).getCantAmarillas()));
+        label9999.setText(String.valueOf(equipos.get(3).getCantAmarillas()));
+
+        label10.setText(String.valueOf(equipos.get(0).getCantRojas()));
+        label1010.setText(String.valueOf(equipos.get(1).getCantRojas()));
+        label101010.setText(String.valueOf(equipos.get(2).getCantRojas()));
+        label10101010.setText(String.valueOf(equipos.get(3).getCantRojas()));
+
+
     }
 }
