@@ -19,9 +19,9 @@ public class SubirDatos {
     private JTextField minutoGol;
     private JButton guardarGol;
     private JComboBox<String> jugadorTarjeta;
-    private JComboBox comboBox3;
-    private JTextField minutoEnElQueTextField;
-    private JButton GUARDARESQUINAButton;
+    private JComboBox equipoEsquina;
+    private JTextField minutoEsquina;
+    private JButton guardarEsquina;
     private JComboBox comboBox4;
     private JComboBox comboBox5;
     private JButton amarilla;

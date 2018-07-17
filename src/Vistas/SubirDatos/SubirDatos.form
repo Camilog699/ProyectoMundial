@@ -188,7 +188,7 @@
           <text value="ESQUINA"/>
         </properties>
       </component>
-      <component id="deda6" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+      <component id="deda6" class="javax.swing.JComboBox" binding="equipoEsquina">
         <constraints>
           <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -199,7 +199,7 @@
           </model>
         </properties>
       </component>
-      <component id="a0af1" class="javax.swing.JButton" binding="GUARDARESQUINAButton" default-binding="true">
+      <component id="a0af1" class="javax.swing.JButton" binding="guardarEsquina">
         <constraints>
           <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -318,7 +318,7 @@
           <text value="AMARILLA"/>
         </properties>
       </component>
-      <component id="73b16" class="javax.swing.JTextField" binding="minutoEnElQueTextField" default-binding="true">
+      <component id="73b16" class="javax.swing.JTextField" binding="minutoEsquina">
         <constraints>
           <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
