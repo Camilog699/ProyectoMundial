@@ -152,7 +152,7 @@ public class Estadisticas {
     
     public void actualizarEsquinasPanel(Esquina esquina) {
         JLabel tiempo = new JLabel(esquina.getTiempo());
-        JLabel equipo = new JLabel();
+        JLabel equipo = new JLabel(esquina.getEquipo().getNombre());
         tiempo.setHorizontalAlignment(SwingConstants.CENTER);
         equipo.setHorizontalAlignment(SwingConstants.CENTER);
         tiempo.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 20));
