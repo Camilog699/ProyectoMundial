@@ -88,7 +88,7 @@ public class SubirDatos {
                     for (Jugador jugador : juego.getE2().getJugadores()) {
                         if (Objects.equals(jugador.getNombre(), JugadorGol.getSelectedItem())) {
                             juego.getGolesE2().add(new Gol(minutoGol.getText(), jugador));
-                            juego.getE1().setGolesContra(juego.getE2().getGolesContra() + 1);
+                            juego.getE1().setGolesContra(juego.getE1().getGolesContra() + 1);
                             juego.getE2().setGolesFavor(juego.getE2().getGolesFavor() + 1);
                             break;
                         }
