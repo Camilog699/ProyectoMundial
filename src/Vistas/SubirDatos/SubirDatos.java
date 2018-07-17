@@ -25,12 +25,15 @@ public class SubirDatos {
     private JComboBox equipoEsquina;
     private JTextField minutoEsquina;
     private JButton guardarEsquina;
-    private JComboBox comboBox4;
-    private JComboBox comboBox5;
+    private JComboBox dorsalEntra;
+    private JComboBox dorsalSale;
     private JButton amarilla;
     private JButton roja;
     private JComboBox<String> equipoTarjeta;
     private JButton finPartido;
+    private JTextField minutoSus;
+    private JButton guardarSus;
+    private JComboBox equipoSus;
     private Juego juego;
     private FrameSubirDatos frame;
 
@@ -39,14 +42,6 @@ public class SubirDatos {
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         jugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
-        panel.addFocusListener(new FocusAdapter() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                super.focusGained(e);
-                frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);
-                juego = frame.getJuego();
-            }
-        });
         backSD.addActionListener(e -> {
             frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);
             frame.setVisible(false);
@@ -110,12 +105,15 @@ public class SubirDatos {
             public void focusGained(FocusEvent e) {
                 super.focusGained(e);
                 frame = (FrameSubirDatos) SwingUtilities.getWindowAncestor(panel);
+                juego = frame.getJuego();
                 EquipoGol.addItem(juego.getE1().getNombre());
                 EquipoGol.addItem(juego.getE2().getNombre());
                 equipoTarjeta.addItem(juego.getE1().getNombre());
                 equipoTarjeta.addItem(juego.getE2().getNombre());
                 equipoEsquina.addItem(juego.getE1().getNombre());
                 equipoEsquina.addItem(juego.getE2().getNombre());
+                equipoSus.addItem(juego.getE1().getNombre());
+                equipoSus.addItem(juego.getE2().getNombre());
             }
         });
         //agregar jugadores dinamicamente en gol
@@ -240,6 +238,13 @@ public class SubirDatos {
                 }
             }
         });
+        equipoEsquina.addActionListener(e -> {
+            if (!(Objects.equals(equipoEsquina.getSelectedItem(), "Seleccione equipo"))) {
+                guardarEsquina.setEnabled(true);
+            } else {
+                guardarEsquina.setEnabled(false);
+            }
+        });
         //Guardar tiro de esquina
         guardarEsquina.addActionListener(new ActionListener() {
             @Override
@@ -293,11 +298,25 @@ public class SubirDatos {
             frameEstadisticas.setResizable(false);
             frameEstadisticas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
-        equipoEsquina.addActionListener(e -> {
-            if (!(Objects.equals(equipoEsquina.getSelectedItem(), "Seleccione equipo"))) {
-                guardarEsquina.setEnabled(true);
+        equipoSus.addActionListener(e -> {
+            if (!(Objects.equals(equipoSus.getSelectedItem(), "Seleccione equipo"))) {
+                if (Objects.equals(equipoSus.getSelectedItem(), juego.getE1().getNombre())) {
+                    dorsalEntra.removeAllItems();
+                    dorsalEntra.addItem("Dorsal Jugador Entra");
+                    for (Jugador jugador : juego.getE1().getJugadores()) {
+                        dorsalEntra.addItem(jugador.getDorsal());
+                    }
+                    dorsalEntra.setEnabled(true);
+                } else {
+                    dorsalEntra.removeAllItems();
+                    dorsalEntra.addItem("Dorsal Jugador Entra");
+                    for (Jugador jugador : juego.getE2().getJugadores()) {
+                        dorsalEntra.addItem(jugador.getDorsal());
+                    }
+                    dorsalEntra.setEnabled(true);
+                }
             } else {
-                guardarEsquina.setEnabled(false);
+                dorsalSale.setEnabled(false);
             }
         });
     }
