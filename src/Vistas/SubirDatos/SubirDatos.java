@@ -222,6 +222,27 @@ public class SubirDatos {
         });
         //Lanzando frame de estadisticas
         finPartido.addActionListener(e -> {
+            if (juego.getE1().getGolesFavor() > juego.getE2().getGolesFavor()) {
+                juego.getE1().setPartJugados(juego.getE1().getPartJugados() + 1);
+                juego.getE1().setPartGanados(juego.getE1().getPartGanados() + 1);
+                juego.getE1().setPuntos(juego.getE1().getPuntos() + 3);
+                juego.getE2().setPartJugados(juego.getE2().getPartJugados() + 1);
+                juego.getE2().setPartPerdidos(juego.getE2().getPartPerdidos() + 1);
+            } else if (juego.getE1().getGolesFavor() < juego.getE2().getGolesFavor()) {
+                juego.getE2().setPartJugados(juego.getE2().getPartJugados() + 1);
+                juego.getE2().setPartGanados(juego.getE2().getPartGanados() + 1);
+                juego.getE2().setPuntos(juego.getE2().getPuntos() + 3);
+                juego.getE1().setPartJugados(juego.getE1().getPartJugados() + 1);
+                juego.getE1().setPartPerdidos(juego.getE1().getPartPerdidos() + 1);
+            } else {
+                juego.getE1().setPartJugados(juego.getE1().getPartJugados() + 1);
+                juego.getE1().setPartEmpatados(juego.getE1().getPartEmpatados() + 1);
+                juego.getE1().setPuntos(juego.getE1().getPuntos() + 1);
+                juego.getE2().setPartJugados(juego.getE1().getPartJugados() + 1);
+                juego.getE2().setPartEmpatados(juego.getE1().getPartEmpatados() + 1);
+                juego.getE2().setPuntos(juego.getE2().getPuntos() + 1);
+            }
+
             FrameEstadisticas frameEstadisticas = new FrameEstadisticas("Subir datos partido | Mundial Russia 2018", juego);
             frameEstadisticas.setContentPane(new Estadisticas().panel);
             frameEstadisticas.pack();
