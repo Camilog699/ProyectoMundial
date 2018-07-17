@@ -4,8 +4,12 @@ import Clases.Gol;
 import Clases.Juego;
 import Clases.Jugador;
 import Clases.Tarjeta;
+import Vistas.Estadisticas.Estadisticas;
+import Vistas.Estadisticas.FrameEstadisticas;
+import Vistas.Tablero.Tablero;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.Objects;
@@ -27,9 +31,10 @@ public class SubirDatos {
     private JButton amarilla;
     private JButton roja;
     private JComboBox<String> equipoTarjeta;
-    private JButton button1;
+    private JButton finPartido;
     private Juego juego;
     private FrameSubirDatos frame;
+
 
     public SubirDatos() {
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
@@ -214,6 +219,18 @@ public class SubirDatos {
                 JOptionPane.showMessageDialog(null, "Se ha agregado la tarjeta roja a "
                         + juego.getTarjetasE2().getLast().getJugador().getNombre());
             }
+        });
+        //HOLA
+        finPartido.addActionListener(e -> {
+            FrameEstadisticas frameEstadisticas = new FrameEstadisticas("Subir datos partido | Mundial Russia 2018", juego);
+            frameEstadisticas.setContentPane(new Estadisticas().panel);
+            frameEstadisticas.pack();
+            frameEstadisticas.setIconImage(Toolkit.getDefaultToolkit().
+                    getImage(Tablero.class.getResource("../../Img/ico.png")));
+            frameEstadisticas.setLocationRelativeTo(null);
+            frameEstadisticas.setVisible(true);
+            frameEstadisticas.setResizable(false);
+            frameEstadisticas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         });
     }
 

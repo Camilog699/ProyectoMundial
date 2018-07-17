@@ -12,7 +12,7 @@ public class Estadisticas {
     JPanel golesPanel;
     private JTabbedPane tabbedPane1;
     Juego juego;
-    private JPanel panel;
+    public JPanel panel;
     private JScrollPane golesScrollPanel;
     private JScrollPane tarjetasScrollPanel;
     private JScrollPane sustitucionesScrollPanel;
