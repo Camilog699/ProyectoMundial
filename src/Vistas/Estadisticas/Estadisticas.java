@@ -5,9 +5,8 @@ import Clases.Juego;
 import Clases.Tarjeta;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
@@ -62,20 +61,32 @@ public class Estadisticas {
     public void actualizarGolesPanel(Gol gol) {
         JLabel jugador = new JLabel(gol.getJ().getNombre());
         JLabel tiempo = new JLabel(gol.getTiempo());
+        jugador.setHorizontalAlignment(SwingConstants.CENTER);
+        tiempo.setHorizontalAlignment(SwingConstants.CENTER);
+        jugador.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 20));
+        tiempo.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 20));
+        jugador.setForeground(Color.WHITE);
+        tiempo.setForeground(Color.WHITE);
         golesPanel.add(jugador);
         golesPanel.add(tiempo);
     }
     
     public void actualizarTarjetasPanel(Tarjeta tarjeta) {
         JLabel jugador = new JLabel(tarjeta.getJugador().getNombre());
-        JLabel tiempo = new JLabel();
+        JLabel tipo = new JLabel();
+        jugador.setHorizontalAlignment(SwingConstants.CENTER);
+        tipo.setHorizontalAlignment(SwingConstants.CENTER);
+        jugador.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 20));
+        tipo.setFont(new FontUIResource("Dusha V5", Font.PLAIN, 20));
+        jugador.setForeground(Color.WHITE);
+        tipo.setForeground(Color.WHITE);
         if (tarjeta.isAmarilla()) {
-            tiempo.setText("Amarilla");
+            tipo.setText("Amarilla");
         } else {
-            tiempo.setText("Roja");
+            tipo.setText("Roja");
         }
         tarjetasPanel.add(jugador);
-        tarjetasPanel.add(tiempo);
+        tarjetasPanel.add(tipo);
     }
     
     private void createUIComponents() {
