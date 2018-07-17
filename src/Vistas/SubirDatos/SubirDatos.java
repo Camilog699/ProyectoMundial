@@ -320,6 +320,7 @@ public class SubirDatos {
                 if (Objects.equals(equipoSus.getSelectedItem(), juego.getE1().getNombre())) {
                     juego.getCambiosE1().add(new Cambio(Integer.parseInt(Objects.requireNonNull(dorsalEntra.getSelectedItem()).toString()),
                             Integer.parseInt(Objects.requireNonNull(dorsalSale.getSelectedItem()).toString()), minutoSus.getText()));
+                    JOptionPane.showMessageDialog(null, "El cambio se ha agragado correctamente");
                 }
             }
         });
