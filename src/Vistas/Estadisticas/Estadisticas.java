@@ -21,6 +21,7 @@ public class Estadisticas {
     private JScrollPane esquinasScrollPanel;
     
     public Estadisticas() {
+        panel.setFocusable(true);
         panel.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -64,8 +65,8 @@ public class Estadisticas {
         } else {
             tiempo.setText("Roja");
         }
-        golesPanel.add(jugador);
-        golesPanel.add(tiempo);
+        tarjetasPanel.add(jugador);
+        tarjetasPanel.add(tiempo);
     }
     
     private void createUIComponents() {

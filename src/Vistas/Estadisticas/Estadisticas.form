@@ -8,24 +8,30 @@
     <properties>
       <maximumSize width="1000" height="603"/>
       <minimumSize width="1000" height="603"/>
+      <opaque value="true"/>
       <preferredSize width="1000" height="603"/>
     </properties>
     <border type="none"/>
     <children>
       <tabbedpane id="e3db" binding="tabbedPane1" default-binding="true">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="2" use-parent-layout="false">
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="650" height="350"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="Dusha V5" size="20"/>
+          <tabPlacement value="1"/>
+        </properties>
         <border type="none"/>
         <children>
           <scrollpane id="9df85" binding="golesScrollPanel">
             <constraints>
               <tabbedpane title="Goles"/>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Dusha V5" size="20"/>
+            </properties>
             <border type="none"/>
             <children/>
           </scrollpane>
