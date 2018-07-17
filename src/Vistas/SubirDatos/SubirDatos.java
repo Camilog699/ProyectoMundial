@@ -220,7 +220,7 @@ public class SubirDatos {
                         + juego.getTarjetasE2().getLast().getJugador().getNombre());
             }
         });
-        //HOLA
+        //Lanzando frame de estadisticas
         finPartido.addActionListener(e -> {
             FrameEstadisticas frameEstadisticas = new FrameEstadisticas("Subir datos partido | Mundial Russia 2018", juego);
             frameEstadisticas.setContentPane(new Estadisticas().panel);
