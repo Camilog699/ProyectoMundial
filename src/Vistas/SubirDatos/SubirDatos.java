@@ -1,15 +1,14 @@
 package Vistas.SubirDatos;
 
-import Clases.Gol;
-import Clases.Juego;
-import Clases.Jugador;
-import Clases.Tarjeta;
+import Clases.*;
 import Vistas.Estadisticas.Estadisticas;
 import Vistas.Estadisticas.FrameEstadisticas;
 import Vistas.Tablero.Tablero;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.Objects;
@@ -115,6 +114,8 @@ public class SubirDatos {
                 EquipoGol.addItem(juego.getE2().getNombre());
                 equipoTarjeta.addItem(juego.getE1().getNombre());
                 equipoTarjeta.addItem(juego.getE2().getNombre());
+                equipoEsquina.addItem(juego.getE1().getNombre());
+                equipoEsquina.addItem(juego.getE2().getNombre());
             }
         });
         //agregar jugadores dinamicamente en gol
@@ -220,6 +221,45 @@ public class SubirDatos {
                         + juego.getTarjetasE2().getLast().getJugador().getNombre());
             }
         });
+        minutoEsquina.setHorizontalAlignment(JTextField.CENTER);
+        minutoEsquina.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                super.focusGained(e);
+                if (minutoEsquina.getText().equals("Minuto en el que ocurrió")) {
+                    minutoEsquina.setText("");
+                }
+            }
+        });
+        minutoEsquina.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                super.focusLost(e);
+                if (minutoEsquina.getText().equals("")) {
+                    minutoEsquina.setText("Minuto en el que ocurrió");
+                }
+            }
+        });
+        //Guardar tiro de esquina
+        guardarEsquina.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(Objects.equals(minutoEsquina.getText(), "Minuto en el que ocurrió")) {
+                    JOptionPane.showMessageDialog(null, "Indica el minuto en que se realizo el tiro de esquina");
+                }
+                else if(Objects.equals(equipoEsquina.getSelectedItem(), juego.getE1().getNombre())) {
+                    juego.getEsquinasE1().add(new Esquina(minutoEsquina.getText(), juego.getE1()));
+                    JOptionPane.showMessageDialog(null, "Se ha agregado el tiro de esquina a "
+                            + juego.getEsquinasE1().getLast().getEquipo().getNombre());
+                }
+                else {
+                    juego.getEsquinasE2().add(new Esquina(minutoEsquina.getText(), juego.getE2()));
+                    JOptionPane.showMessageDialog(null, "Se ha agregado el tiro de esquina a "
+                            + juego.getEsquinasE1().getLast().getEquipo().getNombre());
+
+                }
+            }
+        });
         //Lanzando frame de estadisticas
         finPartido.addActionListener(e -> {
             if (juego.getE1().getGolesFavor() > juego.getE2().getGolesFavor()) {
@@ -252,6 +292,13 @@ public class SubirDatos {
             frameEstadisticas.setVisible(true);
             frameEstadisticas.setResizable(false);
             frameEstadisticas.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        });
+        equipoEsquina.addActionListener(e -> {
+            if (!(Objects.equals(equipoEsquina.getSelectedItem(), "Seleccione equipo"))) {
+                guardarEsquina.setEnabled(true);
+            } else {
+                guardarEsquina.setEnabled(false);
+            }
         });
     }
 
