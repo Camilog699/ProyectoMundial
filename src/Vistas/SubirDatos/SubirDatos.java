@@ -257,9 +257,10 @@ public class SubirDatos {
                     JOptionPane.showMessageDialog(null, "Se ha agregado el tiro de esquina a "
                             + juego.getEsquinasE1().getLast().getEquipo().getNombre());
                 } else {
-                    juego.getEsquinasE2().add(new Esquina(minutoEsquina.getText(), juego.getE2()));
+                    Esquina esq = new Esquina(minutoEsquina.getText(), juego.getE2());
+                    juego.getEsquinasE2().add(esq);
                     JOptionPane.showMessageDialog(null, "Se ha agregado el tiro de esquina a "
-                            + juego.getEsquinasE1().getLast().getEquipo().getNombre());
+                            + esq.getEquipo().getNombre());
 
                 }
             }
