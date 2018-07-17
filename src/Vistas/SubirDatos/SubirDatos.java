@@ -3,13 +3,11 @@ package Vistas.SubirDatos;
 import Clases.Gol;
 import Clases.Juego;
 import Clases.Jugador;
+import Clases.Tarjeta;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
-import java.io.IOException;
 import java.util.Objects;
 
 public class SubirDatos {
@@ -31,15 +29,8 @@ public class SubirDatos {
     private JComboBox<String> equipoTarjeta;
     private Juego juego;
     private FrameSubirDatos frame;
-    
+
     public SubirDatos() {
-        try {
-            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(ImageIO.read(getClass().getResource("../../Img/cursor.png")), new Point(panel.getX(),
-                    panel.getY()), "img"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        backSD.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         JugadorGol.setPrototypeDisplayValue("Juan Carlos Herranz");
         jugadorTarjeta.setPrototypeDisplayValue("Juan Carlos Herranz");
         panel.setFocusable(true);
@@ -106,7 +97,7 @@ public class SubirDatos {
                 JOptionPane.showMessageDialog(null, "Se ha guardado el gol de "
                         + JugadorGol.getSelectedItem());
             }
-            
+
         });
         //Añadir equipos dinamicamente
         panel.addFocusListener(new FocusAdapter() {
@@ -171,24 +162,76 @@ public class SubirDatos {
                 roja.setEnabled(false);
             }
         });
+        //Añadir Amarilla
+        amarilla.addActionListener(e -> {
+            if (Objects.equals(equipoTarjeta.getSelectedItem(), "Seleccione equipo")) {
+                JOptionPane.showMessageDialog(null, "Debe seleccionar el quipo al que pertenece el jugador");
+            } else if (Objects.equals(equipoTarjeta.getSelectedItem(), juego.getE1().getNombre())) {
+                for (Jugador jugador : juego.getE1().getJugadores()) {
+                    if (Objects.equals(jugador.getNombre(), jugadorTarjeta.getSelectedItem())) {
+                        juego.getTarjetasE1().add(new Tarjeta(true, jugador));
+                        juego.getE1().setCantAmarillas(juego.getE1().getCantAmarillas() + 1);
+                        break;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Se ha agregado la tarjeta amarrila a "
+                        + juego.getTarjetasE1().getLast().getJugador().getNombre());
+            } else {
+                for (Jugador jugador : juego.getE2().getJugadores()) {
+                    if (Objects.equals(jugador.getNombre(), jugadorTarjeta.getSelectedItem())) {
+                        juego.getTarjetasE2().add(new Tarjeta(true, jugador));
+                        juego.getE2().setCantAmarillas(juego.getE2().getCantAmarillas() + 1);
+                        break;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Se ha agregado la tarjeta amarrila a "
+                        + juego.getTarjetasE2().getLast().getJugador().getNombre());
+            }
+        });
+        //Añadir Roja
+        roja.addActionListener(e -> {
+            if (Objects.equals(equipoTarjeta.getSelectedItem(), "Seleccione equipo")) {
+                JOptionPane.showMessageDialog(null, "Debe seleccionar el quipo al que pertenece el jugador");
+            } else if (Objects.equals(equipoTarjeta.getSelectedItem(), juego.getE1().getNombre())) {
+                for (Jugador jugador : juego.getE1().getJugadores()) {
+                    if (Objects.equals(jugador.getNombre(), jugadorTarjeta.getSelectedItem())) {
+                        juego.getTarjetasE1().add(new Tarjeta(true, jugador));
+                        juego.getE1().setCantRojas(juego.getE1().getCantRojas() + 1);
+                        break;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Se ha agregado la tarjeta roja a "
+                        + juego.getTarjetasE1().getLast().getJugador().getNombre());
+            } else {
+                for (Jugador jugador : juego.getE2().getJugadores()) {
+                    if (Objects.equals(jugador.getNombre(), jugadorTarjeta.getSelectedItem())) {
+                        juego.getTarjetasE2().add(new Tarjeta(true, jugador));
+                        juego.getE2().setCantRojas(juego.getE2().getCantRojas() + 1);
+                        break;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Se ha agregado la tarjeta roja a "
+                        + juego.getTarjetasE2().getLast().getJugador().getNombre());
+            }
+        });
     }
-    
+
     private void createUIComponents() {
         panel = new SubirDatosPanel();
     }
-    
+
     public Juego getJuego() {
         return juego;
     }
-    
+
     public void setJuego(Juego juego) {
         this.juego = juego;
     }
-    
+
     public FrameSubirDatos getFrame() {
         return frame;
     }
-    
+
     public void setFrame(FrameSubirDatos frame) {
         this.frame = frame;
     }
